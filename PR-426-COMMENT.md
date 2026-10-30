@@ -13,7 +13,7 @@ Thanks for the RemoteDesktop work in this PR, keitheis. We tested head `0204ffbb
 - On screen lock, close remote sessions via `hyprland_lock_notifier_v1` (Hyprland socket2 does not emit `lock>>`), release held keys/buttons, and refuse CreateSession while locked.
 - Optional `~/.local/bin/xdph-rd-on-lock` hook: we use it to restart RustDesk 1.5.0 so the viewer gets a clean disconnect (RustDesk currently keeps a stale portal session; upstream has related work on master / PR 16178).
 
-Writeup, patches, and redacted proof logs (local draft, not published until you are happy with them):
+Writeup, patches, and redacted proof logs:
 
 https://github.com/afterhours84/xdph-remotedesktop-safeguards
 
