@@ -1,0 +1,3 @@
+ninja: Entering directory `build-omarchy'
+[1/2] Compiling C++ object src/xdg-desktop-portal-hyprland.p/core_PortalManager.cpp.o
+[2/2] Linking target src/xdg-desktop-portal-hyprland

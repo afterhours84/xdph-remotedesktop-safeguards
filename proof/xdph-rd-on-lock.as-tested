@@ -1,0 +1,10 @@
+#!/bin/sh
+# Called by the patched xdph when the screen locks, after remote sessions are closed.
+# Restarts RustDesk so the remote viewer gets a real disconnect and the next
+# connection starts a fresh portal session (works around RustDesk session reuse).
+LOG="$HOME/Projects/xdph-rd/proof/lock-hook.log"
+echo "$(date -Is) lock hook: restarting rustdesk" >> "$LOG"
+pkill -x rustdesk
+sleep 2
+setsid -f /usr/bin/rustdesk >/dev/null 2>&1
+echo "$(date -Is) rustdesk relaunched: $(pgrep -x rustdesk | tr '\n' ' ')" >> "$LOG"

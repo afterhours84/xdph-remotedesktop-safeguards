@@ -1,0 +1,9 @@
+    PID %CPU     ELAPSED CMD
+   1252  0.0  1-23:12:26 /usr/lib/xdg-desktop-portal-gtk
+ 195864  0.0       00:07 ~/.local/libexec/xdg-desktop-portal-hyprland
+ 195880  0.4       00:06 /usr/lib/xdg-desktop-portal
+Oct 29 18:06:50 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 29 18:06:50 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 29 18:06:50 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 29 18:06:50 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+u 3

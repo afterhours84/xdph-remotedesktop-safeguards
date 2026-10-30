@@ -1,0 +1,12 @@
+# This is not a source diff against PR #426 by itself.
+# The optional lock hook is invoked from CRemoteDesktopPortal::closeAllSessions
+# when reason == "screen locked" (see 01-safeguards.patch / full.diff):
+#
+#   if ~/.local/bin/xdph-rd-on-lock exists and is executable, fork+exec it.
+#
+# Install the script from scripts/xdph-rd-on-lock:
+#
+#   install -m755 scripts/xdph-rd-on-lock ~/.local/bin/xdph-rd-on-lock
+#
+# As tested, the hook restarted RustDesk after lock so the Windows viewer got a
+# real disconnect (proof/lock-hook.log, proof/19-lock-test3-RESULT.txt).

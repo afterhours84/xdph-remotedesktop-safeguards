@@ -1,0 +1,71 @@
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture_source_manager_v1 (ver 1)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_drm (ver 2)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_output (ver 4)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] dmabufFeedbackMainDevice
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] Found output name HDMI-A-1
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [toplevel] Activated, bound to 565542d4d910, toplevels: 4
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] Registered for toplevel export
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screenshot] init successful
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] registered
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_264/u1 sess=/org/freedesktop/portal/desktop/session/1_264/u1
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] CreateSession returning for appid=
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] devices selected: 7
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] SelectSources:
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_264/u3
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_264/u1
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | appid:
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] unused option types
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] restore data invalid / missing, prompting
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] SHAREDATA returned selection 0
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] virtual pointer created
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] virtual keyboard created with keymap
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [pw] Building modifiers for dma
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] Sharing initialized
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session locked: closing remote sessions
+Oct 29 18:17:11 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] closing all sessions (screen locked)
+Oct 

@@ -1,0 +1,14 @@
+error: package 'meson' was not found
+error: package 'ninja' was not found
+error: package 'cmake' was not found
+error: package 'hyprwayland-scanner' was not found
+error: package 'hyprland-protocols' was not found
+hyprlang 0.6.8-5
+hyprutils 0.14.2-1
+sdbus-cpp 2.3.1-1
+libei 1.6.0-2
+libxkbcommon 1.13.2-1
+qt6-base 6.12.0-3
+qt6-wayland 6.12.0-1
+wayland-protocols 1.49-1
+libpipewire 1:1.6.9-1

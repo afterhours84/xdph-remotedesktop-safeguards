@@ -1,0 +1,49 @@
+2026-10-29T18:29:16-07:00
+--- control: no active remote session
+(objectpath '/org/freedesktop/portal/desktop/request/1_342/proof3',)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_drm (ver 2)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_output (ver 4)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] dmabufFeedbackMainDevice
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] Found output name HDMI-A-1
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screenshot] init successful
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] registered
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_328/u1 sess=/org/freedesktop/portal/desktop/session/1_328/u1
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] CreateSession returning for appid=
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] devices selected: 7
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] SelectSources:
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_328/u3
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_328/u1
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | appid:
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] unused option types
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] restore data invalid / missing, prompting
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] SHAREDATA returned selection 0
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] virtual pointer created
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [pw] Building modifiers for dma
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] Sharing initialized
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy/pipewire] Out of buffers
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [sc] Retrying screencopy (1/10)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_341/proof2 sess=/org/freedesktop/portal/desktop/session/1_341/proof2s
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [remotedesktop] rejecting CreateSession: another remote session already exists
+Oct 29 18:29:16 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to close session implementation: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/session/1_342/proof3s'.
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] registered
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_328/u1 sess=/org/freedesktop/portal/desktop/session/1_328/u1
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] CreateSession returning for appid=
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] devices selected: 7
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] virtual pointer created
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] virtual keyboard created with keymap
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_341/proof2 sess=/org/freedesktop/portal/desktop/session/1_341/proof2s
+Oct 29 18:29:16 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [remotedesktop] rejecting CreateSession: another remote session already exists
+Note: xdph streaming node still present after viewer disconnect (pw-dump count=1): RustDesk keeps its portal session open after the viewer leaves, so the one-session guard still sees it. Control must be run after restarting RustDesk.
+after rustdesk restart, xdph nodes: 0
+(objectpath '/org/freedesktop/portal/desktop/request/1_348/proof4',)
+-- No entries --
+Control result: with no RustDesk portal session alive, CreateSession proof4 succeeded (no 'Failed to close session implementation' error, unlike proof2/proof3). One-session guard: PASS. 2026-10-29T18:29:51-07:00

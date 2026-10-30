@@ -1,0 +1,6 @@
+Best-effort extract: hyprland_lock_notifier_v1 wiring in PortalManager + protocol.
+Depends on CRemoteDesktopPortal::closeAllSessions from 01-safeguards / full.diff.
+Dead socket2 IPC helpers (setupLockWatch) remain in full.diff but are unused;
+socket2 has no lock>> event. Active path is this protocol.
+Apply on top of PR #426 head 0204ffbb after or with safeguards.
+

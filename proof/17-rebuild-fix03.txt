@@ -1,0 +1,6 @@
+ninja: Entering directory `src/build-omarchy'
+[1/2] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_RemoteDesktop.cpp.o
+../src/portals/RemoteDesktop.cpp:118:13: warning: ‘bool validateRestoreToken(const std::string&, const std::string&, uint32_t)’ defined but not used [-Wunused-function]
+  118 | static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+      |             ^~~~~~~~~~~~~~~~~~~~
+[2/2] Linking target src/xdg-desktop-portal-hyprland

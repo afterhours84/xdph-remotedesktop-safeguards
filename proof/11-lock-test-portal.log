@@ -1,0 +1,985 @@
+2026-10-29T18:06:50-07:00 omarchy xdg-desktop-portal-hyprland[195864]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+2026-10-29T18:06:50-07:00 omarchy xdg-desktop-portal-hyprland[195864]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:06:50-07:00 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:06:51-07:00 omarchy systemd[910]: Stopping Portal service...
+2026-10-29T18:06:51-07:00 omarchy systemd[910]: Stopped Portal service.
+2026-10-29T18:06:51-07:00 omarchy systemd[910]: Starting Portal service...
+2026-10-29T18:06:51-07:00 omarchy /usr/lib/xdg-desktop-portal[195880]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:06:51-07:00 omarchy /usr/lib/xdg-desktop-portal[195880]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:06:51-07:00 omarchy /usr/lib/xdg-desktop-portal[195880]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:06:51-07:00 omarchy systemd[910]: Started Portal service.
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Stopping Portal service...
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[195864]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: xdg-desktop-portal-hyprland.service: Consumed 7.467s CPU time over 5min 24.766s wall clock time, 98.5M memory peak.
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Stopped Portal service.
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Starting Portal service...
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] Initializing xdph...
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] XDG_CURRENT_DESKTOP set to Hyprland
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] Gathering exported interfaces
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_seat (ver 9)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_data_device_manager (ver 3)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_compositor (ver 6)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_subcompositor (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_shm (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_viewporter (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_tearing_control_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_fractional_scale_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zxdg_output_manager_v1 (ver 3)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_cursor_shape_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_idle_inhibit_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_relative_pointer_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zxdg_decoration_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_alpha_modifier_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_gamma_control_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_foreign_toplevel_list_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_pointer_gestures_v1 (ver 3)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_foreign_toplevel_manager_v1 (ver 3)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [toplevel] (activate) locks: 1
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_keyboard_shortcuts_inhibit_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_text_input_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_text_input_manager_v3 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_pointer_constraints_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_output_power_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xdg_activation_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_idle_notifier_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_lock_notifier_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_input_method_manager_v2 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_virtual_keyboard_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_virtual_pointer_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_output_manager_v1 (ver 4)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: org_kde_kwin_server_decoration_manager (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_focus_grab_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_tablet_manager_v2 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_layer_shell_v1 (ver 5)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_presentation (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xdg_wm_base (ver 7)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_data_control_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xwayland_shell_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [toplevel mapping] registered manager
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [globalshortcuts] registered
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [input-capture] initializing input capture portal
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [input-capture] init successful
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [pipewire] connected
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] init successful
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+2026-10-29T18:12:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:12:15-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:12:15-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:12:15-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:12:15-07:00 omarchy systemd[910]: Started Portal service.
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:16-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:17-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:19-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:21-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:22-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:25-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:26-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:27-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:28-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:29-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:30-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:31-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:32-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:37-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:12:39-07:00 omarchy /usr/lib/xdg-desktop-portal[200770]: g_hash_table_lookup: assertion 'hash_table != NULL' failed
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_drm (ver 2)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG]  | Got interface: wl_output (ver 4)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] dmabufFeedbackMainDevice
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] Found output name HDMI-A-1
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [toplevel] Activated, bound to 565542d4d910, toplevels: 4
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] Registered for toplevel export
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screenshot] init successful
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] registered
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_264/u1 sess=/org/freedesktop/portal/desktop/session/1_264/u1
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] CreateSession returning for appid=
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] devices selected: 7
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] SelectSources:
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_264/u3
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_264/u1
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy]  | appid:
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] unused option types
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] restore data invalid / missing, prompting
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] SHAREDATA returned selection 0
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] virtual pointer created
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] virtual keyboard created with keymap
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [pw] Building modifiers for dma
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [screencopy] Sharing initialized
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session locked: closing remote sessions
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] closing all sessions (screen locked)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session /org/freedesktop/portal/desktop/session/1_264/u1 destroyed
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:17:11-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [remotedesktop] session unlocked
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[200768]: [LOG] [core] compositor keymap mirrored (35740 bytes
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Stopping Portal service...
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: xdg-desktop-portal-hyprland.service: Consumed 3.454s CPU time over 10min 697ms wall clock time, 60M memory peak.
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Stopped Portal service.
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Starting Portal service...
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] Initializing xdph...
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] XDG_CURRENT_DESKTOP set to Hyprland
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] Gathering exported interfaces
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_seat (ver 9)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_data_device_manager (ver 3)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_compositor (ver 6)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_subcompositor (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_shm (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_viewporter (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_tearing_control_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_fractional_scale_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zxdg_output_manager_v1 (ver 3)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_cursor_shape_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_idle_inhibit_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_relative_pointer_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zxdg_decoration_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_alpha_modifier_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_gamma_control_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_foreign_toplevel_list_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_pointer_gestures_v1 (ver 3)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_foreign_toplevel_manager_v1 (ver 3)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [toplevel] (activate) locks: 1
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_keyboard_shortcuts_inhibit_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_text_input_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_text_input_manager_v3 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_pointer_constraints_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_output_power_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xdg_activation_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_idle_notifier_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_lock_notifier_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_input_method_manager_v2 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_virtual_keyboard_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_virtual_pointer_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_output_manager_v1 (ver 4)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: org_kde_kwin_server_decoration_manager (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_focus_grab_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_tablet_manager_v2 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_layer_shell_v1 (ver 5)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_presentation (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xdg_wm_base (ver 7)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_data_control_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xwayland_shell_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [toplevel mapping] registered manager
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [globalshortcuts] registered
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [input-capture] initializing input capture portal
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [input-capture] init successful
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [pipewire] connected
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] init successful
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+2026-10-29T18:22:15-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:22:15-07:00 omarchy /usr/lib/xdg-desktop-portal[205472]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:22:15-07:00 omarchy /usr/lib/xdg-desktop-portal[205472]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:22:15-07:00 omarchy /usr/lib/xdg-desktop-portal[205472]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:22:15-07:00 omarchy systemd[910]: Started Portal service.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_drm (ver 2)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG]  | Got interface: wl_output (ver 4)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] dmabufFeedbackMainDevice
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] Found output name HDMI-A-1
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [toplevel] Activated, bound to 55d352623910, toplevels: 3
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] Registered for toplevel export
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screenshot] init successful
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] registered
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_291/u1 sess=/org/freedesktop/portal/desktop/session/1_291/u1
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] CreateSession returning for appid=
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] devices selected: 7
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] SelectSources:
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_291/u3
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_291/u1
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy]  | appid:
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] unused option types
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] restore data invalid / missing, prompting
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] SHAREDATA returned selection 0
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] virtual pointer created
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] virtual keyboard created with keymap
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [pw] Building modifiers for dma
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [screencopy] Sharing initialized
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:24:19-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Stopping Portal service...
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[205469]: [LOG] [remotedesktop] session l
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: xdg-desktop-portal-hyprland.service: Consumed 52.275s CPU time over 4min 21.323s wall clock time, 292.3M memory peak.
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Stopped Portal service.
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: xdg-desktop-portal.service: Consumed 1.202s CPU time over 4min 21.329s wall clock time, 5.6M memory peak.
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Starting Portal service...
+2026-10-29T18:26:37-07:00 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:26:37-07:00 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:26:37-07:00 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] Initializing xdph...
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] XDG_CURRENT_DESKTOP set to Hyprland
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] Gathering exported interfaces
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_seat (ver 9)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_data_device_manager (ver 3)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_compositor (ver 6)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_subcompositor (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_shm (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_viewporter (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_tearing_control_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_fractional_scale_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zxdg_output_manager_v1 (ver 3)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_cursor_shape_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_idle_inhibit_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_relative_pointer_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zxdg_decoration_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_alpha_modifier_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_gamma_control_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_foreign_toplevel_list_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_pointer_gestures_v1 (ver 3)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_foreign_toplevel_manager_v1 (ver 3)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [toplevel] (activate) locks: 1
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_keyboard_shortcuts_inhibit_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_text_input_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_text_input_manager_v3 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_pointer_constraints_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_output_power_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xdg_activation_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_idle_notifier_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_lock_notifier_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_input_method_manager_v2 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_virtual_keyboard_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_virtual_pointer_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_output_manager_v1 (ver 4)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: org_kde_kwin_server_decoration_manager (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_focus_grab_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_tablet_manager_v2 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_layer_shell_v1 (ver 5)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_presentation (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xdg_wm_base (ver 7)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_data_control_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xwayland_shell_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [toplevel mapping] registered manager
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [globalshortcuts] registered
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [input-capture] initializing input capture portal
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [input-capture] init successful
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [pipewire] connected
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] init successful
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+2026-10-29T18:26:37-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:26:37-07:00 omarchy systemd[910]: Started Portal service.
+2026-10-29T18:27:56-07:00 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to close session implementation: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/session/1_341/proof2s'.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture_source_manager_v1 (ver 1)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_drm (ver 2)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG]  | Got interface: wl_output (ver 4)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] dmabufFeedbackMainDevice
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] Found output name HDMI-A-1
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [toplevel] Activated, bound to 556fd34a5910, toplevels: 2
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] Registered for toplevel export
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screenshot] init successful
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] registered
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_328/u1 sess=/org/freedesktop/portal/desktop/session/1_328/u1
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] CreateSession returning for appid=
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] devices selected: 7
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] SelectSources:
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_328/u3
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_328/u1
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy]  | appid:
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] unused option types
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] restore data invalid / missing, prompting
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] SHAREDATA returned selection 0
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] virtual pointer created
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] virtual keyboard created with keymap
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [pw] Building modifiers for dma
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy] Sharing initialized
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [screencopy/pipewire] Out of buffers
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [sc] Retrying screencopy (1/10)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_341/proof2 sess=/org/freedesktop/portal/desktop/session/1_341/proof2s
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [WARN] [remotedesktop] rejecting CreateSession: another remote session already exists
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+2026-10-29T18:29:16-07:00 omarchy xdg-desktop-portal-hyprland[208284]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+2026-10-29T18:29:16-07:00 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to close session implementation: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/session/1_342/proof3s'.

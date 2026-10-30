@@ -1,0 +1,1 @@
+123:[2026-10-29 18:13:12.460580 -07:00] WARN [src/server/wayland.rs:575] wayland_diag: Preventing duplicate PipeWire initialization

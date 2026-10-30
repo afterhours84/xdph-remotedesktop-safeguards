@@ -1,0 +1,536 @@
+diff --git a/protocols/meson.build w/protocols/meson.build
+index 2936b16..db98b81 100644
+--- a/protocols/meson.build
++++ b/protocols/meson.build
+@@ -26,6 +26,7 @@ client_protocols = [
+ 	hl_protocol_dir / 'protocols/hyprland-toplevel-mapping-v1.xml',
+ 	hl_protocol_dir / 'protocols/hyprland-global-shortcuts-v1.xml',
+ 	hl_protocol_dir / 'protocols/hyprland-input-capture-v1.xml',
++	hl_protocol_dir / 'protocols/hyprland-lock-notify-v1.xml',
+ 	wl_protocol_dir / 'stable/linux-dmabuf/linux-dmabuf-v1.xml',
+ 	wl_protocol_dir / 'unstable/xdg-output/xdg-output-unstable-v1.xml',
+ 	wl_protocol_dir / 'staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml',
+diff --git a/src/core/PortalManager.cpp w/src/core/PortalManager.cpp
+index 10f881a..7666b08 100644
+--- a/src/core/PortalManager.cpp
++++ b/src/core/PortalManager.cpp
+@@ -204,6 +204,11 @@ void CPortalManager::onGlobal(uint32_t name, const char* interface, uint32_t ver
+             (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &zwp_virtual_keyboard_manager_v1_interface, version));
+     }
+ 
++    else if (INTERFACE == hyprland_lock_notifier_v1_interface.name) {
++        m_sWaylandConnection.lockNotifier = makeShared<CCHyprlandLockNotifierV1>(
++            (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &hyprland_lock_notifier_v1_interface, 1));
++    }
++
+     else if (INTERFACE == wl_output_interface.name) {
+         const auto POUTPUT = m_vOutputs
+                                  .emplace_back(std::make_unique<SOutput>(makeShared<CCWlOutput>(
+@@ -436,6 +441,22 @@ void CPortalManager::init() {
+     // Missing input protocols are reported through AvailableDeviceTypes.
+     m_sPortals.remoteDesktop = std::make_unique<CRemoteDesktopPortal>(m_sWaylandConnection.virtualPointerMgr, m_sWaylandConnection.virtualKeyboardMgr);
+ 
++    if (m_sWaylandConnection.lockNotifier && m_sPortals.remoteDesktop) {
++        m_sWaylandConnection.lockNotification = makeShared<CCHyprlandLockNotificationV1>(m_sWaylandConnection.lockNotifier->sendGetLockNotification());
++        m_sWaylandConnection.lockNotification->setLocked([this](CCHyprlandLockNotificationV1*) {
++            m_sWaylandConnection.sessionLocked = true;
++            Debug::log(LOG, "[remotedesktop] session locked: closing remote sessions");
++            if (m_sPortals.remoteDesktop)
++                m_sPortals.remoteDesktop->closeAllSessions("screen locked");
++        });
++        m_sWaylandConnection.lockNotification->setUnlocked([this](CCHyprlandLockNotificationV1*) {
++            m_sWaylandConnection.sessionLocked = false;
++            Debug::log(LOG, "[remotedesktop] session unlocked");
++        });
++        Debug::log(LOG, "[remotedesktop] watching hyprland_lock_notifier_v1 for lock events");
++    } else
++        Debug::log(WARN, "[remotedesktop] hyprland_lock_notifier_v1 unavailable; sessions will NOT close on lock");
++
+     // Now that all D-Bus objects are registered, claim our service name.
+     // The frontend portal introspects when it sees our name appear; if we claim
+     // the name too early (before RemoteDesktop object is registered), the
+@@ -460,10 +481,25 @@ void CPortalManager::startEventLoop() {
+         exit(1);
+     }
+ 
++    // The dispatch loop below assumes indices 0..2 are dbus, wayland, pipewire.
++    // Portals may register extra fds (e.g. the RemoteDesktop lock watch) during
++    // construction, before this point, so move those after the core fds.
++    std::vector<pollfd> earlyFds;
++    {
++        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
++        earlyFds = std::move(m_sEventLoopInternals.pollFds);
++        m_sEventLoopInternals.pollFds.clear();
++    }
++
+     addFdToEventLoop(m_pConnection->getEventLoopPollData().fd, POLLIN, nullptr);
+     addFdToEventLoop(wl_display_get_fd(m_sWaylandConnection.display), POLLIN, nullptr);
+     addFdToEventLoop(pw_loop_get_fd(m_sPipewire.loop), POLLIN, nullptr);
+     addFdToEventLoop(m_sEventLoopInternals.wakeFd, POLLIN, nullptr);
++    {
++        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
++        for (auto& fd : earlyFds)
++            m_sEventLoopInternals.pollFds.emplace_back(fd);
++    }
+ 
+     std::thread pollThr([this]() {
+         while (1) {
+diff --git a/src/core/PortalManager.hpp w/src/core/PortalManager.hpp
+index 39b90c1..a848f71 100644
+--- a/src/core/PortalManager.hpp
++++ b/src/core/PortalManager.hpp
+@@ -19,6 +19,7 @@
+ 
+ #include "hyprland-toplevel-export-v1.hpp"
+ #include "hyprland-global-shortcuts-v1.hpp"
++#include "hyprland-lock-notify-v1.hpp"
+ #include "linux-dmabuf-v1.hpp"
+ #include "wlr-foreign-toplevel-management-unstable-v1.hpp"
+ #include "wlr-screencopy-unstable-v1.hpp"
+@@ -120,6 +121,9 @@ class CPortalManager {
+         SP<CCWlKeyboard>                      keyboard;
+         SP<CCZwlrVirtualPointerManagerV1>     virtualPointerMgr;
+         SP<CCZwpVirtualKeyboardManagerV1>     virtualKeyboardMgr;
++        SP<CCHyprlandLockNotifierV1>          lockNotifier;
++        SP<CCHyprlandLockNotificationV1>      lockNotification;
++        bool                                  sessionLocked = false;
+         gbm_bo*                               gbm       = nullptr;
+         gbm_device*                           gbmDevice = nullptr;
+         struct {
+diff --git a/src/portals/RemoteDesktop.cpp w/src/portals/RemoteDesktop.cpp
+index 96e6847..93758a6 100644
+--- a/src/portals/RemoteDesktop.cpp
++++ b/src/portals/RemoteDesktop.cpp
+@@ -16,7 +16,9 @@
+ #include <sys/mman.h>
+ #include <sys/random.h>
+ #include <sys/socket.h>
++#include <sys/un.h>
+ #include <sys/stat.h>
++#include <sys/wait.h>
+ #include <unistd.h>
+ #include <xkbcommon/xkbcommon.h>
+ 
+@@ -339,6 +341,11 @@ CRemoteDesktopPortal::CRemoteDesktopPortal(SP<CCZwlrVirtualPointerManagerV1> poi
+ }
+ 
+ CRemoteDesktopPortal::~CRemoteDesktopPortal() {
++    if (m_hyprlandIpcFd >= 0) {
++        g_pPortalManager->removeFdFromEventLoop(m_hyprlandIpcFd);
++        close(m_hyprlandIpcFd);
++        m_hyprlandIpcFd = -1;
++    }
+     if (m_xkbCtx)
+         xkb_context_unref(m_xkbCtx);
+ }
+@@ -346,6 +353,28 @@ CRemoteDesktopPortal::~CRemoteDesktopPortal() {
+ // ─── Session management ──────────────────────────────────────────
+ 
+ CRemoteDesktopPortal::SSession::~SSession() {
++    // Best-effort release of any still-held buttons/keys before Wayland objects die.
++    const uint32_t t = currentTimeMs();
++    if (virtualPointer) {
++        for (const int32_t button : pressedButtons)
++            virtualPointer->sendButton(t, button, 0);
++        if (!pressedButtons.empty())
++            virtualPointer->sendFrame();
++    }
++    if (virtualKeyboard) {
++        for (const int32_t key : pressedKeycodes) {
++            virtualKeyboard->sendKey(t, key, 0);
++            if (xkbState)
++                xkb_state_update_key(xkbState, key + 8, XKB_KEY_UP);
++        }
++        if (xkbState)
++            sendModifiers(virtualKeyboard.get(), xkbState, 0);
++    }
++    pressedButtons.clear();
++    pressedKeycodes.clear();
++    if (g_pPortalManager && g_pPortalManager->m_sWaylandConnection.display)
++        wl_display_flush(g_pPortalManager->m_sWaylandConnection.display);
++
+     if (xkbState)
+         xkb_state_unref(xkbState);
+     releaseKeymap(keymap);
+@@ -612,6 +641,18 @@ dbUasv CRemoteDesktopPortal::onCreateSession(sdbus::ObjectPath requestHandle, sd
+                                              std::unordered_map<std::string, sdbus::Variant> opts) {
+     Debug::log(LOG, "[remotedesktop] New session: appid={} req={} sess={}", appID, std::string(requestHandle), std::string(sessionHandle));
+ 
++    // Practical safeguard: never start remote control while the screen is locked.
++    if (g_pPortalManager->m_sWaylandConnection.sessionLocked) {
++        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: screen is locked");
++        return {2, {}};
++    }
++
++    // Practical safeguard: only one remote-desktop session at a time.
++    if (!m_vSessions.empty()) {
++        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: another remote session already exists");
++        return {2, {}};
++    }
++
+     const auto PSESSION = m_vSessions.emplace_back(std::make_unique<SSession>(appID, requestHandle, sessionHandle)).get();
+ 
+     PSESSION->session            = createDBusSession(sessionHandle);
+@@ -680,12 +721,12 @@ dbUasv CRemoteDesktopPortal::onSelectDevices(sdbus::ObjectPath requestHandle, sd
+         return {2, {}};
+     }
+ 
+-    // Deliberately not gated on persistMode: persist_mode describes how the *new*
+-    // session should be remembered, and says nothing about whether the token the app
+-    // just presented is good.
+-    PSESSION->restored = validateRestoreToken(PSESSION->restoreToken, appID, PSESSION->deviceTypes);
+-    if (PSESSION->restored)
+-        Debug::log(LOG, "[remotedesktop] valid restore token, skipping consent dialog");
++    // Practical safeguard: always require a fresh consent prompt. Ignore restore tokens
++    // so a cached RustDesk peer approval cannot skip the dialog.
++    if (!PSESSION->restoreToken.empty())
++        Debug::log(LOG, "[remotedesktop] ignoring restore token (consent required every session)");
++    PSESSION->restored    = false;
++    PSESSION->persistMode = 0;
+ 
+     return {0, {}};
+ }
+@@ -713,16 +754,13 @@ dbUasv CRemoteDesktopPortal::onStart(sdbus::ObjectPath requestHandle, sdbus::Obj
+         return {2, {}};
+     }
+ 
+-    // Persisting is the user's call, not the app's: `persist_mode` only gets us as far
+-    // as offering the checkbox in the consent dialog.
++    // Practical safeguard: always show the consent dialog; do not offer persistence.
+     bool persistAllowed = false;
+-    if (!PSESSION->restored) {
+-        if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, PSESSION->persistMode == 2, &persistAllowed)) {
+-            Debug::log(LOG, "[remotedesktop] user denied remote-control access");
+-            return {1, {}};
+-        }
+-    } else
+-        persistAllowed = true; // the grant being restored was consented to already
++    if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, false, &persistAllowed)) {
++        Debug::log(LOG, "[remotedesktop] user denied remote-control access");
++        return {1, {}};
++    }
++    persistAllowed = false;
+ 
+     bool initialized = true;
+ 
+@@ -941,6 +979,11 @@ void CRemoteDesktopPortal::onNotifyPointerButton(sdbus::ObjectPath sessionHandle
+     if (!PSESSION || !PSESSION->virtualPointer)
+         return;
+ 
++    if (state == 1)
++        PSESSION->pressedButtons.insert(button);
++    else
++        PSESSION->pressedButtons.erase(button);
++
+     PSESSION->virtualPointer->sendButton(currentTimeMs(), button, state);
+     PSESSION->virtualPointer->sendFrame();
+     wl_display_flush(g_pPortalManager->m_sWaylandConnection.display);
+@@ -954,7 +997,7 @@ void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle,
+     uint32_t time = currentTimeMs();
+     if (dy != 0.0) {
+         PSESSION->virtualPointer->sendAxisSource(2);
+-        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(-dy));
++        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+         PSESSION->axisActiveY = true;
+     }
+     if (dx != 0.0) {
+@@ -986,8 +1029,6 @@ void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath session
+     }
+ 
+     uint32_t time = currentTimeMs();
+-    if (axis == 0)
+-        steps = -steps;
+     PSESSION->virtualPointer->sendAxisSource(0);
+     PSESSION->virtualPointer->sendAxisDiscrete(time, axis, wl_fixed_from_int(steps * 15), steps);
+     PSESSION->virtualPointer->sendFrame();
+@@ -999,6 +1040,11 @@ void CRemoteDesktopPortal::onNotifyKeyboardKeycode(sdbus::ObjectPath sessionHand
+     if (!PSESSION || !PSESSION->virtualKeyboard)
+         return;
+ 
++    if (state == 1)
++        PSESSION->pressedKeycodes.insert(keycode);
++    else
++        PSESSION->pressedKeycodes.erase(keycode);
++
+     PSESSION->virtualKeyboard->sendKey(currentTimeMs(), keycode, state);
+     xkb_state_update_key(PSESSION->xkbState, keycode + 8, state == 1 ? XKB_KEY_DOWN : XKB_KEY_UP);
+     sendModifiers(PSESSION->virtualKeyboard.get(), PSESSION->xkbState, activeKeysymModifiers(PSESSION->keysymModifiers));
+@@ -1022,6 +1068,7 @@ void CRemoteDesktopPortal::onNotifyKeyboardKeysym(sdbus::ObjectPath sessionHandl
+     if (state == 1) {
+         PSESSION->keysymModifiers[keysym] = KEY.modifiers;
+         PSESSION->keysymKeycodes[keysym]  = KEY;
++        PSESSION->pressedKeycodes.insert(KEY.keycode);
+     }
+ 
+     sendModifiers(PSESSION->virtualKeyboard.get(), PSESSION->xkbState, activeKeysymModifiers(PSESSION->keysymModifiers) | KEY.modifiers, KEY.layout);
+@@ -1030,6 +1077,7 @@ void CRemoteDesktopPortal::onNotifyKeyboardKeysym(sdbus::ObjectPath sessionHandl
+     if (state != 1) {
+         PSESSION->keysymModifiers.erase(keysym);
+         PSESSION->keysymKeycodes.erase(keysym);
++        PSESSION->pressedKeycodes.erase(KEY.keycode);
+     }
+     sendModifiers(PSESSION->virtualKeyboard.get(), PSESSION->xkbState, activeKeysymModifiers(PSESSION->keysymModifiers));
+     wl_display_flush(g_pPortalManager->m_sWaylandConnection.display);
+@@ -1155,6 +1203,10 @@ void CRemoteDesktopPortal::processEISEvents() {
+                     if (s->virtualPointer) {
+                         uint32_t button = eis_event_button_get_button(event);
+                         uint32_t state  = eis_event_button_get_is_press(event) ? 1 : 0;
++                        if (state == 1)
++                            s->pressedButtons.insert(static_cast<int32_t>(button));
++                        else
++                            s->pressedButtons.erase(static_cast<int32_t>(button));
+                         s->virtualPointer->sendButton(time, button, state);
+                     }
+                     break;
+@@ -1165,7 +1217,7 @@ void CRemoteDesktopPortal::processEISEvents() {
+                         double dy = eis_event_scroll_get_dy(event);
+                         if (dy != 0.0) {
+                             s->virtualPointer->sendAxisSource(2);
+-                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(-dy));
++                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+                         }
+                         if (dx != 0.0) {
+                             s->virtualPointer->sendAxisSource(2);
+@@ -1183,7 +1235,7 @@ void CRemoteDesktopPortal::processEISEvents() {
+                         s->discreteScrollX %= 120;
+                         s->discreteScrollY %= 120;
+                         if (STEPSY != 0) {
+-                            const int32_t VERTICALSTEPS = -STEPSY;
++                            const int32_t VERTICALSTEPS = STEPSY;
+                             s->virtualPointer->sendAxisSource(0);
+                             s->virtualPointer->sendAxisDiscrete(time, 0, wl_fixed_from_int(VERTICALSTEPS * 15), VERTICALSTEPS);
+                         }
+@@ -1208,6 +1260,10 @@ void CRemoteDesktopPortal::processEISEvents() {
+                     if (s->virtualKeyboard) {
+                         uint32_t key   = eis_event_keyboard_get_key(event);
+                         uint32_t state = eis_event_keyboard_get_key_is_press(event) ? 1 : 0;
++                        if (state == 1)
++                            s->pressedKeycodes.insert(static_cast<int32_t>(key));
++                        else
++                            s->pressedKeycodes.erase(static_cast<int32_t>(key));
+                         s->virtualKeyboard->sendKey(time, key, state);
+                         xkb_state_update_key(s->xkbState, key + 8, state == 1 ? XKB_KEY_DOWN : XKB_KEY_UP);
+                         sendModifiers(s->virtualKeyboard.get(), s->xkbState, activeKeysymModifiers(s->keysymModifiers));
+@@ -1322,7 +1378,171 @@ CRemoteDesktopPortal::SSession* CRemoteDesktopPortal::getSession(const sdbus::Ob
+     return nullptr;
+ }
+ 
++void CRemoteDesktopPortal::releaseHeldInput(SSession* session) {
++    if (!session)
++        return;
++
++    const uint32_t t = currentTimeMs();
++    if (session->virtualPointer) {
++        for (const int32_t button : session->pressedButtons)
++            session->virtualPointer->sendButton(t, button, 0);
++        if (!session->pressedButtons.empty())
++            session->virtualPointer->sendFrame();
++    }
++    if (session->virtualKeyboard) {
++        for (const int32_t key : session->pressedKeycodes) {
++            session->virtualKeyboard->sendKey(t, key, 0);
++            if (session->xkbState)
++                xkb_state_update_key(session->xkbState, key + 8, XKB_KEY_UP);
++        }
++        if (session->xkbState)
++            sendModifiers(session->virtualKeyboard.get(), session->xkbState, 0);
++    }
++    session->pressedButtons.clear();
++    session->pressedKeycodes.clear();
++    session->keysymModifiers.clear();
++    session->keysymKeycodes.clear();
++    if (g_pPortalManager->m_sWaylandConnection.display)
++        wl_display_flush(g_pPortalManager->m_sWaylandConnection.display);
++}
++
++void CRemoteDesktopPortal::closeAllSessions(const char* reason) {
++    Debug::log(LOG, "[remotedesktop] closing all sessions ({})", reason ? reason : "unspecified");
++
++    // Practical safeguard: let the user run a hook (e.g. restart the remote
++    // desktop client so the viewer sees a real disconnect). Opt-in: only runs
++    // if ~/.local/bin/xdph-rd-on-lock exists and is executable.
++    if (const char* home = getenv("HOME"); home && reason && std::string{reason} == "screen locked") {
++        const std::string hook = std::string{home} + "/.local/bin/xdph-rd-on-lock";
++        if (access(hook.c_str(), X_OK) == 0) {
++            Debug::log(LOG, "[remotedesktop] running lock hook {}", hook);
++            pid_t pid = fork();
++            if (pid == 0) {
++                setsid();
++                if (fork() == 0) {
++                    execl(hook.c_str(), hook.c_str(), (char*)nullptr);
++                    _exit(127);
++                }
++                _exit(0);
++            } else if (pid > 0)
++                waitpid(pid, nullptr, 0);
++        }
++    }
++
++    std::vector<sdbus::ObjectPath> paths;
++    paths.reserve(m_vSessions.size());
++    for (const auto& s : m_vSessions)
++        paths.push_back(s->sessionHandle);
++
++    for (const auto& path : paths) {
++        SSession* s = getSession(path);
++        if (!s)
++            continue;
++
++        releaseHeldInput(s);
++        s->virtualPointer.reset();
++        s->virtualKeyboard.reset();
++
++        if (s->session && s->session->object) {
++            try {
++                s->session->object->emitSignal(sdbus::SignalName{"Closed"}).onInterface(sdbus::InterfaceName{"org.freedesktop.impl.portal.Session"});
++            } catch (const std::exception& e) { Debug::log(WARN, "[remotedesktop] failed to emit Session.Closed: {}", e.what()); }
++        }
++
++        if (s->session) {
++            auto destroy = std::move(s->session->onDestroy);
++            s->session->object.reset();
++            if (destroy)
++                destroy();
++            else
++                destroySession(path);
++        } else
++            destroySession(path);
++    }
++}
++
++void CRemoteDesktopPortal::setupLockWatch() {
++    const char* signature = getenv("HYPRLAND_INSTANCE_SIGNATURE");
++    const char* runtime   = getenv("XDG_RUNTIME_DIR");
++    if (!signature || !*signature || !runtime || !*runtime) {
++        Debug::log(WARN, "[remotedesktop] Hyprland IPC unavailable; lock watch disabled");
++        return;
++    }
++
++    const std::string path = std::format("{}/hypr/{}/.socket2.sock", runtime, signature);
++    const int         fd   = socket(AF_UNIX, SOCK_STREAM | SOCK_CLOEXEC | SOCK_NONBLOCK, 0);
++    if (fd < 0) {
++        Debug::log(WARN, "[remotedesktop] lock watch socket() failed: {}", strerror(errno));
++        return;
++    }
++
++    sockaddr_un addr{};
++    addr.sun_family = AF_UNIX;
++    if (path.size() >= sizeof(addr.sun_path)) {
++        Debug::log(WARN, "[remotedesktop] Hyprland IPC path too long");
++        close(fd);
++        return;
++    }
++    std::memcpy(addr.sun_path, path.c_str(), path.size() + 1);
++
++    if (connect(fd, reinterpret_cast<sockaddr*>(&addr), sizeof(addr)) < 0) {
++        Debug::log(WARN, "[remotedesktop] cannot connect to {}: {}", path, strerror(errno));
++        close(fd);
++        return;
++    }
++
++    m_hyprlandIpcFd = fd;
++    g_pPortalManager->addFdToEventLoop(fd, POLLIN, [this] { onHyprlandIpcEvent(); });
++    Debug::log(LOG, "[remotedesktop] watching Hyprland IPC for lock events at {}", path);
++}
++
++void CRemoteDesktopPortal::onHyprlandIpcEvent() {
++    if (m_hyprlandIpcFd < 0)
++        return;
++
++    char buf[4096];
++    while (true) {
++        const ssize_t n = read(m_hyprlandIpcFd, buf, sizeof(buf));
++        if (n < 0) {
++            if (errno == EINTR)
++                continue;
++            if (errno == EAGAIN || errno == EWOULDBLOCK)
++                break;
++            Debug::log(WARN, "[remotedesktop] Hyprland IPC read failed: {}", strerror(errno));
++            g_pPortalManager->removeFdFromEventLoop(m_hyprlandIpcFd);
++            close(m_hyprlandIpcFd);
++            m_hyprlandIpcFd = -1;
++            break;
++        }
++        if (n == 0) {
++            Debug::log(WARN, "[remotedesktop] Hyprland IPC closed");
++            g_pPortalManager->removeFdFromEventLoop(m_hyprlandIpcFd);
++            close(m_hyprlandIpcFd);
++            m_hyprlandIpcFd = -1;
++            break;
++        }
++        m_hyprlandIpcBuf.append(buf, static_cast<size_t>(n));
++    }
++
++    size_t pos = 0;
++    while (true) {
++        const size_t nl = m_hyprlandIpcBuf.find('\n', pos);
++        if (nl == std::string::npos) {
++            m_hyprlandIpcBuf.erase(0, pos);
++            break;
++        }
++        const std::string_view line(m_hyprlandIpcBuf.data() + pos, nl - pos);
++        pos = nl + 1;
++        // Hyprland emits "lock>>" when the session lock activates.
++        if (line.starts_with("lock>>"))
++            closeAllSessions("screen locked");
++    }
++}
++
+ void CRemoteDesktopPortal::destroySession(const sdbus::ObjectPath& path) {
++    if (const auto PSESSION = getSession(path))
++        releaseHeldInput(PSESSION);
++
+     if (g_pPortalManager->m_sPortals.screencopy)
+         g_pPortalManager->m_sPortals.screencopy->destroyRemoteDesktopSession(path);
+ 
+diff --git a/src/portals/RemoteDesktop.hpp w/src/portals/RemoteDesktop.hpp
+index 7121c13..32e4254 100644
+--- a/src/portals/RemoteDesktop.hpp
++++ b/src/portals/RemoteDesktop.hpp
+@@ -1,6 +1,8 @@
+ #pragma once
+ 
+ #include <memory>
++#include <set>
++#include <unordered_set>
+ #include <vector>
+ #include <sdbus-c++/sdbus-c++.h>
+ #include <xkbcommon/xkbcommon.h>
+@@ -20,6 +22,7 @@ struct eis_device;
+ 
+ class CRemoteDesktopPortal {
+   public:
++    void closeAllSessions(const char* reason);
+     CRemoteDesktopPortal(SP<CCZwlrVirtualPointerManagerV1> pointerMgr, SP<CCZwpVirtualKeyboardManagerV1> keyboardMgr);
+     ~CRemoteDesktopPortal();
+ 
+@@ -111,6 +114,10 @@ class CRemoteDesktopPortal {
+         std::unordered_map<int32_t, xkb_mod_mask_t> keysymModifiers;
+         std::unordered_map<int32_t, SKeycode>       keysymKeycodes;
+ 
++        // Buttons/keys this session currently holds down. Released on destroy or lock.
++        std::unordered_set<int32_t>                 pressedButtons;
++        std::unordered_set<int32_t>                 pressedKeycodes;
++
+         SKeymap                                     keymap;
+ 
+         // EIS/libei state (created by ConnectToEIS)
+@@ -125,6 +132,9 @@ class CRemoteDesktopPortal {
+ 
+     SSession*               getSession(const sdbus::ObjectPath& path);
+     void                    destroySession(const sdbus::ObjectPath& path);
++    void                    releaseHeldInput(SSession* session);
++    void                    setupLockWatch();
++    void                    onHyprlandIpcEvent();
+     void                    createEISPointerDevice(SSession* session);
+     void                    removeEISPointerDevice(SSession* session, bool notifyClient = true);
+     void                    createEISKeyboardDevice(SSession* session);
+@@ -140,6 +150,8 @@ class CRemoteDesktopPortal {
+ 
+     std::unique_ptr<sdbus::IObject>        m_pObject;
+     std::vector<std::unique_ptr<SSession>> m_vSessions;
++    int                                    m_hyprlandIpcFd = -1;
++    std::string                            m_hyprlandIpcBuf;
+ 
+     struct {
+         SP<CCZwlrVirtualPointerManagerV1> pointer;

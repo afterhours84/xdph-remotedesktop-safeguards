@@ -1,0 +1,30 @@
+diff --git a/src/core/PortalManager.cpp b/src/core/PortalManager.cpp
+index 10f881a..529b2ef 100644
+--- a/src/core/PortalManager.cpp
++++ b/src/core/PortalManager.cpp
+@@ -460,10 +460,25 @@ void CPortalManager::startEventLoop() {
+         exit(1);
+     }
+ 
++    // The dispatch loop below assumes indices 0..2 are dbus, wayland, pipewire.
++    // Portals may register extra fds (e.g. the RemoteDesktop lock watch) during
++    // construction, before this point, so move those after the core fds.
++    std::vector<pollfd> earlyFds;
++    {
++        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
++        earlyFds = std::move(m_sEventLoopInternals.pollFds);
++        m_sEventLoopInternals.pollFds.clear();
++    }
++
+     addFdToEventLoop(m_pConnection->getEventLoopPollData().fd, POLLIN, nullptr);
+     addFdToEventLoop(wl_display_get_fd(m_sWaylandConnection.display), POLLIN, nullptr);
+     addFdToEventLoop(pw_loop_get_fd(m_sPipewire.loop), POLLIN, nullptr);
+     addFdToEventLoop(m_sEventLoopInternals.wakeFd, POLLIN, nullptr);
++    {
++        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
++        for (auto& fd : earlyFds)
++            m_sEventLoopInternals.pollFds.emplace_back(fd);
++    }
+ 
+     std::thread pollThr([this]() {
+         while (1) {

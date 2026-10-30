@@ -1,0 +1,9 @@
+Best-effort extract from full.diff: consent-every-session, one-session-at-a-time,
+refuse CreateSession while locked, track/release held input, closeAllSessions
+(including optional ~/.local/bin/xdph-rd-on-lock hook on "screen locked").
+Scroll-direction hunks removed (see 05-scroll-direction.patch).
+WARNING: still includes unused socket2 IPC helpers (setupLockWatch / onHyprlandIpcEvent)
+left over from an earlier attempt; they are never called. Active lock path is
+hyprland_lock_notifier_v1 in 03-lock-notify.patch. Prefer patches/full.diff for
+a faithful reproduce of what was tested.
+

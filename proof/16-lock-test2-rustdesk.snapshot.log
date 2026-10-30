@@ -1,0 +1,94 @@
+[2026-10-29 18:17:30.876484 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:17:30.876527 -07:00] INFO [src/server/connection.rs:2847] receive close reason: 
+[2026-10-29 18:17:30.876592 -07:00] INFO [src/server/connection.rs:5249] #1085 Connection closed: Peer close
+[2026-10-29 18:17:30.876624 -07:00] INFO [src/server/connection.rs:1237] #1085 connection loop exited
+[2026-10-29 18:17:30.876663 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1085)
+[2026-10-29 18:17:30.876674 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:17:30.876711 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:17:30.876723 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:17:30.876731 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:17:30.876738 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:17:30.876824 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:17:30.876877 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:17:30.876923 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 18:17:30.893701 -07:00] DEBUG [src/server/service.rs:321] Exit audio service inner loop
+[2026-10-29 18:17:30.906726 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-29 18:17:30.906772 -07:00] DEBUG [src/server/service.rs:321] Exit monitor0 service inner loop
+[2026-10-29 18:17:30.987386 -07:00] DEBUG [src/server/service.rs:321] Exit display service inner loop
+[2026-10-29 18:17:31.010659 -07:00] INFO [src/clipboard.rs:1082] Unsubscribe clipboard listener: clipboard
+[2026-10-29 18:17:31.010702 -07:00] INFO [src/clipboard.rs:1093] Stop clipboard listener thread
+[2026-10-29 18:17:31.020841 -07:00] DEBUG [src/clipboard.rs:1116] Clipboard listener stopped
+[2026-10-29 18:17:31.021011 -07:00] INFO [src/clipboard.rs:1096] Clipboard listener thread stopped
+[2026-10-29 18:17:31.021029 -07:00] INFO [src/clipboard.rs:1099] Clipboard listener unsubscribed: clipboard
+[2026-10-29 18:17:31.021051 -07:00] DEBUG [src/server/service.rs:321] Exit clipboard service inner loop
+[2026-10-29 18:17:33.321958 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52313
+[2026-10-29 18:17:33.489850 -07:00] INFO [src/server.rs:193] Server listening on: 192.168.x.x:42453
+[2026-10-29 18:17:33.497527 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:595] New webrtc stream (remote endpoint: 673 bytes)
+[2026-10-29 18:17:33.498061 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:861] remote offer SDP received (424 bytes), local answer endpoint 673 bytes
+[2026-10-29 18:17:33.498070 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connecting
+[2026-10-29 18:17:33.498111 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:867] Start webrtc with remote key: sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:17:33.500200 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.cloudflare.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-29 18:17:33.501771 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.l.google.com:19302: io error: Network is unreachable (os error 101)
+[2026-10-29 18:17:33.501795 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.antisip.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-29 18:17:33.501947 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.nextcloud.com:443: io error: Network is unreachable (os error 101)
+[2026-10-29 18:17:33.825780 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-29 18:17:35.011503 -07:00] INFO [src/rendezvous_mediator.rs:712] create_relay requested from REDACTED_PUBLIC_IP:52315, relay_server: ovh-west1.rustdesk.com, uuid: REDACTED_UUID, secure: true
+[2026-10-29 18:17:35.203542 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connected
+[2026-10-29 18:17:35.215562 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:765] Remote data channel bootstrap ready
+[2026-10-29 18:17:35.215613 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/data_channel/mod.rs:242] webrtc.DetachDataChannels() enabled but didn't Detach, call Detach from OnOpen
+[2026-10-29 18:17:35.221750 -07:00] DEBUG [src/server/connection.rs:1498] #1086 Connection opened from REDACTED_PUBLIC_IP:52314.
+[2026-10-29 18:17:35.228545 -07:00] INFO [src/platform/mod.rs:112] new wakelock, require display on: true
+[2026-10-29 18:17:35.228688 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-29 18:17:35.228724 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-29 18:17:35.228745 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:17:35.228772 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-29 18:17:35.228821 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:17:35.228839 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-29 18:17:35.228910 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-29 18:17:35.229261 -07:00] INFO [src/platform/linux.rs:2591] wakelock: keepawake could not take the inhibit (org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable)
+[2026-10-29 18:17:35.229343 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-29 18:17:35.229381 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-29 18:17:35.229419 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:17:35.229436 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-29 18:17:35.229449 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:17:35.229462 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-29 18:17:35.229505 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-29 18:17:35.234800 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-29 18:17:35.256687 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:17:35.268309 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 120 to PLAYING state...
+[2026-10-29 18:17:35.277757 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-29 18:17:35.277880 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-29 18:17:35.277926 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-29 18:17:35.277967 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-29 18:17:35.278027 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-29 18:17:35.287756 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-29 18:17:35.289688 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 120 to PLAYING state...
+[2026-10-29 18:17:35.295566 -07:00] ERROR [src/server/wayland.rs:128] Failed scrap Element failed to change its state
+[2026-10-29 18:17:35.295621 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1086, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:17:35.295757 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:17:35.295773 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:17:35.295800 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:17:35.295843 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1086, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:17:35.295918 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:17:35.295926 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:17:35.301330 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:17:35.301396 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 18:17:35.301416 -07:00] INFO [src/server/connection.rs:5249] #1086 Connection closed: Reset by the peer
+[2026-10-29 18:17:35.301433 -07:00] INFO [src/server/connection.rs:1237] #1086 connection loop exited
+[2026-10-29 18:17:35.301456 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1086)
+[2026-10-29 18:17:35.301485 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:17:35.301476 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:17:35.301520 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301540 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:17:35.301581 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301611 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301598 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:17:35.301681 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:17:35.301718 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:17:35.301751 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:17:35.303448 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-29 18:17:35.605637 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 18:17:36.896103 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-29 18:17:38.503648 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-29 18:17:51.491489 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52313: deadline has elapsed
+[2026-10-29 18:17:53.252247 -07:00] ERROR [src/server.rs:387] Failed to create relay connection for REDACTED_PUBLIC_IP:52315 with uuid REDACTED_UUID: deadline has elapsed

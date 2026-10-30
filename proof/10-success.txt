@@ -1,0 +1,12 @@
+2026-10-29T18:08:55-07:00
+User confirmed: typing from gaming PC into omarchy via RustDesk
+Oct 29 18:06:50 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 29 18:06:50 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 29 18:06:50 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 29 18:06:50 omarchy xdg-desktop-portal-hyprland[195864]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+Oct 29 18:06:50 omarchy xdg-desktop-portal-hyprland[195864]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+Oct 29 18:06:50 omarchy xdg-desktop-portal-hyprland[195864]: [LOG] [screencopy] init successful
+Oct 29 18:06:50 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+[2026-10-29 18:08:11.284480 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-29 18:08:11.284675 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-29 18:08:11.302741 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8

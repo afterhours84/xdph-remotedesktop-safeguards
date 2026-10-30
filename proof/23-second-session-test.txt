@@ -1,0 +1,7 @@
+2026-10-29T18:27:55-07:00
+--- active sessions check: rustdesk connected from gaming PC
+(objectpath '/org/freedesktop/portal/desktop/request/1_341/proof2',)
+--- dbus monitor
+Oct 29 18:27:56 omarchy /usr/lib/xdg-desktop-portal[208286]: Failed to close session implementation: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/session/1_341/proof2s'.
+Result: backend refused CreateSession (frontend: 'Failed to close session implementation ... Unknown object .../proof2s', i.e. no backend session was created) while RustDesk session was active.
+tester confirmed active RustDesk session unaffected: PASS 2026-10-29T18:28:41-07:00

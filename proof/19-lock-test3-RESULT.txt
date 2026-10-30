@@ -1,0 +1,1 @@
+Lock test 3 (fix-03, 2026-10-29 ~18:24 MST): PASS per tester. Lock closed portal session, hook restarted RustDesk (lock-hook.log), viewer auto-reconnected after unlock and a fresh screen picker + approval was required on omarchy.

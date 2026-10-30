@@ -1,0 +1,73 @@
+diff --git a/protocols/meson.build b/protocols/meson.build
+index 2936b16..db98b81 100644
+--- a/protocols/meson.build
++++ b/protocols/meson.build
+@@ -26,6 +26,7 @@ client_protocols = [
+ 	hl_protocol_dir / 'protocols/hyprland-toplevel-mapping-v1.xml',
+ 	hl_protocol_dir / 'protocols/hyprland-global-shortcuts-v1.xml',
+ 	hl_protocol_dir / 'protocols/hyprland-input-capture-v1.xml',
++	hl_protocol_dir / 'protocols/hyprland-lock-notify-v1.xml',
+ 	wl_protocol_dir / 'stable/linux-dmabuf/linux-dmabuf-v1.xml',
+ 	wl_protocol_dir / 'unstable/xdg-output/xdg-output-unstable-v1.xml',
+ 	wl_protocol_dir / 'staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml',
+diff --git a/src/core/PortalManager.cpp b/src/core/PortalManager.cpp
+index 10f881a..7666b08 100644
+--- a/src/core/PortalManager.cpp
++++ b/src/core/PortalManager.cpp
+@@ -204,6 +204,11 @@ void CPortalManager::onGlobal(uint32_t name, const char* interface, uint32_t ver
+             (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &zwp_virtual_keyboard_manager_v1_interface, version));
+     }
+ 
++    else if (INTERFACE == hyprland_lock_notifier_v1_interface.name) {
++        m_sWaylandConnection.lockNotifier = makeShared<CCHyprlandLockNotifierV1>(
++            (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &hyprland_lock_notifier_v1_interface, 1));
++    }
++
+     else if (INTERFACE == wl_output_interface.name) {
+         const auto POUTPUT = m_vOutputs
+                                  .emplace_back(std::make_unique<SOutput>(makeShared<CCWlOutput>(
+@@ -436,6 +441,22 @@ void CPortalManager::init() {
+     // Missing input protocols are reported through AvailableDeviceTypes.
+     m_sPortals.remoteDesktop = std::make_unique<CRemoteDesktopPortal>(m_sWaylandConnection.virtualPointerMgr, m_sWaylandConnection.virtualKeyboardMgr);
+ 
++    if (m_sWaylandConnection.lockNotifier && m_sPortals.remoteDesktop) {
++        m_sWaylandConnection.lockNotification = makeShared<CCHyprlandLockNotificationV1>(m_sWaylandConnection.lockNotifier->sendGetLockNotification());
++        m_sWaylandConnection.lockNotification->setLocked([this](CCHyprlandLockNotificationV1*) {
++            m_sWaylandConnection.sessionLocked = true;
++            Debug::log(LOG, "[remotedesktop] session locked: closing remote sessions");
++            if (m_sPortals.remoteDesktop)
++                m_sPortals.remoteDesktop->closeAllSessions("screen locked");
++        });
++        m_sWaylandConnection.lockNotification->setUnlocked([this](CCHyprlandLockNotificationV1*) {
++            m_sWaylandConnection.sessionLocked = false;
++            Debug::log(LOG, "[remotedesktop] session unlocked");
++        });
++        Debug::log(LOG, "[remotedesktop] watching hyprland_lock_notifier_v1 for lock events");
++    } else
++        Debug::log(WARN, "[remotedesktop] hyprland_lock_notifier_v1 unavailable; sessions will NOT close on lock");
++
+     // Now that all D-Bus objects are registered, claim our service name.
+     // The frontend portal introspects when it sees our name appear; if we claim
+     // the name too early (before RemoteDesktop object is registered), the
+diff --git a/src/core/PortalManager.hpp b/src/core/PortalManager.hpp
+index 39b90c1..a848f71 100644
+--- a/src/core/PortalManager.hpp
++++ b/src/core/PortalManager.hpp
+@@ -19,6 +19,7 @@
+ 
+ #include "hyprland-toplevel-export-v1.hpp"
+ #include "hyprland-global-shortcuts-v1.hpp"
++#include "hyprland-lock-notify-v1.hpp"
+ #include "linux-dmabuf-v1.hpp"
+ #include "wlr-foreign-toplevel-management-unstable-v1.hpp"
+ #include "wlr-screencopy-unstable-v1.hpp"
+@@ -120,6 +121,9 @@ class CPortalManager {
+         SP<CCWlKeyboard>                      keyboard;
+         SP<CCZwlrVirtualPointerManagerV1>     virtualPointerMgr;
+         SP<CCZwpVirtualKeyboardManagerV1>     virtualKeyboardMgr;
++        SP<CCHyprlandLockNotifierV1>          lockNotifier;
++        SP<CCHyprlandLockNotificationV1>      lockNotification;
++        bool                                  sessionLocked = false;
+         gbm_bo*                               gbm       = nullptr;
+         gbm_device*                           gbmDevice = nullptr;
+         struct {

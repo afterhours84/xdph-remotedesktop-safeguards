@@ -1,0 +1,208 @@
+ninja: Entering directory `build-omarchy'
+[0/1] Regenerating build files
+The Meson build system
+Version: 1.12.1
+Source dir: ~/Projects/xdph-rd/src
+Build dir: ~/Projects/xdph-rd/src/build-omarchy
+Build type: native build
+Project name: xdg-desktop-portal-hyprland
+Project version: 1.4.1
+C compiler for the host machine: cc (gcc 16.2.1 "cc (GCC) 16.2.1 20260810")
+C linker for the host machine: cc ld.bfd 2.47
+C++ compiler for the host machine: c++ (gcc 16.2.1 "c++ (GCC) 16.2.1 20260810")
+C++ linker for the host machine: c++ ld.bfd 2.47
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C++ supports arguments -std=c++23: YES (cached)
+../meson.build:18: WARNING: Consider using the built-in option for language standard version instead of using "-std=c++23".
+Compiler for C++ supports arguments -Wno-missing-field-initializers: YES (cached)
+Compiler for C++ supports arguments -Wno-narrowing: YES (cached)
+Compiler for C++ supports arguments -Wno-pointer-arith: YES (cached)
+Compiler for C++ supports arguments -Wno-unused-parameter: YES (cached)
+Compiler for C++ supports arguments -Wno-unused-value: YES (cached)
+Compiler for C++ supports arguments -fpermissive: YES (cached)
+Compiler for C++ supports arguments -Wno-address-of-temporary: NO (cached)
+Dependency systemd for host machine found: YES 262 (cached)
+Configuring xdg-desktop-portal-hyprland.service using configuration
+Configuring org.freedesktop.impl.portal.desktop.hyprland.service using configuration
+Dependency wayland-protocols for host machine found: YES 1.49 (cached)
+Dependency hyprland-protocols for host machine found: YES 0.8.0 (cached)
+Dependency hyprwayland-scanner for host machine found: YES 0.4.6 (cached)
+Program /usr/bin/hyprwayland-scanner found: YES (/usr/bin/hyprwayland-scanner)
+Dependency wayland-scanner for host machine found: YES 1.26.0 (cached)
+Dependency gbm for host machine found: YES 26.2.5-arch1.1 (cached)
+Dependency hyprlang for host machine found: YES 0.6.8 (cached)
+Dependency hyprutils for host machine found: YES 0.14.2 (cached)
+Dependency libdrm for host machine found: YES 2.4.134 (cached)
+Dependency libpipewire-0.3 for host machine found: YES 1.6.9 (cached)
+Dependency libeis-1.0 for host machine found: YES 1.6.0 (cached)
+Dependency sdbus-c++ for host machine found: YES 2.3.1 (cached)
+Dependency threads for host machine found: YES unknown (cached)
+Dependency wayland-client for host machine found: YES 1.26.0 (cached)
+Dependency uuid for host machine found: YES 2.42.4 (cached)
+Dependency xkbcommon for host machine found: YES 1.13.2 (cached)
+Dependency qt6 (modules: Widgets) for host machine found: YES 6.12.0 (cached)
+Detecting Qt6 tools
+Found pkg-config: YES (/usr/bin/pkg-config) 3.0.10
+Run-time dependency qt6 (modules: Core) found: YES 6.12.0 (pkg-config)
+Program /usr/lib/qt6/bin/qmlcachegen found: NO
+Program /usr/lib/qt6/qmlcachegen found: YES 6.12.0 6.12.0 (/usr/lib/qt6/qmlcachegen)
+Program /usr/lib/qt6/bin/moc found: NO
+Program /usr/lib/qt6/moc found: YES 6.12.0 6.12.0 (/usr/lib/qt6/moc)
+Program /usr/lib/qt6/bin/lrelease found: NO
+Program /usr/lib/qt6/lrelease found: NO
+Program lrelease6 found: NO
+Program lrelease-qt6 found: NO
+Program lrelease found: NO
+Program /usr/lib/qt6/bin/qmltyperegistrar found: NO
+Program /usr/lib/qt6/qmltyperegistrar found: YES 6.12.0 6.12.0 (/usr/lib/qt6/qmltyperegistrar)
+Program /usr/lib/qt6/bin/rcc found: NO
+Program /usr/lib/qt6/rcc found: YES 6.12.0 6.12.0 (/usr/lib/qt6/rcc)
+Program /usr/lib/qt6/bin/uic found: NO
+Program /usr/lib/qt6/uic found: YES 6.12.0 6.12.0 (/usr/lib/qt6/uic)
+Dependency hyprutils for host machine found: YES 0.14.2 (cached)
+Build targets in project: 16
+
+xdg-desktop-portal-hyprland 1.4.1
+
+  User defined options
+    buildtype: release
+    prefix   : ~/.local/opt/xdph-rd
+
+Found ninja-1.13.2 at /usr/bin/ninja
+Generating targets:   0%|          | 0/16 eta ?                                               Writing build.ninja:   0%|          | 0/94 eta ?                                                Cleaning... 0 files.
+[1/16] Generating protocols/_usr_share_hyprland_protocols_protocols_hyprland_lock_notify_v1_xml_c with a custom command
+[2/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/meson-generated_.._.._protocols_hyprland-lock-notify-v1.cpp.o
+[3/16] Compiling C++ object protocols/libclient_protos.a.p/meson-generated_.._hyprland-lock-notify-v1.cpp.o
+[4/16] Linking static target protocols/libclient_protos.a
+[5/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/main.cpp.o
+[6/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/shared_ToplevelManager.cpp.o
+[7/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/shared_Session.cpp.o
+[8/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/shared_ScreencopyShared.cpp.o
+../src/shared/ScreencopyShared.cpp: In function ‘SSelectionData promptForScreencopySelection(bool)’:
+../src/shared/ScreencopyShared.cpp:51:46: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+   51 |     static auto* const*      PCUSTOMPICKER = (Hyprlang::STRING* const)g_pPortalManager->m_sConfig.config->getConfigValuePtr("screencopy:custom_picker_binary")->getDataStaticPtr();
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/spa-0.2/spa/pod/builder.h:12,
+                 from ../src/shared/ScreencopyShared.hpp:6,
+                 from ../src/shared/ScreencopyShared.cpp:1:
+../src/shared/ScreencopyShared.cpp: In function ‘spa_pod* fixate_format(spa_pod_builder*, spa_video_format, uint32_t, uint32_t, uint32_t, uint64_t*)’:
+/usr/include/spa-0.2/spa/utils/defs.h:100:60: warning: taking address of rvalue [-fpermissive]
+  100 | #define SPA_RECTANGLE(width,height) ((struct spa_rectangle){ (width), (height) })
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:71:61: note: in definition of macro ‘SPA_POD_Rectangle’
+   71 | #define SPA_POD_Rectangle(val)                          "R",val
+      |                                                             ^~~
+../src/shared/ScreencopyShared.cpp:292:70: note: in expansion of macro ‘SPA_RECTANGLE’
+  292 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_size, SPA_POD_Rectangle(&SPA_RECTANGLE(width, height)), 0);
+      |                                                                      ^~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:76:61: note: in definition of macro ‘SPA_POD_Fraction’
+   76 | #define SPA_POD_Fraction(val)                           "F",val
+      |                                                             ^~~
+../src/shared/ScreencopyShared.cpp:294:74: note: in expansion of macro ‘SPA_FRACTION’
+  294 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_framerate, SPA_POD_Fraction(&SPA_FRACTION(0, 1)), 0);
+      |                                                                          ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:60: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                            ^~~
+../src/shared/ScreencopyShared.cpp:295:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:295:90: note: in expansion of macro ‘SPA_FRACTION’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                          ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:66: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                                  ^~~
+../src/shared/ScreencopyShared.cpp:295:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:295:119: note: in expansion of macro ‘SPA_FRACTION’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                                                       ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:72: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                                        ^~~
+../src/shared/ScreencopyShared.cpp:295:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:295:140: note: in expansion of macro ‘SPA_FRACTION’
+  295 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                                                                            ^~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp: In function ‘spa_pod* build_format(spa_pod_builder*, spa_video_format, uint32_t, uint32_t, uint32_t, uint64_t*, int)’:
+/usr/include/spa-0.2/spa/utils/defs.h:100:60: warning: taking address of rvalue [-fpermissive]
+  100 | #define SPA_RECTANGLE(width,height) ((struct spa_rectangle){ (width), (height) })
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:71:61: note: in definition of macro ‘SPA_POD_Rectangle’
+   71 | #define SPA_POD_Rectangle(val)                          "R",val
+      |                                                             ^~~
+../src/shared/ScreencopyShared.cpp:329:70: note: in expansion of macro ‘SPA_RECTANGLE’
+  329 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_size, SPA_POD_Rectangle(&SPA_RECTANGLE(width, height)), 0);
+      |                                                                      ^~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:76:61: note: in definition of macro ‘SPA_POD_Fraction’
+   76 | #define SPA_POD_Fraction(val)                           "F",val
+      |                                                             ^~~
+../src/shared/ScreencopyShared.cpp:331:74: note: in expansion of macro ‘SPA_FRACTION’
+  331 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_framerate, SPA_POD_Fraction(&SPA_FRACTION(0, 1)), 0);
+      |                                                                          ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:60: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                            ^~~
+../src/shared/ScreencopyShared.cpp:332:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:332:90: note: in expansion of macro ‘SPA_FRACTION’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                          ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:66: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                                  ^~~
+../src/shared/ScreencopyShared.cpp:332:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:332:119: note: in expansion of macro ‘SPA_FRACTION’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                                                       ^~~~~~~~~~~~
+/usr/include/spa-0.2/spa/utils/defs.h:118:55: warning: taking address of rvalue [-fpermissive]
+  118 | #define SPA_FRACTION(num,denom) ((struct spa_fraction){ (num), (denom) })
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/spa-0.2/spa/pod/vararg.h:29:72: note: in definition of macro ‘SPA_CHOICE_RANGE’
+   29 | #define SPA_CHOICE_RANGE(def,min,max)                   3,(def),(min),(max)
+      |                                                                        ^~~
+../src/shared/ScreencopyShared.cpp:332:59: note: in expansion of macro ‘SPA_POD_CHOICE_RANGE_Fraction’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/shared/ScreencopyShared.cpp:332:140: note: in expansion of macro ‘SPA_FRACTION’
+  332 |     spa_pod_builder_add(b, SPA_FORMAT_VIDEO_maxFramerate, SPA_POD_CHOICE_RANGE_Fraction(&SPA_FRACTION(framerate, 1), &SPA_FRACTION(1, 1), &SPA_FRACTION(framerate, 1)), 0);
+      |                                                                                                                                            ^~~~~~~~~~~~
+[9/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_GlobalShortcuts.cpp.o
+[10/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/core_PortalManager.cpp.o
+[11/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_InputCapture.cpp.o
+[12/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_RemoteDesktop.cpp.o
+../src/portals/RemoteDesktop.cpp:117:13: warning: ‘bool validateRestoreToken(const std::string&, const std::string&, uint32_t)’ defined but not used [-Wunused-function]
+  117 | static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+      |             ^~~~~~~~~~~~~~~~~~~~
+[13/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_Screencopy.cpp.o
+[14/16] Compiling C++ object src/xdg-desktop-portal-hyprland.p/portals_Screenshot.cpp.o
+[15/16] Linking target src/xdg-desktop-portal-hyprland

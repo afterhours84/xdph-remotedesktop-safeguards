@@ -1,0 +1,5 @@
+     Active: active (running) since Thu 2026-10-29 18:01:46 MST; 3min 31s ago
+   Main PID: 193599 (xdg-desktop-por)
+     Active: active (running) since Thu 2026-10-29 18:02:12 MST; 3min 6s ago
+   Main PID: 193725 (xdg-desktop-por)
+Oct 29 18:02:12 omarchy systemd[910]: Started Portal service.

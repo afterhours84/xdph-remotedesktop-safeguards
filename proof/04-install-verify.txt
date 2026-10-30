@@ -1,0 +1,28 @@
+● xdg-desktop-portal-hyprland.service - Portal service (Hyprland, user-local RemoteDesktop build)
+     Loaded: loaded (~/.config/systemd/user/xdg-desktop-portal-hyprland.service; static)
+     Active: active (running) since Thu 2026-10-29 18:01:46 MST; 27s ago
+ Invocation: REDACTED_INVOCATION
+   Main PID: 193599 (xdg-desktop-por)
+      Tasks: 4 (limit: 18861)
+     Memory: 3.8M (peak: 4.7M)
+        CPU: 42.448s
+org.freedesktop.portal.RemoteDesktop       interface -                 -            -
+org.freedesktop.portal.ScreenCast          interface -                 -            -
+u 3
+u 2
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG] [pipewire] connected
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG] [screencopy] init successful
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+Oct 29 18:01:46 omarchy xdg-desktop-portal-hyprland[193599]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+Oct 29 18:01:46 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-29T18:02:28-07:00 portal pid 193599 using ~156% CPU at idle (busy loop, to fix)
