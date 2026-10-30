@@ -15,6 +15,6 @@ Thanks for the RemoteDesktop work in this PR, keitheis. We tested head `0204ffbb
 
 Writeup, patches, and redacted proof logs (local draft, not published until you are happy with them):
 
-REPO_URL_PLACEHOLDER
+https://github.com/afterhours84/xdph-remotedesktop-safeguards
 
 Happy to open follow-up PRs or drop just the two bugfix patches if you would rather keep safeguards out of this PR.
