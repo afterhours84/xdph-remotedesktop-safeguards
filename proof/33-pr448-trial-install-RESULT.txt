@@ -1,0 +1,12 @@
+=== 33-pr448-trial-install-RESULT ===
+date: 2026-10-30 17:43:34 MST
+trial_install_ok=1 restored=0
+installed_md5=8bc2d89c8b53ad635637444b5c8e75d7  (#448)
+backup_ours_md5=27011044bd5770cf78bcacd9f5c18cf4  (proof/xdph-before-pr448-introspect.bin)
+RemoteDesktop version=2 AvailableDeviceTypes=3
+ScreenCast version=6
+xdph_pid=524342
+rustdesk_pid=524388 /usr/bin/rustdesk
+detail_log=proof/32-pr448-trial-install.txt
+active
+active

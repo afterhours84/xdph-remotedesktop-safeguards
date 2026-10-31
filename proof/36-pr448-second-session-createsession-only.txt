@@ -1,0 +1,63 @@
+=== 36 CreateSession-only (proof/23 style) against #448 while RustDesk open ===
+date: 2026-10-30 17:52:25 MST
+rustdesk: 524388 /usr/bin/rustdesk
+sessions_before:
+        └─ /org/freedesktop/portal/desktop/session
+          └─ /org/freedesktop/portal/desktop/session/1_407
+            └─ /org/freedesktop/portal/desktop/session/1_407/u1
+
+=== gdbus CreateSession ===
+(objectpath '/org/freedesktop/portal/desktop/request/1_432/proof448cs',)
+gdbus_exit=0
+req_path=/org/freedesktop/portal/desktop/request/1_432/proof448cs
+waiting Response on /org/freedesktop/portal/desktop/request/1_432/proof448cs
+TIMEOUT waiting Response
+Request.Close: org.freedesktop.DBus.Error.UnknownMethod: Object does not exist at path “/org/freedesktop/portal/desktop/request/1_432/proof448cs”
+
+=== sessions after ===
+        └─ /org/freedesktop/portal/desktop/session
+          └─ /org/freedesktop/portal/desktop/session/1_407
+            └─ /org/freedesktop/portal/desktop/session/1_407/u1
+rustdesk_after: 524388 /usr/bin/rustdesk;525040 /usr/lib/rustdesk/rustdesk --cm;
+
+=== journal since 2 min ago ===
+-- No entries --
+
+=== dbus-monitor (tail) ===
+signal time=1793407944.876133 sender=org.freedesktop.DBus -> destination=:1.430 serial=4294967295 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.430"
+signal time=1793407944.876258 sender=org.freedesktop.DBus -> destination=:1.430 serial=4294967295 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.430"
+method call time=1793407945.410077 sender=:1.432 -> destination=org.freedesktop.portal.Desktop serial=3 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.portal.RemoteDesktop; member=CreateSession
+   array [
+      dict entry(
+         string "handle_token"
+         variant             string "proof448cs"
+      )
+      dict entry(
+         string "session_handle_token"
+         variant             string "proof448css"
+      )
+   ]
+method call time=1793407945.412263 sender=:1.394 -> destination=:1.392 serial=5806 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.impl.portal.RemoteDesktop; member=CreateSession
+   object path "/org/freedesktop/portal/desktop/request/1_432/proof448cs"
+   object path "/org/freedesktop/portal/desktop/session/1_432/proof448css"
+   string ""
+   array [
+   ]
+signal time=1793407945.412601 sender=:1.394 -> destination=:1.432 serial=5808 path=/org/freedesktop/portal/desktop/request/1_432/proof448cs; interface=org.freedesktop.portal.Request; member=Response
+   uint32 0
+   array [
+      dict entry(
+         string "session_handle"
+         variant             string "/org/freedesktop/portal/desktop/session/1_432/proof448css"
+      )
+   ]
+method call time=1793407957.662929 sender=:1.433 -> destination=:1.394 serial=7 path=/org/freedesktop/portal/desktop/request/1_432/proof448cs; interface=org.freedesktop.portal.Request; member=Close
+=== delayed xdph lines ===
+
+=== KEY dbus-monitor evidence ===
+Backend impl CreateSession WAS invoked for proof448css while RustDesk session 1_407/u1 existed.
+Frontend Request.Response code=0 with session_handle (ACCEPTED, not rejected).
+Contrast proof/23 on our build: backend rejected; frontend 'Failed to close session implementation ... Unknown object'.
+RustDesk PIDs unchanged; session 1_407/u1 still present after test.

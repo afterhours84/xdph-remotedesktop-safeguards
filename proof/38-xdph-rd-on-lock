@@ -1,0 +1,44 @@
+#!/bin/bash
+# xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+# Invoked by xdph via fork+exec (does not block the portal event loop on our sleep
+# as long as we return quickly). We background the kill/delay/restart work so this
+# script exits immediately.
+#
+# Goal: gaming-PC RustDesk viewer should see a clear "connection forcibly closed"
+# (TCP RST via SIGKILL), then after a short delay RustDesk is restarted so a later
+# reconnect (after unlock + approve) can succeed.
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart" >>"$LOG"
+
+# Detach the slow work so this hook process returns immediately to the forked child.
+(
+  echo "$(ts) xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk" >>"$LOG"
+  # Abrupt kill so the viewer gets RST / "connection forcibly closed" rather than
+  # a graceful disconnect that can look like a freeze.
+  pkill -KILL -x rustdesk 2>/dev/null || true
+  pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+  pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+  sleep 0.3
+  if pgrep -x rustdesk >/dev/null 2>&1; then
+    echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+  else
+    echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+  fi
+
+  # Delay before restart so the viewer has time to surface the error dialog
+  # before a new listener appears and auto-reconnect races it.
+  echo "$(ts) xdph-rd-on-lock: sleeping 10s before rustdesk restart" >>"$LOG"
+  sleep 10
+
+  echo "$(ts) xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+  setsid -f /usr/bin/rustdesk
+  sleep 1
+  echo "$(ts) xdph-rd-on-lock: rustdesk after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+) >/dev/null 2>&1 &
+
+echo "$(ts) xdph-rd-on-lock: parent exiting (worker pid $!)" >>"$LOG"
+exit 0

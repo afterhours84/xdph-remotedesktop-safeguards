@@ -1,19 +1,33 @@
-#!/bin/sh
-# Optional lock hook for the patched xdph RemoteDesktop backend.
-# Called after remote sessions are closed on screen lock, if installed as
-# ~/.local/bin/xdph-rd-on-lock and marked executable.
-#
-# Restarts RustDesk so the remote viewer gets a real disconnect and the next
-# connection starts a fresh portal session. Works around RustDesk 1.5.0 keeping
-# a stale portal session after the viewer leaves or the portal closes it.
-# See known limitations in README.md.
-#
-# Adjust LOG and the rustdesk binary path as needed.
+#!/bin/bash
+# xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+# xdph already double-forks this hook. We only SIGKILL rustdesk here and arm a
+# one-shot unlock waiter; rustdesk is NOT restarted until unlock.
 
-LOG="${XDG_STATE_HOME:-$HOME/.local/state}/xdph-rd/lock-hook.log"
+LOG="${XDG_STATE_HOME:-$HOME/.local/share}/xdph-rd/lock-hook.log"
 mkdir -p "$(dirname "$LOG")"
-echo "$(date -Is) lock hook: restarting rustdesk" >> "$LOG"
-pkill -x rustdesk
-sleep 2
-setsid -f /usr/bin/rustdesk >/dev/null 2>&1
-echo "$(date -Is) rustdesk relaunched: $(pgrep -x rustdesk | tr '\n' ' ')" >> "$LOG"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-lock: invoked (screen locked); hard-killing rustdesk (no restart until unlock)" >>"$LOG"
+
+pkill -KILL -x rustdesk 2>/dev/null || true
+pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+sleep 0.3
+if pgrep -x rustdesk >/dev/null 2>&1; then
+  echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+else
+  echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+fi
+
+# Arm unlock waiter (exactly one via flock). Detached so this hook returns now.
+WAIT="${HOME}/.local/bin/xdph-rd-wait-unlock"
+LOCKFILE="${XDG_RUNTIME_DIR:-/tmp}/xdph-rd-wait-unlock.lock"
+if [ -x "$WAIT" ]; then
+  setsid -f bash -c "flock -n '$LOCKFILE' '$WAIT' || echo \"\$(date '+%Y-%m-%d %H:%M:%S %z') xdph-rd-on-lock: unlock waiter already running; leave it\" >>'$LOG'" >/dev/null 2>&1
+  echo "$(ts) xdph-rd-on-lock: unlock waiter spawn attempted" >>"$LOG"
+else
+  echo "$(ts) xdph-rd-on-lock: WARN missing $WAIT" >>"$LOG"
+fi
+
+echo "$(ts) xdph-rd-on-lock: done" >>"$LOG"
+exit 0

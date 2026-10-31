@@ -1,0 +1,37 @@
+=== 39-restore-and-hook-RESULT ===
+date: 2026-10-30 18:08:27 MST
+
+RESTORE
+  installed_md5=27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+  expect=27011044bd5770cf78bcacd9f5c18cf4
+active active
+u 2
+u 3
+
+HOOK
+Permissions Size User Date Modified Name
+.rwxr-xr-x  2.0k user 30 Oct 18:07  ~/.local/bin/xdph-rd-on-lock
+.rwxr-xr-x   519 user 29 Oct 18:21  ~/.local/bin/xdph-rd-on-lock.bak-20261030-180749
+  xdph invokes via fork+setsid+fork+execl then waitpid on intermediate only
+  (RemoteDesktop.cpp closeAllSessions); hook also backgrounds worker so sleep 10
+  cannot stall anything. Uses pkill -KILL then sleep 10 then setsid rustdesk.
+  log: ~/.local/share/xdph-rd/lock-hook.log
+  proof diff: proof/38-xdph-rd-on-lock.diff
+
+RUSTDESK
+536256 /usr/bin/rustdesk
+536686 /usr/lib/rustdesk/rustdesk --cm
+
+TEST STEPS FOR TESTER
+  1. From gaming PC: connect to omarchy via RustDesk; approve picker on gaming-pc.
+  2. Lock the gaming-pc screen (hyprlock / lock key).
+  3. Expect on gaming PC within seconds: clear 'connection forcibly closed' (or similar RST) error.
+  4. Wait ~10s (RustDesk restarts on omarchy in background).
+  5. Unlock gaming-pc (locally or after Retry once rustdesk is back).
+  6. On gaming PC: Retry / reconnect; expect choose-screen + approve again.
+  7. Confirm session works; optional: check ~/.local/share/xdph-rd/lock-hook.log and
+     journalctl --user -u xdg-desktop-portal-hyprland.service -f
+
+TAIL DURING TEST
+  journalctl --user -u xdg-desktop-portal-hyprland.service -f --no-pager
+  tail -F ~/.local/share/xdph-rd/lock-hook.log

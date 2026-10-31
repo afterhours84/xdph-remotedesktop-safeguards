@@ -1,7 +1,12 @@
 # Install (user-local)
 
-Built from draft PR https://github.com/hyprwm/xdg-desktop-portal-hyprland/pull/426
-(commit `0204ffbb`) plus the patches in `patches/`.
+Built from [xdg-desktop-portal-hyprland PR #426](https://github.com/hyprwm/xdg-desktop-portal-hyprland/pull/426)
+(commit `0204ffbb`, now closed) plus the patches in `patches/`.
+
+Open [PR #448](https://github.com/hyprwm/xdg-desktop-portal-hyprland/pull/448) includes the poll-fd and
+scroll fixes that are also in this tree, but it does **not** include the safeguards
+(consent every session / no persist, one-session limit, close on lock, lock/unlock
+RustDesk hooks). See the README comparison and proof/25-44.
 
 This does **not** replace the system xdph package by overwriting `/usr`. Everything
 lands under your home directory and can be undone without pacman.
@@ -55,12 +60,16 @@ mkdir -p "$PREFIX/libexec" "$HOME/.local/bin" \
   "$HOME/.local/share/xdg-desktop-portal/portals" \
   "$HOME/.local/share/dbus-1/services" \
   "$HOME/.config/systemd/user" \
-  "$HOME/.config/xdg-desktop-portal"
+  "$HOME/.config/xdg-desktop-portal" \
+  "${XDG_STATE_HOME:-$HOME/.local/share}/xdph-rd"
 
 install -m755 build-omarchy/src/xdg-desktop-portal-hyprland "$PREFIX/libexec/"
 install -m755 build-omarchy/hyprland-share-picker/hyprland-share-picker "$HOME/.local/bin/"
-# optional lock hook (RustDesk 1.5.0 workaround):
+
+# Lock/unlock hooks (RustDesk 1.5.0 + Omarchy Quickshell lock):
 install -m755 /path/to/this/repo/scripts/xdph-rd-on-lock "$HOME/.local/bin/xdph-rd-on-lock"
+install -m755 /path/to/this/repo/scripts/xdph-rd-wait-unlock "$HOME/.local/bin/xdph-rd-wait-unlock"
+install -m755 /path/to/this/repo/scripts/xdph-rd-on-unlock "$HOME/.local/bin/xdph-rd-on-unlock"
 
 install -m644 hyprland.portal \
   "$HOME/.local/share/xdg-desktop-portal/portals/hyprland.portal"
@@ -114,6 +123,14 @@ journalctl --user -u xdg-desktop-portal-hyprland.service -b --no-pager | grep -i
 
 You want `[remotedesktop] registered` and `[remotedesktop] watching hyprland_lock_notifier_v1 for lock events` in the journal, and a non-empty `AvailableDeviceTypes` (typically 3 = keyboard|pointer).
 
+### Lock / unlock hooks
+
+On lock, xdph forks `~/.local/bin/xdph-rd-on-lock`, which SIGKILLs rustdesk and arms
+`xdph-rd-wait-unlock`. The waiter polls `omarchy-hyprland-session-locked` until unlock,
+then runs `xdph-rd-on-unlock` to start rustdesk again. This path is Omarchy-specific;
+other setups need an equivalent unlock signal. Logs:
+`${XDG_STATE_HOME:-$HOME/.local/share}/xdph-rd/lock-hook.log`.
+
 ## Rollback
 
 ```bash
@@ -121,6 +138,8 @@ systemctl --user stop xdg-desktop-portal-hyprland.service || true
 rm -f "$HOME/.local/opt/xdph-rd/libexec/xdg-desktop-portal-hyprland"
 rm -f "$HOME/.local/bin/hyprland-share-picker"
 rm -f "$HOME/.local/bin/xdph-rd-on-lock"
+rm -f "$HOME/.local/bin/xdph-rd-wait-unlock"
+rm -f "$HOME/.local/bin/xdph-rd-on-unlock"
 rm -f "$HOME/.local/share/xdg-desktop-portal/portals/hyprland.portal"
 rm -f "$HOME/.local/share/dbus-1/services/org.freedesktop.impl.portal.desktop.hyprland.service"
 rm -f "$HOME/.config/systemd/user/xdg-desktop-portal-hyprland.service"
@@ -137,3 +156,4 @@ No `/usr` files are modified by this install path.
 - Replaces the **session** portal backend for Hyprland while the user unit is active. A bug can break ScreenCast/Screenshot/InputCapture as well as RemoteDesktop until you roll back.
 - Lock close is not atomic with the compositor lock.
 - Closing on lock only drops virtual devices and releases keys/buttons this portal tracked.
+- WebRTC means the viewer may not show a clear "forcibly closed" dialog when rustdesk is killed; expect drop + failed reconnect until unlock.

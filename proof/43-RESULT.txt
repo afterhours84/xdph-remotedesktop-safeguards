@@ -1,0 +1,15 @@
+
+=== 43 RESULT (fixed waiter $?) ===
+date: 2026-10-30 18:19:11 MST
+mechanism: xdph on-lock kill + one-shot flock waiter polling omarchy-hyprland-session-locked
+why_not_hypridle: not used on Omarchy (Quickshell lock); no hypridle unit/config/process
+why_not_omarchy_hook: no lock/unlock hook event in hooks.md
+why_not_xdph_rebuild: avoid; waiter is enough
+files:
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.5k user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-lock
+.rwxr-xr-x  2.0k user 30 Oct 18:07  ~/.local/bin/xdph-rd-on-lock.bak-20261030-181843
+.rwxr-xr-x   756 user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-unlock
+.rwxr-xr-x  1.3k user 30 Oct 18:19  ~/.local/bin/xdph-rd-wait-unlock
+rustdesk: 537542 /usr/bin/rustdesk;538891 /usr/lib/rustdesk/rustdesk --cm;
+dry_run_waiter: see lock-hook.log tail above

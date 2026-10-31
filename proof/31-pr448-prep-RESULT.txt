@@ -1,0 +1,105 @@
+=== 31-pr448-prep-RESULT ===
+date: 2026-10-30 10:06:42 MST
+
+GOAL
+  Prep testing of hyprwm/xdg-desktop-portal-hyprland PR #448 on omarchy without
+  installing over the working binary and without any RustDesk session (tester away).
+
+HEAD SHA
+  84b03f2a991c7019a168ed3199e4b3158c2ff560
+  branch: pr-448 (fetched as refs/pull/448/head)
+  clone: ~/Projects/xdph-448
+  title: Fundamental remotedesktop portal (draft, keitheis)
+  combines: #428, #426, #402 plus poll-fd, scroll, held-key fixes
+
+BUILD
+  meson setup build-omarchy --prefix=$HOME/.local -Dsystemd=enabled
+  ninja -C build-omarchy  -> exit 0
+  binary: ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+  md5: 8bc2d89c8b53ad635637444b5c8e75d7
+  NOT installed over ~/.local/libexec (only briefly swapped for introspection)
+
+DIFF VS OUR TESTED BUILD
+  ours base: 0204ffbb + fixes 01-04 (dirty tree at ~/Projects/xdph-rd/src)
+  ours installed md5: 27011044bd5770cf78bcacd9f5c18cf4
+
+  POLL-FD FIX: PRESENT in #448, and stronger than ours.
+    Commit e483da6 "dispatch polled services by fd instead of position".
+    Uses addFdToEventLoop + pollCallbacks keyed by fd (not positional [0]/[1]/[2]).
+
+  SCROLL FIX: PRESENT in #448.
+    Commit 1512d05 "preserve vertical scroll direction".
+    onNotifyPointerAxis uses wl_fixed_from_double(dy) with no negation.
+    Discrete path uses steps as-is. No -dy / dy*-1 near axis handlers.
+
+  HELD-KEY RELEASE: PRESENT in #448 (releaseKeyboardKeys on EIS keyboard stop).
+
+  CONSENT PROMPT: PRESENT in #448 (promptForRemoteDesktopConsent / share-picker).
+    Valid restore_token can SKIP the consent dialog.
+
+  PERSIST / RESTORE TOKENS: PRESENT in #448 (optional persistent authorization).
+    persist_mode 1 coerced to 0; persist_mode 2 can issue/validate restore tokens.
+    OURS forces persistMode = 0 after SelectDevices (consent every session, no persist).
+
+  ONE-SESSION LIMIT: ABSENT from #448.
+    Ours rejects CreateSession with "another remote session already exists".
+
+  LOCK CLOSE / LOCK NOTIFIER: ABSENT from #448.
+    Ours binds hyprland_lock_notifier_v1, closeAllSessions("screen locked"),
+    rejects CreateSession while locked, and forks ~/.local/bin/xdph-rd-on-lock.
+
+  OTHER NOTABLE IN #448
+    Merges remotedesktop with newer screencopy integration, compositor keymap
+    mirroring, EIS pointer regions per output, KeyboardState unit test,
+    hyprland-share-picker changes, project version 1.5.0 build.
+
+INTROSPECTION
+  Method: stop user unit, overwrite ~/.local/libexec briefly, start, busctl,
+  stop, restore backup, start. First attempt failed with Text file busy
+  (overwrite while running); second attempt (proof/30) succeeded and restored.
+
+  PRE (ours) and POST (restored ours) and MID (#448) all advertised:
+    org.freedesktop.impl.portal.RemoteDesktop  version=2  AvailableDeviceTypes=3
+    org.freedesktop.impl.portal.ScreenCast     version=6  AvailableSourceTypes=7
+                                               AvailableCursorModes=3
+    Methods include CreateSession, SelectDevices/SelectSources, Start,
+    ConnectToEIS, NotifyPointer*, NotifyKeyboard*.
+
+  Interface surface looks the same at D-Bus level for RemoteDesktop/ScreenCast.
+  Behavioral differences are in consent/persist/session/lock policy (see above).
+
+FINAL STATE (after prep)
+  xdg-desktop-portal-hyprland.service: active (our binary restored)
+  xdg-desktop-portal.service: active
+  installed binary md5 matches backup: 27011044bd5770cf78bcacd9f5c18cf4
+  RustDesk: was not running before; not started after (tester away)
+  #448 build left in place at ~/Projects/xdph-448/build-omarchy (side by side)
+
+PROOF FILES
+  25-pr448-fetch.txt
+  26-pr448-build.txt
+  27-pr448-vs-ours-diff.txt
+  27-pr448-vs-ours-SUMMARY.txt
+  28-pr448-consent-scroll-detail.txt
+  29-pr448-introspect.txt          (partial; Text file busy)
+  30-pr448-introspect.txt          (successful swap + restore)
+  31-pr448-prep-RESULT.txt         (this file)
+  xdph-before-pr448-introspect.bin (backup of installed binary)
+
+WHAT TO TEST WHEN TESTER IS HOME
+  1. Optionally install #448 binary (or run via temp ExecStart) and reconnect
+     RustDesk; expect share-picker + consent. Note persist may allow skip on
+     later connects if a restore token was stored.
+  2. Scroll direction (should be correct; already in #448).
+  3. Second concurrent session (ours rejects; #448 likely allows).
+  4. Lock screen while connected (#448 will NOT close session or restart
+     RustDesk; ours does). Confirm and decide whether to re-port safeguards.
+  5. After any #448 trial, restore our binary from
+     proof/xdph-before-pr448-introspect.bin (or rebuild from xdph-rd/src) and
+     restart the user unit; restart RustDesk with setsid -f /usr/bin/rustdesk
+     if capturer/stale-session issues appear.
+
+SAFETY NOTES
+  Do not leave #448 installed unattended: it allows restore-token skip of
+  consent and does not close on lock or limit to one session.
+  No /usr/share/omarchy edits. No sudo used.

@@ -1,0 +1,164 @@
+=== 27 SUMMARY: PR #448 vs our tested build ===
+date: 2026-10-30 10:04:33 MST
+ours_base: 0204ffbbcb3cef72af76804cdf59f114f2e2f6d9 + fixes 01-04
+pr448_head: 84b03f2a991c7019a168ed3199e4b3158c2ff560
+
+POLL-FD FIX:
+  UNCLEAR - see detail log
+  theirs poll-loop snippet:
+    4:    m_sEventLoopInternals.wakeFd = eventfd(0, EFD_CLOEXEC | EFD_NONBLOCK);
+    6:        Debug::log(CRIT, "[core] Failed to create poll wake fd: {}", strerror(errno));
+    10:    // Core fds use the same fd-keyed dispatch as portals: registrations made
+    11:    // during portal construction must not change which service gets dispatched.
+    12:    addFdToEventLoop(m_pConnection->getEventLoopPollData().fd, POLLIN, [this]() {
+    17:    addFdToEventLoop(wl_display_get_fd(m_sWaylandConnection.display), POLLIN, [this]() {
+    21:            wl_display_dispatch_pending(m_sWaylandConnection.display);
+    23:            wl_display_dispatch(m_sWaylandConnection.display);
+    25:    addFdToEventLoop(pw_loop_get_fd(m_sPipewire.loop), POLLIN, [this]() {
+    32:    std::thread pollThr([this]() {
+    34:            std::vector<pollfd> pollFds;
+    36:                std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+    37:                pollFds = m_sEventLoopInternals.pollFds;
+    40:            int ret = poll(pollFds.data(), pollFds.size(), -1);
+    44:                Debug::log(CRIT, "[core] Polling fds failed with {}", strerror(errno));
+    52:                std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+    53:                for (const auto& polled : pollFds) {
+    54:                    if (!polled.revents)
+    57:                    if (polled.fd == m_sEventLoopInternals.wakeFd) {
+    65:                    const auto CURRENT = std::ranges::find(m_sEventLoopInternals.pollFds, polled.fd, &pollfd::fd);
+    66:                    if (CURRENT == m_sEventLoopInternals.pollFds.end())
+    69:                    CURRENT->revents |= polled.revents;
+    71:                    if (!(polled.revents & (POLLHUP | POLLERR | POLLNVAL)))
+    74:                    Debug::log(CRIT, "[core] Disconnected from pollfd {}", polled.fd);
+    90:            Debug::log(TRACE, "[core] got poll event");
+    139:    while (1) { // dbus events
+    154:        std::vector<pollfd>                  readyFds;
+    155:        std::map<int, std::function<void()>> pollCallbacks;
+    157:            std::lock_guard<std::mutex> pollLock(m_sEventLoopInternals.pollMutex);
+    158:            readyFds      = m_sEventLoopInternals.pollFds;
+    159:            pollCallbacks = m_sEventLoopInternals.pollCallbacks;
+    160:            for (auto& fd : m_sEventLoopInternals.pollFds)
+    161:                fd.revents = 0;
+    164:        for (pollfd p : readyFds) {
+    165:            if (p.revents & POLLIN && pollCallbacks.contains(p.fd))
+    166:                pollCallbacks[p.fd]();
+    182:            ret = wl_display_dispatch_pending(m_sWaylandConnection.display);
+    207:    if (m_sCompositorKeymap.fd >= 0) {
+    208:        close(m_sCompositorKeymap.fd);
+    209:        m_sCompositorKeymap.fd = -1;
+
+SCROLL FIX:
+  PRESENT (no -dy / dy*-1 near axis handlers in #448)
+  ours negation hits (expect empty after fix-04): none
+
+CONSENT:
+  PRESENT (consent / share-picker referenced)
+    29:// The impl-side portal interface exchanges persistence state as `restore_data` (suv):
+    31:// `restore_token` the application sees. Keep the vendor/version in sync with the
+    33:using SRestoreData = sdbus::Struct<std::string, uint32_t, sdbus::Variant>;
+    35:static constexpr const char* RESTORE_DATA_VENDOR    = "hyprland";
+    36:static constexpr uint32_t    RESTORE_DATA_VERSION   = 3;
+    37:static constexpr const char* RESTORE_DATA_TOKEN_KEY = "remoteDesktopToken";
+    39:static std::filesystem::path restoreTokenFile() {
+    51:static std::string newRestoreToken() {
+    116:// failed attempt would silently drop them back to the consent dialog next time.
+    117:static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+    121:    const auto path = restoreTokenFile();
+    143:// Drops the grant, e.g. because the app restored it while asking for no further
+    144:// persistence. Without this such an entry would sit in the store forever.
+    145:static bool revokeRestoreToken(const std::string& token) {
+    149:    const auto path = restoreTokenFile();
+    178:    const auto suffix = newRestoreToken();
+    206:static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+    208:        Debug::log(WARN, "[remotedesktop] refusing to persist a token for an app id containing record separators");
+    212:    const auto token = newRestoreToken();
+    216:    const auto path = restoreTokenFile();
+    655:        } else if (k == "persist_mode") {
+    656:            PSESSION->persistMode = v.get<uint32_t>();
+    657:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+    658:        } else if (k == "restore_data") {
+    659:            // xdg-desktop-portal swaps the app-facing `restore_token` for our own
+
+PERSIST / RESTORE TOKENS:
+  PRESENT in #448 (PR description says optional persistent authorization)
+    29:// The impl-side portal interface exchanges persistence state as `restore_data` (suv):
+    31:// `restore_token` the application sees. Keep the vendor/version in sync with the
+    33:using SRestoreData = sdbus::Struct<std::string, uint32_t, sdbus::Variant>;
+    35:static constexpr const char* RESTORE_DATA_VENDOR    = "hyprland";
+    36:static constexpr uint32_t    RESTORE_DATA_VERSION   = 3;
+    37:static constexpr const char* RESTORE_DATA_TOKEN_KEY = "remoteDesktopToken";
+    39:static std::filesystem::path restoreTokenFile() {
+    51:static std::string newRestoreToken() {
+    117:static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+    121:    const auto path = restoreTokenFile();
+    143:// Drops the grant, e.g. because the app restored it while asking for no further
+    144:// persistence. Without this such an entry would sit in the store forever.
+    145:static bool revokeRestoreToken(const std::string& token) {
+    149:    const auto path = restoreTokenFile();
+    178:    const auto suffix = newRestoreToken();
+    206:static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+    208:        Debug::log(WARN, "[remotedesktop] refusing to persist a token for an app id containing record separators");
+    212:    const auto token = newRestoreToken();
+    216:    const auto path = restoreTokenFile();
+    655:        } else if (k == "persist_mode") {
+    656:            PSESSION->persistMode = v.get<uint32_t>();
+    657:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+    658:        } else if (k == "restore_data") {
+    659:            // xdg-desktop-portal swaps the app-facing `restore_token` for our own
+    660:            // `restore_data` blob before it reaches this backend, so this is the only
+  ours (expect force no-persist / consent every session):
+    30:// The impl-side portal interface exchanges persistence state as `restore_data` (suv):
+    32:// `restore_token` the application sees. Keep the vendor/version in sync with the
+    34:using SRestoreData = sdbus::Struct<std::string, uint32_t, sdbus::Variant>;
+    36:static constexpr const char* RESTORE_DATA_VENDOR    = "hyprland";
+    37:static constexpr uint32_t    RESTORE_DATA_VERSION   = 3;
+    38:static constexpr const char* RESTORE_DATA_TOKEN_KEY = "remoteDesktopToken";
+    40:static std::filesystem::path restoreTokenFile() {
+    52:static std::string newRestoreToken() {
+    117:// failed attempt would silently drop them back to the consent dialog next time.
+    118:static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+    122:    const auto path = restoreTokenFile();
+    144:// Drops the grant, e.g. because the app restored it while asking for no further
+    145:// persistence. Without this such an entry would sit in the store forever.
+    146:static bool revokeRestoreToken(const std::string& token) {
+    150:    const auto path = restoreTokenFile();
+    179:    const auto suffix = newRestoreToken();
+    207:static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+    209:        Debug::log(WARN, "[remotedesktop] refusing to persist a token for an app id containing record separators");
+    213:    const auto token = newRestoreToken();
+    217:    const auto path = restoreTokenFile();
+    690:        } else if (k == "persist_mode") {
+    691:            PSESSION->persistMode = v.get<uint32_t>();
+    692:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+    693:        } else if (k == "restore_data") {
+    694:            // xdg-desktop-portal swaps the app-facing `restore_token` for our own
+
+ONE-SESSION LIMIT:
+  ABSENT from #448 (ours has it)
+    ours: 646:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: screen is locked");
+    ours: 652:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: another remote session already exists");
+
+LOCK CLOSE / LOCK NOTIFIER:
+  ABSENT from #448 (ours has hyprland_lock_notifier_v1 + closeAllSessions on lock)
+  ours hits:
+    ~/Projects/xdph-rd/src/src/core/PortalManager.cpp:207:    else if (INTERFACE == hyprland_lock_notifier_v1_interface.name) {
+    ~/Projects/xdph-rd/src/src/core/PortalManager.cpp:209:            (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &hyprland_lock_notifier_v1_interface, 1));
+    ~/Projects/xdph-rd/src/src/core/PortalManager.cpp:450:                m_sPortals.remoteDesktop->closeAllSessions("screen locked");
+    ~/Projects/xdph-rd/src/src/core/PortalManager.cpp:456:        Debug::log(LOG, "[remotedesktop] watching hyprland_lock_notifier_v1 for lock events");
+    ~/Projects/xdph-rd/src/src/core/PortalManager.cpp:458:        Debug::log(WARN, "[remotedesktop] hyprland_lock_notifier_v1 unavailable; sessions will NOT close on lock");
+    ~/Projects/xdph-rd/src/src/portals/RemoteDesktop.cpp:1409:void CRemoteDesktopPortal::closeAllSessions(const char* reason) {
+    ~/Projects/xdph-rd/src/src/portals/RemoteDesktop.cpp:1415:    if (const char* home = getenv("HOME"); home && reason && std::string{reason} == "screen locked") {
+    ~/Projects/xdph-rd/src/src/portals/RemoteDesktop.cpp:1538:            closeAllSessions("screen locked");
+
+HELD-KEY RELEASE:
+  PRESENT in #448
+    355:    releaseKeyboardKeys(this);
+    356:    releaseKeymap(keymap);
+    467:    releaseKeyboardKeys(session);
+    524:    releaseKeymap(keymap);
+    605:void CRemoteDesktopPortal::releaseKeymap(SKeymap& keymap) {
+    792:        releaseKeymap(PSESSION->keymap);
+    803:        releaseKeymap(PSESSION->keymap);
+    1207:                    // A pointer leaving must not disturb held keyboard keys.
+    1209:                        releaseKeyboardKeys(s.get());
+    1251:void CRemoteDesktopPortal::releaseKeyboardKeys(SSession* session) {

@@ -1,0 +1,70 @@
+=== 35-pr448-second-session-test ===
+date: 2026-10-30 17:50:37 MST
+method: proof/23-style frontend org.freedesktop.portal.RemoteDesktop
+  CreateSession -> SelectDevices -> ScreenCast.SelectSources -> Start
+  token=proof448s2 timeout=60s (tester at gaming-pc to approve picker)
+rustdesk_before: 524388 /usr/bin/rustdesk;525040 /usr/lib/rustdesk/rustdesk --cm;
+installed: 8bc2d89c8b53ad635637444b5c8e75d7  ~/.local/libexec/xdg-desktop-portal-hyprland
+xdph_pid: 524342
+
+=== PROBE OUTPUT ===
+start token=proof448s2 timeout=60s unique=:1.422
+[create] request=/org/freedesktop/portal/desktop/request/1_422/proof448s2
+[create] waiting up to 15s on /org/freedesktop/portal/desktop/request/1_422/proof448s2
+[create] Response code=0 results_keys=[dbus.String('session_handle')]
+[create]   session_handle=/org/freedesktop/portal/desktop/session/1_422/proof448s2s
+[create] session_path=/org/freedesktop/portal/desktop/session/1_422/proof448s2s
+[select] request=/org/freedesktop/portal/desktop/request/1_422/proof448s2d
+[select] waiting up to 15s on /org/freedesktop/portal/desktop/request/1_422/proof448s2d
+[select] Response code=0 results_keys=[]
+[select_sources] request=/org/freedesktop/portal/desktop/request/1_422/proof448s2src
+[select_sources] waiting up to 60s on /org/freedesktop/portal/desktop/request/1_422/proof448s2src
+[select_sources] TIMEOUT after 60s
+[select_sources] Request.Close after timeout: org.freedesktop.DBus.Error.UnknownObject: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/request/1_422/proof448s2src'.
+[select_sources] failed/timeout/nonzero: None (continuing to Start anyway)
+[start] request=/org/freedesktop/portal/desktop/request/1_422/proof448s2t  (approve picker on omarchy if shown; timeout 60s)
+[start] waiting up to 60s on /org/freedesktop/portal/desktop/request/1_422/proof448s2t
+[select_sources] Response code=0 results_keys=[]
+[start] TIMEOUT after 60s
+[start] Request.Close after timeout: org.freedesktop.DBus.Error.UnknownObject: GDBus.Error:org.freedesktop.DBus.Error.UnknownObject: Unknown object '/org/freedesktop/portal/desktop/request/1_422/proof448s2t'.
+[start] timeout; cleaning up
+[cleanup] Session.Close /org/freedesktop/portal/desktop/session/1_422/proof448s2s
+SUMMARY create=(0, {dbus.String('session_handle'): dbus.String('/org/freedesktop/portal/desktop/session/1_422/proof448s2s', variant_level=1)}) select=(0, {}) select_sources=None start=None session=/org/freedesktop/portal/desktop/session/1_422/proof448s2s closed=True errors=[]
+
+probe_exit=0
+rustdesk_after: 524388 /usr/bin/rustdesk;525040 /usr/lib/rustdesk/rustdesk --cm;
+
+=== JOURNAL (xdph + xdg-desktop-portal since start) ===
+-- No entries --
+
+=== FILTERED remotedesktop / reject / consent / proof448 ===
+(no matches)
+
+=== INTERPRETATION HINTS ===
+DONE
+
+=== APPEND: journal filtered (15 min) + post-state ===
+Oct 30 17:43:18 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 30 17:43:18 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 30 17:43:18 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] registered
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_407/u1 sess=/org/freedesktop/portal/desktop/session/1_407/u1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] CreateSession returning for appid=
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] devices selected: 7
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] SelectSources:
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] restore data invalid / missing, prompting
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [sc] Selection output: [SELECTION]r/screen:HDMI-A-1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] SHAREDATA returned selection 0
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] virtual pointer created
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] virtual keyboard created with keymap
+rustdesk_now: 524388 /usr/bin/rustdesk;525040 /usr/lib/rustdesk/rustdesk --cm;
+share_picker_now: 
+date_now: 2026-10-30 17:52:02 MST
+
+=== CLARIFIED RESULT (see also proof/36 + 37) ===
+CreateSession ACCEPTED concurrent with RustDesk (dbus Response 0).
+SelectSources/Start: TIMEOUT 60s (picker grant not confirmed).
+RustDesk session unaffected.

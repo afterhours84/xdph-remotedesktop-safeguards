@@ -1,0 +1,257 @@
+=== 38-restore-and-hook ===
+date: 2026-10-30 18:07:49 MST
+
+=== 1) RESTORE OUR BUILD ===
+backup=27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+installed_before=8bc2d89c8b53ad635637444b5c8e75d7  ~/.local/libexec/xdg-desktop-portal-hyprland
+installed_after=27011044bd5770cf78bcacd9f5c18cf4
+active
+active
+MainPID=536185
+RemoteDesktop version: u 2
+u 3
+NAME                         TYPE     SIGNATURE RESULT/VALUE FLAGS
+.ConnectToEIS                method   osa{sv}   h            -
+.CreateSession               method   oosa{sv}  ua{sv}       -
+.NotifyKeyboardKeycode       method   oa{sv}iu  -            -
+.NotifyKeyboardKeysym        method   oa{sv}iu  -            -
+.NotifyPointerAxis           method   oa{sv}dd  -            -
+.NotifyPointerAxisDiscrete   method   oa{sv}ui  -            -
+.NotifyPointerButton         method   oa{sv}iu  -            -
+.NotifyPointerMotion         method   oa{sv}dd  -            -
+.NotifyPointerMotionAbsolute method   oa{sv}udd -            -
+.SelectDevices               method   oosa{sv}  ua{sv}       -
+.Start                       method   oossa{sv} ua{sv}       -
+.AvailableDeviceTypes        property u         3            emits-change
+.version                     property u         2            emits-change
+RD_VER=2
+RESTORE_OK md5=27011044bd5770cf78bcacd9f5c18cf4 RemoteDesktop=v2
+
+=== 2) BACK UP AND MODIFY LOCK HOOK ===
+Permissions Size User Date Modified Name
+.rwxr-xr-x   519 user 29 Oct 18:21  ~/.local/bin/xdph-rd-on-lock
+--- hook BEFORE ---
+#!/bin/sh
+# Called by the patched xdph when the screen locks, after remote sessions are closed.
+# Restarts RustDesk so the remote viewer gets a real disconnect and the next
+# connection starts a fresh portal session (works around RustDesk session reuse).
+LOG="$HOME/Projects/xdph-rd/proof/lock-hook.log"
+echo "$(date -Is) lock hook: restarting rustdesk" >> "$LOG"
+pkill -x rustdesk
+sleep 2
+setsid -f /usr/bin/rustdesk >/dev/null 2>&1
+echo "$(date -Is) rustdesk relaunched: $(pgrep -x rustdesk | tr '\n' ' ')" >> "$LOG"
+backed_up_to=~/.local/bin/xdph-rd-on-lock.bak-20261030-180749
+9521cc5baabf7af1dd40d3264d105ec0  ~/.local/bin/xdph-rd-on-lock
+9521cc5baabf7af1dd40d3264d105ec0  ~/.local/bin/xdph-rd-on-lock.bak-20261030-180749
+--- hook AFTER ---
+#!/bin/bash
+# xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+# Invoked by xdph via fork+exec (does not block the portal event loop on our sleep
+# as long as we return quickly). We background the kill/delay/restart work so this
+# script exits immediately.
+#
+# Goal: gaming-PC RustDesk viewer should see a clear "connection forcibly closed"
+# (TCP RST via SIGKILL), then after a short delay RustDesk is restarted so a later
+# reconnect (after unlock + approve) can succeed.
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart" >>"$LOG"
+
+# Detach the slow work so this hook process returns immediately to the forked child.
+(
+  echo "$(ts) xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk" >>"$LOG"
+  # Abrupt kill so the viewer gets RST / "connection forcibly closed" rather than
+  # a graceful disconnect that can look like a freeze.
+  pkill -KILL -x rustdesk 2>/dev/null || true
+  pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+  pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+  sleep 0.3
+  if pgrep -x rustdesk >/dev/null 2>&1; then
+    echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+  else
+    echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+  fi
+
+  # Delay before restart so the viewer has time to surface the error dialog
+  # before a new listener appears and auto-reconnect races it.
+  echo "$(ts) xdph-rd-on-lock: sleeping 10s before rustdesk restart" >>"$LOG"
+  sleep 10
+
+  echo "$(ts) xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+  setsid -f /usr/bin/rustdesk
+  sleep 1
+  echo "$(ts) xdph-rd-on-lock: rustdesk after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+) >/dev/null 2>&1 &
+
+echo "$(ts) xdph-rd-on-lock: parent exiting (worker pid $!)" >>"$LOG"
+exit 0
+--- diff vs bak ---
+--- ~/.local/bin/xdph-rd-on-lock.bak-20261030-180749	2026-10-29 18:21:57.748544715 -0700
++++ ~/.local/bin/xdph-rd-on-lock	2026-10-30 18:07:51.841325220 -0700
+@@ -1,10 +1,44 @@
+-#!/bin/sh
+-# Called by the patched xdph when the screen locks, after remote sessions are closed.
+-# Restarts RustDesk so the remote viewer gets a real disconnect and the next
+-# connection starts a fresh portal session (works around RustDesk session reuse).
+-LOG="$HOME/Projects/xdph-rd/proof/lock-hook.log"
+-echo "$(date -Is) lock hook: restarting rustdesk" >> "$LOG"
+-pkill -x rustdesk
+-sleep 2
+-setsid -f /usr/bin/rustdesk >/dev/null 2>&1
+-echo "$(date -Is) rustdesk relaunched: $(pgrep -x rustdesk | tr '\n' ' ')" >> "$LOG"
++#!/bin/bash
++# xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
++# Invoked by xdph via fork+exec (does not block the portal event loop on our sleep
++# as long as we return quickly). We background the kill/delay/restart work so this
++# script exits immediately.
++#
++# Goal: gaming-PC RustDesk viewer should see a clear "connection forcibly closed"
++# (TCP RST via SIGKILL), then after a short delay RustDesk is restarted so a later
++# reconnect (after unlock + approve) can succeed.
++
++LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
++mkdir -p "$(dirname "$LOG")"
++ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
++
++echo "$(ts) xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart" >>"$LOG"
++
++# Detach the slow work so this hook process returns immediately to the forked child.
++(
++  echo "$(ts) xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk" >>"$LOG"
++  # Abrupt kill so the viewer gets RST / "connection forcibly closed" rather than
++  # a graceful disconnect that can look like a freeze.
++  pkill -KILL -x rustdesk 2>/dev/null || true
++  pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
++  pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
++  sleep 0.3
++  if pgrep -x rustdesk >/dev/null 2>&1; then
++    echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
++  else
++    echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
++  fi
++
++  # Delay before restart so the viewer has time to surface the error dialog
++  # before a new listener appears and auto-reconnect races it.
++  echo "$(ts) xdph-rd-on-lock: sleeping 10s before rustdesk restart" >>"$LOG"
++  sleep 10
++
++  echo "$(ts) xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
++  setsid -f /usr/bin/rustdesk
++  sleep 1
++  echo "$(ts) xdph-rd-on-lock: rustdesk after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
++) >/dev/null 2>&1 &
++
++echo "$(ts) xdph-rd-on-lock: parent exiting (worker pid $!)" >>"$LOG"
++exit 0
+
+=== xdph fork/exec of hook (source) ===
+1414:    // if ~/.local/bin/xdph-rd-on-lock exists and is executable.
+1415:    if (const char* home = getenv("HOME"); home && reason && std::string{reason} == "screen locked") {
+1416:        const std::string hook = std::string{home} + "/.local/bin/xdph-rd-on-lock";
+1417-        if (access(hook.c_str(), X_OK) == 0) {
+1418-            Debug::log(LOG, "[remotedesktop] running lock hook {}", hook);
+1419:            pid_t pid = fork();
+1420-            if (pid == 0) {
+1421-                setsid();
+1422:                if (fork() == 0) {
+1423:                    execl(hook.c_str(), hook.c_str(), (char*)nullptr);
+1424-                    _exit(127);
+1425-                }
+1426-                _exit(0);
+1427-            } else if (pid > 0)
+1428-                waitpid(pid, nullptr, 0);
+1429-        }
+1430-    }
+1431-
+1432-    std::vector<sdbus::ObjectPath> paths;
+1433-    paths.reserve(m_vSessions.size());
+1434-    for (const auto& s : m_vSessions)
+1435-        paths.push_back(s->sessionHandle);
+1436-
+1437-    for (const auto& path : paths) {
+1438-        SSession* s = getSession(path);
+1439-        if (!s)
+1440-            continue;
+1441-
+1442-        releaseHeldInput(s);
+1443-        s->virtualPointer.reset();
+--
+1538:            closeAllSessions("screen locked");
+1539-    }
+1540-}
+1541-
+1542-void CRemoteDesktopPortal::destroySession(const sdbus::ObjectPath& path) {
+1543-    if (const auto PSESSION = getSession(path))
+1544-        releaseHeldInput(PSESSION);
+1545-
+1546-    if (g_pPortalManager->m_sPortals.screencopy)
+1547-        g_pPortalManager->m_sPortals.screencopy->destroyRemoteDesktopSession(path);
+1548-
+1549-    std::erase_if(m_vSessions, [&](const auto& session) { return session->sessionHandle == path; });
+1550-    Debug::log(LOG, "[remotedesktop] session {} destroyed", path.c_str());
+1551-}
+
+=== 3) RESTART RUSTDESK NOW ===
+rustdesk cleared
+
+(rustdesk:536256): Atk-CRITICAL **: 18:07:53.228: atk_socket_embed: assertion 'plug_id != NULL' failed
+Try setting transparent
+flutter: launch args: []
+flutter: initializing FFI main
+flutter: _appType:main,info1-id:2b53e13ad90346ed8a43c95abd325654,info2-name:Omarchy,dir:~/Documents
+flutter: _globalFFI init
+flutter: registerEventHandler callback_query_onlines address book peer
+flutter: registerEventHandler load_address_book_peers address book peer
+flutter: registerEventHandler callback_query_onlines group peer
+flutter: registerEventHandler load_group_peers group peer
+flutter: registerEventHandler callback_query_onlines recent peer
+flutter: registerEventHandler load_recent_peers recent peer
+flutter: registerEventHandler callback_query_onlines fav peer
+flutter: registerEventHandler load_fav_peers fav peer
+flutter: registerEventHandler callback_query_onlines discovered peer
+flutter: registerEventHandler load_lan_peers discovered peer
+flutter: _globalFFI init end
+flutter: registerEventHandler check_software_update_finish check_software_update_finish
+flutter: registerEventHandler callback_query_onlines AllPeersLoader
+flutter: restore lpos: 1280.0/720.0, offset:null/null, isMaximized: true, isFullscreen: false
+flutter: handled by uni links: false
+flutter: [MultiWindowHandler] active window changed: {0}
+536256 /usr/bin/rustdesk
+536256 /usr/bin/rustdesk
+
+=== FINAL STATE ===
+active
+active
+installed=27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+hook=Permissions Size User Date Modified Name
+.rwxr-xr-x  2.0k user 30 Oct 18:07  ~/.local/bin/xdph-rd-on-lock
+hook_bak=Permissions Size User Date Modified Name
+.rwxr-xr-x   519 user 29 Oct 18:21  ~/.local/bin/xdph-rd-on-lock.bak-20261030-180749
+rustdesk=536256 /usr/bin/rustdesk;
+DONE restore_ok=1 hook_updated=1
+
+(rustdesk:536686): Atk-CRITICAL **: 18:08:25.803: atk_socket_embed: assertion 'plug_id != NULL' failed
+Try setting transparent
+flutter: launch args: [--cm]
+flutter: --cm started
+flutter: initializing FFI cm
+flutter: _appType:cm,info1-id:2b53e13ad90346ed8a43c95abd325654,info2-name:Omarchy,dir:~/Documents
+flutter: _globalFFI init
+flutter: registerEventHandler callback_query_onlines address book peer
+flutter: registerEventHandler load_address_book_peers address book peer
+flutter: registerEventHandler callback_query_onlines group peer
+flutter: registerEventHandler load_group_peers group peer
+flutter: registerEventHandler callback_query_onlines recent peer
+flutter: registerEventHandler load_recent_peers recent peer
+flutter: registerEventHandler callback_query_onlines fav peer
+flutter: registerEventHandler load_fav_peers fav peer
+flutter: registerEventHandler callback_query_onlines discovered peer
+flutter: registerEventHandler load_lan_peers discovered peer
+flutter: _globalFFI init end
+flutter: registerEventHandler theme theme
+flutter: registerEventHandler language language
+flutter: Bring window 'null' on top

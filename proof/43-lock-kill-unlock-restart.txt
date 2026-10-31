@@ -1,0 +1,215 @@
+=== 43 lock-kill / unlock-restart ===
+date: 2026-10-30 18:18:43 MST
+
+=== MECHANISM EVIDENCE ===
+hypridle: NOT installed/running (no hypridle.conf, no process, no unit)
+omarchy lock: omarchy-shell lock via Quickshell WlSessionLock (ext-session-lock)
+omarchy hooks: no lock/unlock event (only theme-set, post-boot, battery-low, ...)
+omarchy-system-wake runs on unlock but only brightness; PATH prefers /usr/share/omarchy/bin over ~/.local/bin so cannot shadow
+Chosen: xdph lock hook kills only; starts one-shot waiter (flock) that polls
+  omarchy-hyprland-session-locked (Omarchy's own helper; 0=locked 1=unlocked 2=undet)
+  until unlocked, then xdph-rd-on-unlock starts rustdesk if not running.
+No xdph rebuild. No hypridle restart needed.
+
+=== BACKUPS ===
+backed_up_hook=~/.local/bin/xdph-rd-on-lock.bak-20261030-181843
+4eb420e00170e774ca5434b91dc4c3c2  ~/.local/bin/xdph-rd-on-lock
+4eb420e00170e774ca5434b91dc4c3c2  ~/.local/bin/xdph-rd-on-lock.bak-20261030-181843
+
+=== WRITE xdph-rd-on-unlock ===
+=== WRITE xdph-rd-wait-unlock ===
+=== WRITE xdph-rd-on-lock (kill only + spawn waiter) ===
+--- hook ---
+#!/bin/bash
+# xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+# xdph already double-forks this hook. We only SIGKILL rustdesk here and arm a
+# one-shot unlock waiter; rustdesk is NOT restarted until unlock.
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-lock: invoked (screen locked); hard-killing rustdesk (no restart until unlock)" >>"$LOG"
+
+pkill -KILL -x rustdesk 2>/dev/null || true
+pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+sleep 0.3
+if pgrep -x rustdesk >/dev/null 2>&1; then
+  echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+else
+  echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+fi
+
+# Arm unlock waiter (exactly one via flock). Detached so this hook returns now.
+WAIT="${HOME}/.local/bin/xdph-rd-wait-unlock"
+LOCKFILE="${XDG_RUNTIME_DIR:-/tmp}/xdph-rd-wait-unlock.lock"
+if [ -x "$WAIT" ]; then
+  setsid -f bash -c "flock -n '$LOCKFILE' '$WAIT' || echo \"\$(date '+%Y-%m-%d %H:%M:%S %z') xdph-rd-on-lock: unlock waiter already running; leave it\" >>'$LOG'" >/dev/null 2>&1
+  echo "$(ts) xdph-rd-on-lock: unlock waiter spawn attempted" >>"$LOG"
+else
+  echo "$(ts) xdph-rd-on-lock: WARN missing $WAIT" >>"$LOG"
+fi
+
+echo "$(ts) xdph-rd-on-lock: done" >>"$LOG"
+exit 0
+--- wait ---
+#!/bin/bash
+# xdph-rd-wait-unlock: poll until the compositor session lock is gone, then
+# run xdph-rd-on-unlock. Intended to be run under flock so only one waiter
+# exists. Omarchy has no unlock hook and does not use hypridle; this uses the
+# same helper Omarchy uses (omarchy-hyprland-session-locked).
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-wait-unlock: waiting for unlock (pid $$)" >>"$LOG"
+
+# Exit 0 = locked. Exit 1 = unlocked. Exit 2 = undetermined (treat as keep waiting
+# while we know a lock just happened; only break on clear unlock).
+while true; do
+  if omarchy-hyprland-session-locked; then
+    # locked
+    sleep 1
+    continue
+  fi
+  ec=$?
+  if [ "$ec" -eq 1 ]; then
+    echo "$(ts) xdph-rd-wait-unlock: unlocked (omarchy-hyprland-session-locked exit 1)" >>"$LOG"
+    break
+  fi
+  # undetermined (2) or other: confirm via omarchy-shell lock status when available
+  status=$(omarchy-shell lock status 2>/dev/null || true)
+  if printf '%s' "$status" | grep -q '"locked":false' \
+     && printf '%s' "$status" | grep -q '"sessionLocked":false'; then
+    echo "$(ts) xdph-rd-wait-unlock: unlocked (shell status: $status)" >>"$LOG"
+    break
+  fi
+  sleep 1
+done
+
+ONUNLOCK="${HOME}/.local/bin/xdph-rd-on-unlock"
+if [ -x "$ONUNLOCK" ]; then
+  exec "$ONUNLOCK"
+fi
+echo "$(ts) xdph-rd-wait-unlock: WARN missing $ONUNLOCK" >>"$LOG"
+exit 1
+--- on-unlock ---
+#!/bin/bash
+# xdph-rd-on-unlock: start RustDesk after the session unlocks (idempotent).
+# Called by xdph-rd-wait-unlock once omarchy-hyprland-session-locked reports unlocked.
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-unlock: invoked" >>"$LOG"
+
+if pgrep -x rustdesk >/dev/null 2>&1; then
+  echo "$(ts) xdph-rd-on-unlock: rustdesk already running; skip start: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+  exit 0
+fi
+
+echo "$(ts) xdph-rd-on-unlock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+setsid -f /usr/bin/rustdesk
+sleep 1
+echo "$(ts) xdph-rd-on-unlock: after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+exit 0
+
+=== DIFF vs bak ===
+--- ~/.local/bin/xdph-rd-on-lock.bak-20261030-181843	2026-10-30 18:07:51.841325220 -0700
++++ ~/.local/bin/xdph-rd-on-lock	2026-10-30 18:18:43.906349880 -0700
+@@ -1,44 +1,33 @@
+ #!/bin/bash
+ # xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+-# Invoked by xdph via fork+exec (does not block the portal event loop on our sleep
+-# as long as we return quickly). We background the kill/delay/restart work so this
+-# script exits immediately.
+-#
+-# Goal: gaming-PC RustDesk viewer should see a clear "connection forcibly closed"
+-# (TCP RST via SIGKILL), then after a short delay RustDesk is restarted so a later
+-# reconnect (after unlock + approve) can succeed.
++# xdph already double-forks this hook. We only SIGKILL rustdesk here and arm a
++# one-shot unlock waiter; rustdesk is NOT restarted until unlock.
+ 
+ LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+ mkdir -p "$(dirname "$LOG")"
+ ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+ 
+-echo "$(ts) xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart" >>"$LOG"
++echo "$(ts) xdph-rd-on-lock: invoked (screen locked); hard-killing rustdesk (no restart until unlock)" >>"$LOG"
+ 
+-# Detach the slow work so this hook process returns immediately to the forked child.
+-(
+-  echo "$(ts) xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk" >>"$LOG"
+-  # Abrupt kill so the viewer gets RST / "connection forcibly closed" rather than
+-  # a graceful disconnect that can look like a freeze.
+-  pkill -KILL -x rustdesk 2>/dev/null || true
+-  pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+-  pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+-  sleep 0.3
+-  if pgrep -x rustdesk >/dev/null 2>&1; then
+-    echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+-  else
+-    echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+-  fi
++pkill -KILL -x rustdesk 2>/dev/null || true
++pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
++pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
++sleep 0.3
++if pgrep -x rustdesk >/dev/null 2>&1; then
++  echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
++else
++  echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
++fi
++
++# Arm unlock waiter (exactly one via flock). Detached so this hook returns now.
++WAIT="${HOME}/.local/bin/xdph-rd-wait-unlock"
++LOCKFILE="${XDG_RUNTIME_DIR:-/tmp}/xdph-rd-wait-unlock.lock"
++if [ -x "$WAIT" ]; then
++  setsid -f bash -c "flock -n '$LOCKFILE' '$WAIT' || echo \"\$(date '+%Y-%m-%d %H:%M:%S %z') xdph-rd-on-lock: unlock waiter already running; leave it\" >>'$LOG'" >/dev/null 2>&1
++  echo "$(ts) xdph-rd-on-lock: unlock waiter spawn attempted" >>"$LOG"
++else
++  echo "$(ts) xdph-rd-on-lock: WARN missing $WAIT" >>"$LOG"
++fi
+ 
+-  # Delay before restart so the viewer has time to surface the error dialog
+-  # before a new listener appears and auto-reconnect races it.
+-  echo "$(ts) xdph-rd-on-lock: sleeping 10s before rustdesk restart" >>"$LOG"
+-  sleep 10
+-
+-  echo "$(ts) xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+-  setsid -f /usr/bin/rustdesk
+-  sleep 1
+-  echo "$(ts) xdph-rd-on-lock: rustdesk after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+-) >/dev/null 2>&1 &
+-
+-echo "$(ts) xdph-rd-on-lock: parent exiting (worker pid $!)" >>"$LOG"
++echo "$(ts) xdph-rd-on-lock: done" >>"$LOG"
+ exit 0
+
+=== ENSURE RUSTDESK RUNNING NOW ===
+already running: 537542 /usr/bin/rustdesk;538891 /usr/lib/rustdesk/rustdesk --cm;
+
+=== SANITY: scripts executable, helpers present ===
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.5k user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-lock
+.rwxr-xr-x   756 user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-unlock
+.rwxr-xr-x  1.4k user 30 Oct 18:18  ~/.local/bin/xdph-rd-wait-unlock
+/usr/share/omarchy/bin/omarchy-hyprland-session-locked
+
+=== 43 RESULT (fixed waiter $?) ===
+date: 2026-10-30 18:19:11 MST
+mechanism: xdph on-lock kill + one-shot flock waiter polling omarchy-hyprland-session-locked
+why_not_hypridle: not used on Omarchy (Quickshell lock); no hypridle unit/config/process
+why_not_omarchy_hook: no lock/unlock hook event in hooks.md
+why_not_xdph_rebuild: avoid; waiter is enough
+files:
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.5k user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-lock
+.rwxr-xr-x  2.0k user 30 Oct 18:07  ~/.local/bin/xdph-rd-on-lock.bak-20261030-181843
+.rwxr-xr-x   756 user 30 Oct 18:18  ~/.local/bin/xdph-rd-on-unlock
+.rwxr-xr-x  1.3k user 30 Oct 18:19  ~/.local/bin/xdph-rd-wait-unlock
+rustdesk: 537542 /usr/bin/rustdesk;538891 /usr/lib/rustdesk/rustdesk --cm;
+dry_run_waiter: see lock-hook.log tail above

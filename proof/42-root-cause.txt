@@ -1,0 +1,81 @@
+=== 42 root cause: no 'forcibly closed' on lock (2026-10-30) ===
+America/Phoenix local times.
+
+SUMMARY
+  Hook and SIGKILL worked. Root rustdesk.service was NOT involved.
+  Viewer did not show 'connection forcibly closed' because the session is
+  WebRTC (UDP/DTLS), not a plain TCP socket that RST on SIGKILL. Kill looks
+  like a freeze until the client times out and auto-reconnects. We then
+  restarted rustdesk after only 10s, so auto-reconnect hit a still-locked
+  gaming-pc (portal response 2), matching tester: freeze, then reconnect failed.
+
+EVIDENCE
+
+1) Hook DID fire and KILL DID clear user rustdesk
+   ~/.local/share/xdph-rd/lock-hook.log:
+     18:09:03 invoked; worker pkill -KILL -x rustdesk
+     18:09:04 rustdesk gone after KILL
+     18:09:14 setsid /usr/bin/rustdesk (pid 537542 after)
+   xdph journal (flush ~18:09:22, buffered): session locked; closing all
+   sessions (screen locked); running lock hook; session destroyed.
+
+2) NOT a root --service / --server problem
+   systemctl: rustdesk.service loaded but inactive (dead), disabled.
+   Unit would run /usr/bin/rustdesk --service as User=root; it was not running.
+   Processes at diagnose time: only user user /usr/bin/rustdesk and --cm.
+   No --service/--server. User-level pkill was sufficient to kill the binary.
+   Pre-kill log also: "failed to connect to ipc_service" x3 (no root IPC).
+
+3) Transport is WebRTC, so SIGKILL != viewer 'forcibly closed'
+   Pre-kill log rustdesk_r2026-10-30_18-07-53.log:
+     18:08:16 Handle intranet from REDACTED_PUBLIC_IP
+     WebRTC peer connection state: connecting -> connected
+     Connection opened from REDACTED_PUBLIC_IP; portal response 0; session OK
+   Log ends abruptly at 18:08:36 (audio) with NO 'Connection closed' line.
+   That is consistent with SIGKILL: process dies without a protocol close.
+   WebRTC/UDP does not deliver a TCP RST 'connection forcibly closed' to the
+   Windows viewer the way a killed TCP server would.
+
+4) Viewer auto-reconnected quickly into still-locked portal (tester's report)
+   Post-restart CURRENT log starts 18:09:14 (matches hook restart).
+     18:09:21 Handle intranet from REDACTED_PUBLIC_IP (auto-reconnect ~7s after restart)
+     18:09:22 Connection opened from REDACTED_PUBLIC_IP
+     portal response: 2  ->  Wayland portal handshake failed: wl-stage:create-session:ended
+     Connection closed: Reset by the peer
+     18:09:39 Failed to accept ... deadline has elapsed
+     18:09:46-51 another connect; portal response 0 (tester unlocked; session worked)
+     18:10:04 another Failed to accept deadline
+   response 2 = cancelled/denied while locked. Matches: reconnect failed until unlock.
+   No evidence of a clean 'forcibly closed' path on the server side either.
+
+5) What tester saw (inferred)
+   Freeze at kill (no RST dialog) -> client auto-retry while locked -> portal
+   deny / peer reset -> later success after unlock. Unknown exact Windows
+   wording beyond 'no forcibly closed error'.
+
+ROOT CAUSE (primary)
+  Assuming SIGKILL produces a TCP RST that RustDesk Windows surfaces as
+  'connection forcibly closed' is wrong for this setup: peer path is WebRTC
+  over the LAN. Abrupt process death => stall/freeze + client auto-reconnect,
+  not that dialog. The 10s delayed restart then gave the client a live peer
+  to reconnect to while the screen was still locked.
+
+SECONDARY
+  Restart-while-locked is the wrong policy if the goal is a clear hard stop
+  until the user unlocks and re-approves.
+
+PROPOSED FIX (do not apply until tester approves)
+  A. On lock: keep closing portal sessions + run hook, but DO NOT restart
+     rustdesk until unlock (hyprland unlock hook, or poll lock state). Viewer
+     stays disconnected; Retry only works after unlock + picker.
+  B. If a mid-lock restart is still wanted: delay much longer (60s+) AND/OR
+     block inbound until unlock, so auto-reconnect cannot partially succeed.
+  C. For a clearer viewer error: try a protocol-level disconnect before kill
+     (RustDesk IPC / close active connections if available). SIGKILL alone
+     will not reliably yield 'forcibly closed' on WebRTC. Validate on the
+     gaming PC which exact string appears for a graceful close vs kill.
+  D. Optional later: enable rustdesk.service only if we intentionally want
+     root --service; currently unused; not the bug this time.
+
+NO CHANGES MADE this turn (diagnose only).
+Proof: 40-lock-diagnose.txt, 40b-rd-log-extract.txt, 41-..., 42-root-cause.txt

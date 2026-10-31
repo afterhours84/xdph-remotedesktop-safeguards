@@ -1,0 +1,456 @@
+=== 27-pr448-vs-ours-diff ===
+date: 2026-10-30 10:04:32 MST
+ours: ~/Projects/xdph-rd/src @ 0204ffbbcb3cef72af76804cdf59f114f2e2f6d9 + local fixes (dirty)
+theirs: ~/Projects/xdph-448 @ 84b03f2a991c7019a168ed3199e4b3158c2ff560
+
+=== FILE LIST DIFF (src/portals RemoteDesktop, PortalManager, protocols) ===
+-- src/portals/RemoteDesktop.cpp  ours_lines=1551 theirs_lines=1350
+  unified_diff_lines=482
+-- src/portals/RemoteDesktop.hpp  ours_lines=166 theirs_lines=156
+  unified_diff_lines=78
+-- src/core/PortalManager.cpp  ours_lines=867 theirs_lines=864
+  unified_diff_lines=232
+-- src/core/PortalManager.hpp  ours_lines=193 theirs_lines=197
+  unified_diff_lines=77
+-- src/portals/Screencopy.cpp  ours_lines=1532 theirs_lines=1797
+  unified_diff_lines=729
+-- src/portals/Screencopy.hpp  ours_lines=188 theirs_lines=210
+  unified_diff_lines=102
+-- src/shared/ScreencopyShared.cpp  ours_lines=376 theirs_lines=536
+  unified_diff_lines=328
+-- src/shared/KeyboardState.cpp  OURS_MISSING theirs_only lines=28
+-- protocols/meson.build  ours_lines=65 theirs_lines=80
+  unified_diff_lines=48
+-- hyprland-share-picker/main.cpp  ours_lines=308 theirs_lines=130
+  unified_diff_lines=419
+-- hyprland.portal  ours_lines=4 theirs_lines=4
+  unified_diff_lines=0
+
+=== POLL FD FIX (dispatch by fd, not position) ===
+-- theirs PortalManager.cpp:
+9:#include <pipewire/pipewire.h>
+118:        // libwayland hands us the only reference to this fd, so keep it rather than
+389:        m_pConnection = sdbus::createSessionBusConnection();
+391:        Debug::log(CRIT, "Couldn't create the dbus connection ({})", e.what());
+396:        Debug::log(CRIT, "Couldn't connect to dbus");
+400:    // init wayland connection
+404:        Debug::log(CRIT, "Couldn't connect to a wayland compositor");
+469:        m_pConnection->requestName(sdbus::ServiceName{"org.freedesktop.impl.portal.desktop.hyprland"});
+483:        Debug::log(CRIT, "[core] Failed to create poll wake fd: {}", strerror(errno));
+487:    // Core fds use the same fd-keyed dispatch as portals: registrations made
+488:    // during portal construction must not change which service gets dispatched.
+489:    addFdToEventLoop(m_pConnection->getEventLoopPollData().fd, POLLIN, [this]() {
+494:    addFdToEventLoop(wl_display_get_fd(m_sWaylandConnection.display), POLLIN, [this]() {
+498:            wl_display_dispatch_pending(m_sWaylandConnection.display);
+500:            wl_display_dispatch(m_sWaylandConnection.display);
+502:    addFdToEventLoop(pw_loop_get_fd(m_sPipewire.loop), POLLIN, [this]() {
+507:    addFdToEventLoop(m_sEventLoopInternals.wakeFd, POLLIN, nullptr);
+509:    std::thread pollThr([this]() {
+511:            std::vector<pollfd> pollFds;
+513:                std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+514:                pollFds = m_sEventLoopInternals.pollFds;
+517:            int ret = poll(pollFds.data(), pollFds.size(), -1);
+529:                std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+530:                for (const auto& polled : pollFds) {
+531:                    if (!polled.revents)
+534:                    if (polled.fd == m_sEventLoopInternals.wakeFd) {
+542:                    const auto CURRENT = std::ranges::find(m_sEventLoopInternals.pollFds, polled.fd, &pollfd::fd);
+543:                    if (CURRENT == m_sEventLoopInternals.pollFds.end())
+546:                    CURRENT->revents |= polled.revents;
+548:                    if (!(polled.revents & (POLLHUP | POLLERR | POLLNVAL)))
+551:                    Debug::log(CRIT, "[core] Disconnected from pollfd {}", polled.fd);
+567:            Debug::log(TRACE, "[core] got poll event");
+616:    while (1) { // dbus events
+631:        std::vector<pollfd>                  readyFds;
+632:        std::map<int, std::function<void()>> pollCallbacks;
+634:            std::lock_guard<std::mutex> pollLock(m_sEventLoopInternals.pollMutex);
+635:            readyFds      = m_sEventLoopInternals.pollFds;
+636:            pollCallbacks = m_sEventLoopInternals.pollCallbacks;
+637:            for (auto& fd : m_sEventLoopInternals.pollFds)
+641:        for (pollfd p : readyFds) {
+642:            if (p.revents & POLLIN && pollCallbacks.contains(p.fd))
+643:                pollCallbacks[p.fd]();
+659:            ret = wl_display_dispatch_pending(m_sWaylandConnection.display);
+690:    pollThr.join(); // wait for poll to exit
+695:sdbus::IConnection* CPortalManager::getConnection() {
+797:        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+798:        m_sEventLoopInternals.pollFds.emplace_back(pollfd{.fd = fd, .events = events});
+801:            m_sEventLoopInternals.pollCallbacks[fd] = callback;
+812:        std::lock_guard<std::mutex> lg(m_sEventLoopInternals.pollMutex);
+813:        std::erase_if(m_sEventLoopInternals.pollFds, [fd](const pollfd& p) { return p.fd == fd; });
+814:        m_sEventLoopInternals.pollCallbacks.erase(fd);
+
+-- presence of 'dispatch polled services by fd' style loop in theirs:
+511:            std::vector<pollfd> pollFds;
+514:                pollFds = m_sEventLoopInternals.pollFds;
+517:            int ret = poll(pollFds.data(), pollFds.size(), -1);
+530:                for (const auto& polled : pollFds) {
+531:                    if (!polled.revents)
+542:                    const auto CURRENT = std::ranges::find(m_sEventLoopInternals.pollFds, polled.fd, &pollfd::fd);
+543:                    if (CURRENT == m_sEventLoopInternals.pollFds.end())
+546:                    CURRENT->revents |= polled.revents;
+548:                    if (!(polled.revents & (POLLHUP | POLLERR | POLLNVAL)))
+635:            readyFds      = m_sEventLoopInternals.pollFds;
+637:            for (auto& fd : m_sEventLoopInternals.pollFds)
+638:                fd.revents = 0;
+642:            if (p.revents & POLLIN && pollCallbacks.contains(p.fd))
+798:        m_sEventLoopInternals.pollFds.emplace_back(pollfd{.fd = fd, .events = events});
+813:        std::erase_if(m_sEventLoopInternals.pollFds, [fd](const pollfd& p) { return p.fd == fd; });
+
+-- ours (for contrast) same patterns:
+490:        earlyFds = std::move(m_sEventLoopInternals.pollFds);
+491:        m_sEventLoopInternals.pollFds.clear();
+501:            m_sEventLoopInternals.pollFds.emplace_back(fd);
+506:            std::vector<pollfd> pollFds;
+509:                pollFds = m_sEventLoopInternals.pollFds;
+512:            int ret = poll(pollFds.data(), pollFds.size(), -1);
+525:                for (const auto& polled : pollFds) {
+526:                    if (!polled.revents)
+537:                    const auto CURRENT = std::ranges::find(m_sEventLoopInternals.pollFds, polled.fd, &pollfd::fd);
+538:                    if (CURRENT == m_sEventLoopInternals.pollFds.end())
+541:                    CURRENT->revents |= polled.revents;
+543:                    if (!(polled.revents & (POLLHUP | POLLERR | POLLNVAL)))
+630:            readyFds      = m_sEventLoopInternals.pollFds;
+632:            for (auto& fd : m_sEventLoopInternals.pollFds)
+633:                fd.revents = 0;
+636:        if (readyFds[0].revents & POLLIN /* dbus */) {
+642:        if (readyFds[1].revents & POLLIN /* wl */) {
+652:        if (readyFds[2].revents & POLLIN /* pw */) {
+659:            if (p.revents & POLLIN && pollCallbacks.contains(p.fd))
+822:        m_sEventLoopInternals.pollFds.emplace_back(pollfd{.fd = fd, .events = events});
+837:        std::erase_if(m_sEventLoopInternals.pollFds, [fd](const pollfd& p) { return p.fd == fd; });
+
+=== SCROLL DIRECTION FIX ===
+-- theirs NotifyPointerAxis / dy / scroll:
+26:    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();
+262:    // durable, and the revoke path already pays for this.
+323:            sdbus::registerMethod("NotifyPointerAxis").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, double d1, double d2) {
+324:                onNotifyPointerAxis(o, m, d1, d2);
+326:            sdbus::registerMethod("NotifyPointerAxisDiscrete")
+328:                    [this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, uint32_t u1, int32_t i1) { onNotifyPointerAxisDiscrete(o, m, u1, i1); }),
+709:        Debug::log(WARN, "[remotedesktop] session already started");
+731:        persistAllowed = true; // the grant being restored was consented to already
+771:                // map it is already using keeps emulated keycodes meaning what the user's
+826:        // A restored grant is already in the store - hand the same one back rather than
+832:            // The screencast half of a combined session may already have written its own
+866:        Debug::log(ERR, "[remotedesktop] ConnectToEIS: session already has an EIS connection");
+909:void CRemoteDesktopPortal::onNotifyPointerMotion(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+914:    Debug::log(TRACE, "[remotedesktop] NotifyPointerMotion: dx={}, dy={}", dx, dy);
+915:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+949:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+954:    // Portal and Wayland scroll deltas use the same coordinate directions.
+956:    if (dy != 0.0) {
+958:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+959:        PSESSION->axisActiveY = true;
+961:    if (dx != 0.0) {
+963:        PSESSION->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+964:        PSESSION->axisActiveX = true;
+969:        if (PSESSION->axisActiveY)
+971:        if (PSESSION->axisActiveX)
+973:        PSESSION->axisActiveX = false;
+974:        PSESSION->axisActiveY = false;
+980:void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t axis, int32_t steps) {
+984:    if (axis > 1) {
+985:        Debug::log(WARN, "[remotedesktop] ignoring discrete scroll with invalid axis {}", axis);
+991:    PSESSION->virtualPointer->sendAxisDiscrete(time, axis, wl_fixed_from_int(steps * 15), steps);
+1130:                        double dx = eis_event_pointer_get_dx(event);
+1131:                        double dy = eis_event_pointer_get_dy(event);
+1133:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1164:                        double dx = eis_event_scroll_get_dx(event);
+1165:                        double dy = eis_event_scroll_get_dy(event);
+1166:                        if (dy != 0.0) {
+1168:                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1170:                        if (dx != 0.0) {
+1172:                            s->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+1179:                        s->discreteScrollX += eis_event_scroll_get_discrete_dx(event);
+1180:                        s->discreteScrollY += eis_event_scroll_get_discrete_dy(event);
+1199:                        if (eis_event_scroll_get_stop_y(event))
+1201:                        if (eis_event_scroll_get_stop_x(event))
+
+-- lines with -dy or * -1 near scroll in theirs:
+915:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+958:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+963:        PSESSION->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+980:void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t axis, int32_t steps) {
+991:    PSESSION->virtualPointer->sendAxisDiscrete(time, axis, wl_fixed_from_int(steps * 15), steps);
+1133:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1168:                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1172:                            s->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+
+-- ours same:
+324:            sdbus::registerMethod("NotifyPointerAxis").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, double d1, double d2) {
+325:                onNotifyPointerAxis(o, m, d1, d2);
+327:            sdbus::registerMethod("NotifyPointerAxisDiscrete")
+329:                    [this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, uint32_t u1, int32_t i1) { onNotifyPointerAxisDiscrete(o, m, u1, i1); }),
+953:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+992:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+1000:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1005:        PSESSION->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+1022:void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t axis, int32_t steps) {
+1033:    PSESSION->virtualPointer->sendAxisDiscrete(time, axis, wl_fixed_from_int(steps * 15), steps);
+1181:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1220:                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1224:                            s->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+
+=== CONSENT / PERSIST / RESTORE TOKEN ===
+-- theirs RemoteDesktop.cpp consent/persist/restore:
+26:    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();
+29:// The impl-side portal interface exchanges persistence state as `restore_data` (suv):
+31:// `restore_token` the application sees. Keep the vendor/version in sync with the
+33:using SRestoreData = sdbus::Struct<std::string, uint32_t, sdbus::Variant>;
+35:static constexpr const char* RESTORE_DATA_VENDOR    = "hyprland";
+36:static constexpr uint32_t    RESTORE_DATA_VERSION   = 3;
+37:static constexpr const char* RESTORE_DATA_TOKEN_KEY = "remoteDesktopToken";
+39:static std::filesystem::path restoreTokenFile() {
+51:static std::string newRestoreToken() {
+116:// failed attempt would silently drop them back to the consent dialog next time.
+117:static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+121:    const auto path = restoreTokenFile();
+143:// Drops the grant, e.g. because the app restored it while asking for no further
+144:// persistence. Without this such an entry would sit in the store forever.
+145:static bool revokeRestoreToken(const std::string& token) {
+149:    const auto path = restoreTokenFile();
+177:    // rename) block every future revocation, O_EXCL and all.
+178:    const auto suffix = newRestoreToken();
+206:static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+208:        Debug::log(WARN, "[remotedesktop] refusing to persist a token for an app id containing record separators");
+212:    const auto token = newRestoreToken();
+216:    const auto path = restoreTokenFile();
+279:                            xkb_state_serialize_mods(state, XKB_STATE_MODS_LOCKED), LAYOUT);
+302:            sdbus::registerMethod("CreateSession")
+304:                    [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onCreateSession(o1, o2, s, m); }),
+305:            sdbus::registerMethod("SelectDevices")
+307:                    [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onSelectDevices(o1, o2, s, m); }),
+513:    for (auto& session : m_vSessions) {
+617:dbUasv CRemoteDesktopPortal::onCreateSession(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+621:    const auto PSESSION = m_vSessions.emplace_back(std::make_unique<SSession>(appID, requestHandle, sessionHandle)).get();
+638:    Debug::log(LOG, "[remotedesktop] CreateSession returning for appid={}", appID);
+642:dbUasv CRemoteDesktopPortal::onSelectDevices(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+647:        Debug::log(ERR, "[remotedesktop] SelectDevices: no session");
+655:        } else if (k == "persist_mode") {
+656:            PSESSION->persistMode = v.get<uint32_t>();
+657:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+658:        } else if (k == "restore_data") {
+659:            // xdg-desktop-portal swaps the app-facing `restore_token` for our own
+660:            // `restore_data` blob before it reaches this backend, so this is the only
+663:                const auto DATA = v.get<SRestoreData>();
+664:                if (DATA.get<0>() != RESTORE_DATA_VENDOR || DATA.get<1>() != RESTORE_DATA_VERSION)
+665:                    Debug::log(LOG, "[remotedesktop] ignoring foreign restore data from {} v{}", DATA.get<0>(), DATA.get<1>());
+668:                    if (const auto IT = MAP.find(RESTORE_DATA_TOKEN_KEY); IT != MAP.end())
+669:                        PSESSION->restoreToken = IT->second.get<std::string>();
+671:            } catch (const std::exception& e) { Debug::log(WARN, "[remotedesktop] malformed restore data: {}", e.what()); }
+675:    if (PSESSION->persistMode == 1) {
+676:        Debug::log(WARN, "[remotedesktop] transient persistence is unsupported; downgrading to no persistence");
+677:        PSESSION->persistMode = 0;
+689:    // Deliberately not gated on persistMode: persist_mode describes how the *new*
+692:    PSESSION->restored = validateRestoreToken(PSESSION->restoreToken, appID, PSESSION->deviceTypes);
+693:    if (PSESSION->restored)
+694:        Debug::log(LOG, "[remotedesktop] valid restore token, skipping consent dialog");
+722:    // Persisting is the user's call, not the app's: `persist_mode` only gets us as far
+723:    // as offering the checkbox in the consent dialog.
+724:    bool persistAllowed = false;
+725:    if (!PSESSION->restored) {
+726:        if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, PSESSION->persistMode == 2, &persistAllowed)) {
+731:        persistAllowed = true; // the grant being restored was consented to already
+800:    const bool                                      persistSession = PSESSION->persistMode == 2 && persistAllowed;
+801:    if (g_pPortalManager->m_sPortals.screencopy && !g_pPortalManager->m_sPortals.screencopy->startRemoteDesktopSession(sessionHandle, persistSession, results)) {
+814:    if (!persistSession) {
+815:        results.erase("restore_data");
+816:        results.erase("persist_mode");
+819:    if (!persistSession && PSESSION->restored) {
+820:        // The app restored a grant but no longer wants one kept; honour that.
+821:        if (revokeRestoreToken(PSESSION->restoreToken))
+822:            Debug::log(LOG, "[remotedesktop] revoked restore token, app asked for no persistence");
+824:            Debug::log(WARN, "[remotedesktop] failed to revoke restore token");
+825:    } else if (persistSession) {
+826:        // A restored grant is already in the store - hand the same one back rather than
+827:        // appending a duplicate entry on every restore.
+828:        const auto TOKEN = PSESSION->restored ? PSESSION->restoreToken : issueRestoreToken(appID, PSESSION->deviceTypes);
+830:            Debug::log(WARN, "[remotedesktop] failed to persist restore token");
+834:            std::unordered_map<std::string, sdbus::Variant> restoreData;
+835:            if (const auto IT = results.find("restore_data"); IT != results.end()) {
+837:                    const auto EXISTING = IT->second.get<SRestoreData>();
+838:                    if (EXISTING.get<0>() == RESTORE_DATA_VENDOR && EXISTING.get<1>() == RESTORE_DATA_VERSION)
+839:                        restoreData = EXISTING.get<2>().get<std::unordered_map<std::string, sdbus::Variant>>();
+840:                } catch (const std::exception& e) { Debug::log(WARN, "[remotedesktop] could not merge screencast restore data: {}", e.what()); }
+843:            restoreData[RESTORE_DATA_TOKEN_KEY] = sdbus::Variant{TOKEN};
+
+-- ours RemoteDesktop.cpp consent/persist/restore:
+27:    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();
+30:// The impl-side portal interface exchanges persistence state as `restore_data` (suv):
+32:// `restore_token` the application sees. Keep the vendor/version in sync with the
+34:using SRestoreData = sdbus::Struct<std::string, uint32_t, sdbus::Variant>;
+36:static constexpr const char* RESTORE_DATA_VENDOR    = "hyprland";
+37:static constexpr uint32_t    RESTORE_DATA_VERSION   = 3;
+38:static constexpr const char* RESTORE_DATA_TOKEN_KEY = "remoteDesktopToken";
+40:static std::filesystem::path restoreTokenFile() {
+52:static std::string newRestoreToken() {
+117:// failed attempt would silently drop them back to the consent dialog next time.
+118:static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+122:    const auto path = restoreTokenFile();
+144:// Drops the grant, e.g. because the app restored it while asking for no further
+145:// persistence. Without this such an entry would sit in the store forever.
+146:static bool revokeRestoreToken(const std::string& token) {
+150:    const auto path = restoreTokenFile();
+178:    // rename) block every future revocation, O_EXCL and all.
+179:    const auto suffix = newRestoreToken();
+207:static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+209:        Debug::log(WARN, "[remotedesktop] refusing to persist a token for an app id containing record separators");
+213:    const auto token = newRestoreToken();
+217:    const auto path = restoreTokenFile();
+280:                            xkb_state_serialize_mods(state, XKB_STATE_MODS_LOCKED), LAYOUT);
+303:            sdbus::registerMethod("CreateSession")
+305:                    [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onCreateSession(o1, o2, s, m); }),
+306:            sdbus::registerMethod("SelectDevices")
+308:                    [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onSelectDevices(o1, o2, s, m); }),
+536:    for (auto& session : m_vSessions) {
+640:dbUasv CRemoteDesktopPortal::onCreateSession(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+644:    // Practical safeguard: never start remote control while the screen is locked.
+645:    if (g_pPortalManager->m_sWaylandConnection.sessionLocked) {
+646:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: screen is locked");
+651:    if (!m_vSessions.empty()) {
+652:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: another remote session already exists");
+656:    const auto PSESSION = m_vSessions.emplace_back(std::make_unique<SSession>(appID, requestHandle, sessionHandle)).get();
+673:    Debug::log(LOG, "[remotedesktop] CreateSession returning for appid={}", appID);
+677:dbUasv CRemoteDesktopPortal::onSelectDevices(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+682:        Debug::log(ERR, "[remotedesktop] SelectDevices: no session");
+690:        } else if (k == "persist_mode") {
+691:            PSESSION->persistMode = v.get<uint32_t>();
+692:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+693:        } else if (k == "restore_data") {
+694:            // xdg-desktop-portal swaps the app-facing `restore_token` for our own
+695:            // `restore_data` blob before it reaches this backend, so this is the only
+698:                const auto DATA = v.get<SRestoreData>();
+699:                if (DATA.get<0>() != RESTORE_DATA_VENDOR || DATA.get<1>() != RESTORE_DATA_VERSION)
+700:                    Debug::log(LOG, "[remotedesktop] ignoring foreign restore data from {} v{}", DATA.get<0>(), DATA.get<1>());
+703:                    if (const auto IT = MAP.find(RESTORE_DATA_TOKEN_KEY); IT != MAP.end())
+704:                        PSESSION->restoreToken = IT->second.get<std::string>();
+706:            } catch (const std::exception& e) { Debug::log(WARN, "[remotedesktop] malformed restore data: {}", e.what()); }
+710:    if (PSESSION->persistMode == 1) {
+711:        Debug::log(WARN, "[remotedesktop] transient persistence is unsupported; downgrading to no persistence");
+712:        PSESSION->persistMode = 0;
+724:    // Practical safeguard: always require a fresh consent prompt. Ignore restore tokens
+726:    if (!PSESSION->restoreToken.empty())
+727:        Debug::log(LOG, "[remotedesktop] ignoring restore token (consent required every session)");
+728:    PSESSION->restored    = false;
+729:    PSESSION->persistMode = 0;
+757:    // Practical safeguard: always show the consent dialog; do not offer persistence.
+758:    bool persistAllowed = false;
+759:    if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, false, &persistAllowed)) {
+763:    persistAllowed = false;
+835:    const bool                                      persistSession = PSESSION->persistMode == 2 && persistAllowed;
+836:    if (g_pPortalManager->m_sPortals.screencopy && !g_pPortalManager->m_sPortals.screencopy->startRemoteDesktopSession(sessionHandle, persistSession, results)) {
+852:    if (!persistSession) {
+853:        results.erase("restore_data");
+854:        results.erase("persist_mode");
+857:    if (!persistSession && PSESSION->restored) {
+858:        // The app restored a grant but no longer wants one kept; honour that.
+859:        if (revokeRestoreToken(PSESSION->restoreToken))
+860:            Debug::log(LOG, "[remotedesktop] revoked restore token, app asked for no persistence");
+862:            Debug::log(WARN, "[remotedesktop] failed to revoke restore token");
+863:    } else if (persistSession) {
+864:        // A restored grant is already in the store - hand the same one back rather than
+865:        // appending a duplicate entry on every restore.
+866:        const auto TOKEN = PSESSION->restored ? PSESSION->restoreToken : issueRestoreToken(appID, PSESSION->deviceTypes);
+868:            Debug::log(WARN, "[remotedesktop] failed to persist restore token");
+872:            std::unordered_map<std::string, sdbus::Variant> restoreData;
+873:            if (const auto IT = results.find("restore_data"); IT != results.end()) {
+875:                    const auto EXISTING = IT->second.get<SRestoreData>();
+
+=== LOCK NOTIFIER (ours-only expected) ===
+-- theirs PortalManager lock:
+-- theirs protocols meson for lock:
+-- ours PortalManager lock:
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:207:    else if (INTERFACE == hyprland_lock_notifier_v1_interface.name) {
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:209:            (wl_proxy*)wl_registry_bind((wl_registry*)m_sWaylandConnection.registry->resource(), name, &hyprland_lock_notifier_v1_interface, 1));
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:447:            m_sWaylandConnection.sessionLocked = true;
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:450:                m_sPortals.remoteDesktop->closeAllSessions("screen locked");
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:453:            m_sWaylandConnection.sessionLocked = false;
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:456:        Debug::log(LOG, "[remotedesktop] watching hyprland_lock_notifier_v1 for lock events");
+~/Projects/xdph-rd/src/src/core/PortalManager.cpp:458:        Debug::log(WARN, "[remotedesktop] hyprland_lock_notifier_v1 unavailable; sessions will NOT close on lock");
+~/Projects/xdph-rd/src/src/core/PortalManager.hpp:126:        bool                                  sessionLocked = false;
+-- ours protocols meson lock:
+29:	hl_protocol_dir / 'protocols/hyprland-lock-notify-v1.xml',
+
+=== ONE-SESSION LIMIT ===
+-- theirs:
+513:    for (auto& session : m_vSessions) {
+621:    const auto PSESSION = m_vSessions.emplace_back(std::make_unique<SSession>(appID, requestHandle, sessionHandle)).get();
+1042:    for (auto& s : m_vSessions) {
+1337:    for (auto& s : m_vSessions) {
+1348:    std::erase_if(m_vSessions, [&](const auto& session) { return session->sessionHandle == path; });
+-- ours:
+536:    for (auto& session : m_vSessions) {
+646:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: screen is locked");
+650:    // Practical safeguard: only one remote-desktop session at a time.
+651:    if (!m_vSessions.empty()) {
+652:        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: another remote session already exists");
+656:    const auto PSESSION = m_vSessions.emplace_back(std::make_unique<SSession>(appID, requestHandle, sessionHandle)).get();
+1090:    for (auto& s : m_vSessions) {
+1374:    for (auto& s : m_vSessions) {
+1433:    paths.reserve(m_vSessions.size());
+1434:    for (const auto& s : m_vSessions)
+1549:    std::erase_if(m_vSessions, [&](const auto& session) { return session->sessionHandle == path; });
+
+=== HELD KEY RELEASE (in #448 commit log) ===
+355:    releaseKeyboardKeys(this);
+356:    releaseKeymap(keymap);
+467:    releaseKeyboardKeys(session);
+524:    releaseKeymap(keymap);
+605:void CRemoteDesktopPortal::releaseKeymap(SKeymap& keymap) {
+792:        releaseKeymap(PSESSION->keymap);
+803:        releaseKeymap(PSESSION->keymap);
+1207:                    // A pointer leaving must not disturb held keyboard keys.
+1209:                        releaseKeyboardKeys(s.get());
+1251:void CRemoteDesktopPortal::releaseKeyboardKeys(SSession* session) {
+
+=== SHARE PICKER remote / consent flags ===
+20:static int runRemoteDesktopConsent(const CSharedPointer<IBackend>& backend) {
+25:                            ->appTitle("Allow remote control?")
+29:        std::cerr << "[XDPH_PICKER_ERROR] Failed to create the consent window\n";
+48:    const char* APPID        = std::getenv("XDPH_REMOTE_DESKTOP_APP_ID");
+49:    const char* DEVICES      = std::getenv("XDPH_REMOTE_DESKTOP_DEVICE_TYPES");
+58:    // Persistence is offered only when requested, and is never selected by default.
+59:    const char*                      PERSIST = std::getenv("XDPH_REMOTE_DESKTOP_PERSIST");
+60:    CSharedPointer<CCheckboxElement> persistBox;
+61:    if (PERSIST && *PERSIST == '1') {
+63:        persistBox     = CCheckboxBuilder::begin()->toggled(false)->commence();
+64:        ROW->addChild(persistBox);
+66:            CTextBuilder::begin()->text("Allow " + APP + " to skip this prompt in the future")->color([backend] { return backend->getPalette()->m_colors.text; })->commence());
+73:                          ->label("Allow")
+87:    if (persistBox && persistBox->state())
+88:        std::cout << "[PERSIST]";
+96:    bool allowTokenByDefault = false;
+97:    bool remoteDesktop       = false;
+99:        if (std::string_view{argv[i]} == "--allow-token")
+100:            allowTokenByDefault = true;
+101:        else if (std::string_view{argv[i]} == "--remote-desktop")
+102:            remoteDesktop = true;
+112:    if (remoteDesktop)
+113:        return runRemoteDesktopConsent(BACKEND);
+121:                      WORKSPACE_LIST_V3 ? parseWorkspaceListV3(WORKSPACE_LIST_V3) : parseWorkspaceList(WORKSPACE_LIST ? WORKSPACE_LIST : ""), allowTokenByDefault);
+-- ours picker:
+83:    bool allowTokenByDefault = false;
+84:    bool remoteDesktop       = false;
+86:        if (argv[i] == std::string{"--allow-token"})
+87:            allowTokenByDefault = true;
+88:        else if (argv[i] == std::string{"--remote-desktop"})
+89:            remoteDesktop = true;
+98:    if (remoteDesktop) {
+99:        const char* APPID    = getenv("XDPH_REMOTE_DESKTOP_APP_ID");
+101:        const char* DEVICES  = getenv("XDPH_REMOTE_DESKTOP_DEVICE_TYPES");
+116:        QMessageBox box(QMessageBox::Question, QStringLiteral("Allow remote control?"), QStringLiteral("%1 wants to control your %2.").arg(APP, what),
+121:        // Only offer to remember the grant when the app actually asked to persist.
+124:        const char* PERSIST    = getenv("XDPH_REMOTE_DESKTOP_PERSIST");
+125:        QCheckBox*  persistBox = nullptr;
+126:        if (PERSIST && *PERSIST == '1') {
+127:            persistBox = new QCheckBox(QStringLiteral("Allow %1 to skip this prompt in the future").arg(APP));
+128:            box.setCheckBox(persistBox); // takes ownership
+135:        if (persistBox && persistBox->isChecked())
+136:            std::cout << "[PERSIST]";
+151:    const auto ALLOWTOKENBUTTON = w.findChild<QCheckBox*>("checkBox");
+153:    if (allowTokenByDefault)
+154:        ALLOWTOKENBUTTON->setCheckState(Qt::CheckState::Checked);
+181:            std::cout << (ALLOWTOKENBUTTON->isChecked() ? "r" : "");
+217:            std::cout << (ALLOWTOKENBUTTON->isChecked() ? "r" : "");
+284:            std::cout << (ALLOWTOKENBUTTON->isChecked() ? "r" : "");

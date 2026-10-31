@@ -1,0 +1,1351 @@
+=== 41 analysis + rustdesk log extract ===
+date: 2026-10-30 18:12:16 MST
+
+=== RUSTDESK LOG FILES ===
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-26_21-27-31.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-27_18-22-01.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_16-13-14.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-04-11.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-07-40.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-14-05.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-19-10.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-22-20.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-24-21.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-26-41.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-29-42.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-30_17-43-22.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-30_18-07-53.log
+~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_rCURRENT.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-04.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-32.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-57.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-27_18-22-28.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_16-14-55.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-04-31.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-07-48.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-04.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-12.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-15-08.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-17-35.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-22-58.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-24-34.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-26-54.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_17-44-03.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-08-25.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-09-22.log
+~/.local/share/logs/RustDesk/cm/rustdesk_rCURRENT.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-26_21-27-31.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-27_18-22-01.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-14.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-48.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-04-11.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-07-40.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-14-05.log
+~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-19-10.log
+Permissions Size User Date Modified Name
+drwxr-xr-x     - user 30 Oct 18:09  check-hwcodec-config
+drwxr-xr-x     - user 30 Oct 18:09  cm
+drwxr-xr-x     - user 29 Oct 18:13  tray
+.rw-r--r--   39k user 26 Oct 21:29  rustdesk_r2026-10-26_21-27-31.log
+.rw-r--r--   15k user 27 Oct 18:22  rustdesk_r2026-10-27_18-22-01.log
+.rw-r--r--   15k user 29 Oct 16:15  rustdesk_r2026-10-29_16-13-14.log
+.rw-r--r--   923 user 29 Oct 16:13  rustdesk_r2026-10-29_16-13-48.log
+.rw-r--r--   15k user 29 Oct 18:04  rustdesk_r2026-10-29_18-04-11.log
+.rw-r--r--   46k user 29 Oct 18:13  rustdesk_r2026-10-29_18-07-40.log
+.rw-r--r--   38k user 29 Oct 18:17  rustdesk_r2026-10-29_18-14-05.log
+.rw-r--r--  3.1k user 29 Oct 18:19  rustdesk_r2026-10-29_18-19-10.log
+.rw-r--r--   22k user 29 Oct 18:23  rustdesk_r2026-10-29_18-22-19.log
+.rw-r--r--   21k user 29 Oct 18:24  rustdesk_r2026-10-29_18-24-21.log
+.rw-r--r--   23k user 29 Oct 18:29  rustdesk_r2026-10-29_18-26-41.log
+.rw-r--r--  3.1k user 29 Oct 18:29  rustdesk_r2026-10-29_18-29-42.log
+.rw-r--r--   23k user 30 Oct 18:01  rustdesk_r2026-10-30_17-43-22.log
+.rw-r--r--   21k user 30 Oct 18:08  rustdesk_r2026-10-30_18-07-53.log
+.rw-r--r--   34k user 30 Oct 18:10  rustdesk_rCURRENT.log
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-26_21-27-31.log size=38755 mtime=2026-10-26 21:29:14.978310498 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-27_18-22-01.log size=15391 mtime=2026-10-27 18:22:53.358987685 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-14.log size=15262 mtime=2026-10-29 16:15:17.608095079 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-48.log size=923 mtime=2026-10-29 16:13:48.474094961 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-04-11.log size=14840 mtime=2026-10-29 18:04:50.222138015 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-07-40.log size=45586 mtime=2026-10-29 18:13:29.707167852 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-14-05.log size=38298 mtime=2026-10-29 18:17:53.250577728 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-19-10.log size=3074 mtime=2026-10-29 18:19:12.302207068 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-22-19.log size=21694 mtime=2026-10-29 18:23:08.576299354 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-24-21.log size=21026 mtime=2026-10-29 18:24:46.879989247 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-26-41.log size=23395 mtime=2026-10-29 18:29:00.110654500 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-29-42.log size=3074 mtime=2026-10-29 18:29:44.102212183 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_17-43-22.log size=22839 mtime=2026-10-30 18:01:27.524963893 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_18-07-53.log size=21022 mtime=2026-10-30 18:08:36.062016461 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log size=33801 mtime=2026-10-30 18:10:04.405193870 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log size=33801 mtime=2026-10-30 18:10:04.405193870 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-26_21-27-31.log size=38755 mtime=2026-10-26 21:29:14.978310498 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-27_18-22-01.log size=15391 mtime=2026-10-27 18:22:53.358987685 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-14.log size=15262 mtime=2026-10-29 16:15:17.608095079 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-48.log size=923 mtime=2026-10-29 16:13:48.474094961 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-04-11.log size=14840 mtime=2026-10-29 18:04:50.222138015 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-07-40.log size=45586 mtime=2026-10-29 18:13:29.707167852 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-14-05.log size=38298 mtime=2026-10-29 18:17:53.250577728 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-19-10.log size=3074 mtime=2026-10-29 18:19:12.302207068 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-22-19.log size=21694 mtime=2026-10-29 18:23:08.576299354 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-24-21.log size=21026 mtime=2026-10-29 18:24:46.879989247 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-26-41.log size=23395 mtime=2026-10-29 18:29:00.110654500 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-29-42.log size=3074 mtime=2026-10-29 18:29:44.102212183 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_17-43-22.log size=22839 mtime=2026-10-30 18:01:27.524963893 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_18-07-53.log size=21022 mtime=2026-10-30 18:08:36.062016461 -0700 =====
+
+===== ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log size=33801 mtime=2026-10-30 18:10:04.405193870 -0700 =====
+CURRENT=~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_rCURRENT.log
+--- lines mentioning 18:0[89] or 18:1 today ---
+[2026-10-30 18:09:14.509387 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-30 18:09:14.511705 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-30 18:09:14.512269 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-30 18:09:14.513484 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.513494 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.513710 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-30 18:09:14.513720 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-30 18:09:14.513723 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-30 18:09:14.514764 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.514772 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.514928 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-30 18:09:14.514936 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-30 18:09:14.514940 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-30 18:09:14.515408 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+[2026-10-30 18:09:14.515555 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-30 18:09:14.515565 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-30 18:09:14.516832 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-30 18:09:14.516841 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:09:14.579373 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-30 18:09:14.592766 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-30 18:09:14.855214 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:09:14.896360 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-30 18:09:14.906126 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-30 18:09:15.180017 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 18:09:15.180142 -07:00] INFO [src/ipc.rs:2122] send ok
+
+--- connect/disconnect/error/closed/kill/session/portal keywords last 200 matches ---
+[2026-10-30 18:09:14.513484 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.513494 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.513710 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-30 18:09:14.513720 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-30 18:09:14.514764 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.514772 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.514928 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-30 18:09:14.514936 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-30 18:09:14.515408 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+[2026-10-30 18:09:14.515555 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-30 18:09:14.515565 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+
+=== ALL RD LOG TAILS (last 40 each) with 18:09 context ===
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-26_21-27-31.log ---
+[2026-10-26 21:27:31.995982 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-26 21:27:32.025586 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-26 21:27:32.026214 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-26 21:27:32.027776 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-26 21:27:32.027796 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-26 21:27:32.028078 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-26 21:27:32.028106 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-26 21:27:32.028111 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-26 21:27:32.029530 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-26 21:27:32.029545 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-26 21:27:32.029762 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-26 21:27:32.029772 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-26 21:27:32.029776 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-26 21:27:32.031781 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-26 21:27:32.032081 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-26 21:27:32.032103 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-26 21:27:32.034223 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-26 21:27:32.034249 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-26 21:27:32.138278 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-26 21:27:32.285966 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-26 21:27:32.419095 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-26 21:27:32.468459 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-26 21:27:32.478491 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-26 21:27:32.743124 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-26 21:27:32.743241 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-27_18-22-01.log ---
+[2026-10-27 18:22:01.160772 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-27 18:22:01.199949 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-27 18:22:01.200516 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-27 18:22:01.201678 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-27 18:22:01.201687 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-27 18:22:01.201855 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-27 18:22:01.201864 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-27 18:22:01.201868 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-27 18:22:01.202859 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-27 18:22:01.202867 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-27 18:22:01.203019 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-27 18:22:01.203027 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-27 18:22:01.203030 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-27 18:22:01.208739 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-27 18:22:01.208881 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-27 18:22:01.208896 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-27 18:22:01.210426 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-27 18:22:01.210439 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-27 18:22:01.298276 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-27 18:22:01.441281 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-27 18:22:01.581223 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-27 18:22:01.621052 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-27 18:22:01.630647 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-27 18:22:01.899589 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-27 18:22:01.899727 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_16-13-14.log ---
+[2026-10-29 16:13:14.933305 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 16:13:14.974022 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 16:13:14.974659 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 16:13:14.975881 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 16:13:14.975890 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 16:13:14.976070 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 16:13:14.976079 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 16:13:14.976082 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 16:13:14.977141 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 16:13:14.977153 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 16:13:14.977338 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 16:13:14.977349 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 16:13:14.977354 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 16:13:14.980735 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 16:13:14.980900 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 16:13:14.980913 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 16:13:14.982566 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 16:13:14.982579 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 16:13:15.065227 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 16:13:15.204925 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 16:13:15.342069 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 16:13:15.383164 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 16:13:15.392962 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 16:13:15.658124 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 16:13:15.658319 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-04-11.log ---
+[2026-10-29 18:04:11.828240 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:04:11.849607 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:04:11.850437 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:04:11.852039 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:04:11.852054 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:04:11.852250 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:04:11.852261 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:04:11.852267 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:04:11.853454 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:04:11.853468 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:04:11.853658 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:04:11.853668 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:04:11.853672 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:04:11.854971 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:04:11.855082 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:04:11.855093 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:04:11.856560 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:04:11.856573 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:04:11.960354 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:04:11.976589 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:04:12.245705 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:04:12.290083 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:04:12.300573 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:04:12.566998 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:04:12.567153 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-07-40.log ---
+[2026-10-29 18:07:40.553991 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:07:40.555946 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:07:40.556488 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:07:40.557731 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:07:40.557740 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:07:40.557916 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:07:40.557926 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:07:40.557929 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:07:40.558984 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:07:40.558993 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:07:40.559150 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:07:40.559159 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:07:40.559162 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:07:40.559673 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:07:40.559783 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:07:40.559793 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:07:40.561070 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:07:40.561079 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:07:40.628584 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:07:40.647049 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:07:40.908931 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:07:40.955045 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:07:40.964862 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:07:41.230855 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:07:41.231055 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-14-05.log ---
+[2026-10-29 18:14:05.670643 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:14:05.685073 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:14:05.686030 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:14:05.687655 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:14:05.687667 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:14:05.687917 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:14:05.687929 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:14:05.687935 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:14:05.689285 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:14:05.689296 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:14:05.689523 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:14:05.689554 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:14:05.689560 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:14:05.691380 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:14:05.691529 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:14:05.691542 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:14:05.693192 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:14:05.693202 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:14:05.796141 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:14:05.810795 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:14:06.079392 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:14:06.122050 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:14:06.131964 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:14:06.399848 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:14:06.400046 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-19-10.log ---
+[2026-10-29 18:19:10.548745 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:19:10.550764 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:19:10.551560 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:19:10.553145 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:19:10.553166 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:19:10.553377 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:19:10.553389 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:19:10.553393 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:19:10.554715 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:19:10.554736 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:19:10.554918 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:19:10.554927 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:19:10.554931 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:19:10.555406 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:19:10.555565 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:19:10.555576 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:19:10.556912 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:19:10.556921 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:19:10.632314 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:19:10.645845 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:19:10.910261 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:19:10.952126 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:19:10.962582 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:19:11.230263 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:19:11.230389 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-22-20.log ---
+[2026-10-29 18:22:20.047150 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:22:20.049027 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:22:20.049598 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:22:20.050771 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:22:20.050781 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:22:20.050955 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:22:20.050964 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:22:20.050968 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:22:20.051987 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:22:20.051996 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:22:20.052158 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:22:20.052168 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:22:20.052171 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:22:20.052793 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:22:20.052958 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:22:20.052971 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:22:20.055137 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:22:20.055158 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:22:20.136573 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:22:20.155438 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:22:20.415609 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:22:20.458161 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:22:20.468809 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:22:20.736746 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:22:20.737004 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-24-21.log ---
+[2026-10-29 18:24:21.528726 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:24:21.530670 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:24:21.531233 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:24:21.532498 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:24:21.532509 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:24:21.532748 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:24:21.532757 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:24:21.532761 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:24:21.533800 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:24:21.533809 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:24:21.533968 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:24:21.533976 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:24:21.533980 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:24:21.534463 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:24:21.534618 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:24:21.534628 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:24:21.536073 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:24:21.536083 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:24:21.594190 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:24:21.607306 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:24:21.869520 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:24:21.914176 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:24:21.924609 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:24:22.191230 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:24:22.191366 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-26-41.log ---
+[2026-10-29 18:26:41.391855 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:26:41.393835 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:26:41.394369 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:26:41.395599 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:26:41.395609 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:26:41.395783 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:26:41.395793 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:26:41.395796 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:26:41.396821 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:26:41.396830 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:26:41.396989 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:26:41.396998 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:26:41.397002 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:26:41.397473 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:26:41.397614 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:26:41.397625 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:26:41.399047 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:26:41.399057 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:26:41.471259 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:26:41.485917 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:26:41.750897 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:26:41.794500 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:26:41.805364 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:26:42.071824 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:26:42.071951 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-29_18-29-42.log ---
+[2026-10-29 18:29:42.349172 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-29 18:29:42.351683 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-29 18:29:42.352358 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-29 18:29:42.353924 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:29:42.353936 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:29:42.354210 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-29 18:29:42.354223 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-29 18:29:42.354229 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-29 18:29:42.355614 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-29 18:29:42.355625 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-29 18:29:42.355848 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-29 18:29:42.355860 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-29 18:29:42.355866 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-29 18:29:42.356503 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-29 18:29:42.356669 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-29 18:29:42.356682 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-29 18:29:42.358850 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-29 18:29:42.358871 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:29:42.437322 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-29 18:29:42.453972 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-29 18:29:42.716375 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-29 18:29:42.759201 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-29 18:29:42.769600 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-29 18:29:43.041176 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:29:43.041404 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-30_17-43-22.log ---
+[2026-10-30 17:43:22.063862 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-30 17:43:22.065820 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-30 17:43:22.066348 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-30 17:43:22.067505 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-30 17:43:22.067535 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-30 17:43:22.067749 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-30 17:43:22.067758 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-30 17:43:22.067762 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-30 17:43:22.068828 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-30 17:43:22.068836 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-30 17:43:22.068993 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-30 17:43:22.069001 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-30 17:43:22.069005 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-30 17:43:22.069499 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-30 17:43:22.069635 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-30 17:43:22.069645 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-30 17:43:22.071140 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-30 17:43:22.071151 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 17:43:22.142378 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-30 17:43:22.158065 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-30 17:43:22.419770 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 17:43:22.462105 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-30 17:43:22.472457 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-30 17:43:22.740757 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 17:43:22.740973 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_r2026-10-30_18-07-53.log ---
+[2026-10-30 18:07:53.079177 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-30 18:07:53.081082 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-30 18:07:53.081657 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-30 18:07:53.082842 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-30 18:07:53.082852 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-30 18:07:53.083030 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-30 18:07:53.083039 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-30 18:07:53.083043 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-30 18:07:53.084051 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+
+[2026-10-30 18:07:53.084059 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+
+[2026-10-30 18:07:53.084217 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-30 18:07:53.084226 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-30 18:07:53.084229 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-30 18:07:53.084739 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+
+[2026-10-30 18:07:53.084899 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-30 18:07:53.084908 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-30 18:07:53.086186 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-30 18:07:53.086195 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:07:53.162681 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-30 18:07:53.176994 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-30 18:07:53.452864 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:07:53.505289 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-30 18:07:53.523642 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-30 18:07:53.788523 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 18:07:53.788819 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/check-hwcodec-config/rustdesk_rCURRENT.log ---
+[2026-10-30 18:09:14.509387 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/common.rs:118] Successfully set up parent death signal
+[2026-10-30 18:09:14.511705 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:193] GPU support detected - NV: true, AMF: false, Intel: true
+[2026-10-30 18:09:14.512269 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_nvenc
+[2026-10-30 18:09:14.513484 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.513494 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.513710 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: h264_nvenc
+[2026-10-30 18:09:14.513720 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_nvenc
+[2026-10-30 18:09:14.513723 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: hevc_nvenc
+[2026-10-30 18:09:14.514764 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Driver does not support the required nvenc API version. Required: 13.1 Found: 13.0
+[2026-10-30 18:09:14.514772 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] The minimum required Nvidia driver for nvenc is (unknown) or newer
+[2026-10-30 18:09:14.514928 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] avcodec_open2 failed, ret = Function not implemented, name: hevc_nvenc
+[2026-10-30 18:09:14.514936 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder hevc_nvenc
+[2026-10-30 18:09:14.514940 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:310] Testing encoder: h264_vaapi
+[2026-10-30 18:09:14.515408 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg.rs:34] Failed to initialise VAAPI connection: -1 (unknown libva error).
+[2026-10-30 18:09:14.515555 -07:00] ERROR [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/lib.rs:17] [FFMPEG_RAM_ENC] av_hwdevice_ctx_create failed
+[2026-10-30 18:09:14.515565 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/encode.rs:386] Failed to create encoder h264_vaapi
+[2026-10-30 18:09:14.516832 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:169] Linux GPU support detected - NV: true
+[2026-10-30 18:09:14.516841 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: h264 (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:09:14.579373 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder h264 created successfully
+[2026-10-30 18:09:14.592766 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder h264 test passed
+[2026-10-30 18:09:14.855214 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:268] Testing decoder: hevc (hwdevice: AV_HWDEVICE_TYPE_CUDA)
+[2026-10-30 18:09:14.896360 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:281] Decoder hevc created successfully
+[2026-10-30 18:09:14.906126 -07:00] DEBUG [/home/builder/.cargo/git/checkouts/hwcodec-3f3da9ff8e484625/778df1f/src/ffmpeg_ram/decode.rs:298] Decoder hevc test passed
+[2026-10-30 18:09:15.180017 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:713] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 18:09:15.180142 -07:00] INFO [src/ipc.rs:2122] send ok
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-04.log ---
+[2026-10-26 21:28:04.196966 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-26 21:28:04.196966 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-26 21:28:04.257301 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-26 21:28:04.257342 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-26 21:28:04.257367 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1686
+[2026-10-26 21:28:18.271930 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1686
+[2026-10-26 21:28:18.294278 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-26 21:28:18.294364 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-32.log ---
+[2026-10-26 21:28:32.532735 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-26 21:28:32.533389 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-26 21:28:32.555781 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-26 21:28:32.555822 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-26 21:28:32.555852 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1688
+[2026-10-26 21:28:45.495077 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1688
+[2026-10-26 21:28:45.641666 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-26 21:28:45.641753 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-57.log ---
+[2026-10-26 21:28:57.971037 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-26 21:28:57.971131 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-26 21:28:58.008629 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-26 21:28:58.008665 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-26 21:28:58.008689 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1689
+[2026-10-26 21:29:01.630803 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-26 21:29:01.630861 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-27_18-22-28.log ---
+[2026-10-27 18:22:28.325903 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-27 18:22:28.325908 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-27 18:22:28.419825 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-27 18:22:28.419863 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-27 18:22:28.419888 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1992
+[2026-10-27 18:22:53.340105 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1992
+[2026-10-27 18:22:53.347384 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-27 18:22:53.347413 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_16-14-55.log ---
+[2026-10-29 16:14:55.493015 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 16:14:55.493015 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 16:14:55.560450 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 16:14:55.560503 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 16:14:55.560551 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1800
+[2026-10-29 16:15:07.879941 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1800
+[2026-10-29 16:15:07.886716 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 16:15:07.886762 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-04-31.log ---
+[2026-10-29 18:04:31.272039 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:04:31.272907 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:04:31.536040 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:04:31.536089 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:04:31.536126 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1708
+[2026-10-29 18:04:39.770991 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1708
+[2026-10-29 18:04:39.778681 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:04:39.778726 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-07-48.log ---
+[2026-10-29 18:07:48.797612 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:07:48.797622 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:07:48.809793 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:07:48.809837 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:07:48.809865 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1263
+[2026-10-29 18:08:11.329634 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1263
+[2026-10-29 18:08:11.448292 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-29 18:12:40.011318 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:12:40.011454 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-04.log ---
+[2026-10-29 18:13:04.326491 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:13:04.327151 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:13:04.556704 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:13:04.556752 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:13:04.556779 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1264
+[2026-10-29 18:13:04.556817 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:13:04.556828 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-12.log ---
+[2026-10-29 18:13:12.770097 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:13:12.771948 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:13:13.070703 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:13:13.070747 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:13:13.070774 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1265
+[2026-10-29 18:13:13.070815 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:13:13.070827 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-15-08.log ---
+[2026-10-29 18:15:08.806825 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:15:08.807364 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:15:09.023113 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:15:09.023160 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:15:09.023193 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1085
+[2026-10-29 18:15:09.032484 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-29 18:17:30.876934 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:17:30.877033 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+[2026-10-29 18:17:30.893675 -07:00] ERROR [src/ipc.rs:1544] Failed to send audio data:Broken pipe (os error 32)
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-17-35.log ---
+[2026-10-29 18:17:35.597739 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:17:35.597882 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:17:35.605616 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:17:35.605659 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:17:35.605694 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1086
+[2026-10-29 18:17:35.605741 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:17:35.605758 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-22-58.log ---
+[2026-10-29 18:22:58.172375 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:22:58.172704 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:22:58.406312 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-29 18:22:58.426818 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:22:58.426857 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:22:58.426882 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 520
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-24-34.log ---
+[2026-10-29 18:24:34.528208 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:24:34.529161 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:24:34.782020 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-29 18:24:34.788182 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:24:34.788242 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:24:34.788280 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1422
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-26-54.log ---
+[2026-10-29 18:26:54.526980 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-29 18:26:54.529384 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-29 18:26:54.741001 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-29 18:26:54.760933 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-29 18:26:54.760982 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-29 18:26:54.761012 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1498
+[2026-10-29 18:28:59.831999 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-29 18:28:59.832074 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+[2026-10-29 18:28:59.867703 -07:00] ERROR [src/ipc.rs:1544] Failed to send audio data:Broken pipe (os error 32)
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_17-44-03.log ---
+[2026-10-30 17:44:03.983405 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-30 17:44:03.985166 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-30 17:44:04.232085 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-30 17:44:04.232780 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-30 17:44:04.232811 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-30 17:44:04.232836 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1285
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-08-25.log ---
+[2026-10-30 18:08:25.921301 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-30 18:08:25.921823 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-30 18:08:26.155306 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-30 18:08:26.155377 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-30 18:08:26.156714 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1088
+[2026-10-30 18:08:26.171656 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-09-22.log ---
+[2026-10-30 18:09:22.574770 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-30 18:09:22.575754 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-30 18:09:22.590918 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-30 18:09:22.590974 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-30 18:09:22.591013 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1477
+[2026-10-30 18:09:22.591085 -07:00] INFO [src/ui_cm_interface.rs:569] cm ipc connection closed from connection request
+[2026-10-30 18:09:22.591106 -07:00] DEBUG [src/ui_cm_interface.rs:841] ipc task end
+--- ~/.local/share/logs/RustDesk/cm/rustdesk_rCURRENT.log ---
+[2026-10-30 18:09:52.141638 -07:00] INFO [src/ipc.rs:725] Started ipc_pa server at path: /tmp/RustDesk-1000/ipc_pa
+[2026-10-30 18:09:52.142084 -07:00] INFO [src/ipc.rs:725] Started ipc_cm server at path: /tmp/RustDesk-1000/ipc_cm
+[2026-10-30 18:09:52.388646 -07:00] INFO [src/ipc.rs:1516] pa monitor: "alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor"
+[2026-10-30 18:09:52.399274 -07:00] DEBUG [src/ui_cm_interface.rs:862] Got new connection
+[2026-10-30 18:09:52.399320 -07:00] DEBUG [src/ui_cm_interface.rs:816] ipc task begin
+[2026-10-30 18:09:52.399345 -07:00] DEBUG [src/ui_cm_interface.rs:558] conn_id: 1478
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-26_21-27-31.log ---
+[2026-10-26 21:29:01.589406 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-26 21:29:01.589415 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-26 21:29:01.589423 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-26 21:29:01.589430 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-26 21:29:01.589476 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-26 21:29:01.594097 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-26 21:29:01.614685 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-26 21:29:01.623591 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1689, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-26 21:29:01.623736 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-26 21:29:01.623746 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-26 21:29:01.623769 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-26 21:29:01.623800 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1689, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-26 21:29:01.623884 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-26 21:29:01.623903 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-26 21:29:01.630450 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-26 21:29:01.630510 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-26 21:29:01.630529 -07:00] INFO [src/server/connection.rs:5249] #1689 Connection closed: Reset by the peer
+[2026-10-26 21:29:01.630545 -07:00] INFO [src/server/connection.rs:1237] #1689 connection loop exited
+[2026-10-26 21:29:01.630599 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-26 21:29:01.630601 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1689)
+[2026-10-26 21:29:01.630612 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-26 21:29:01.630628 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-26 21:29:01.630640 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-26 21:29:01.630618 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-26 21:29:01.630649 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-26 21:29:01.630704 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-26 21:29:01.630783 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-26 21:29:01.630863 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-26 21:29:01.964686 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-26 21:29:14.979240 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:49446: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-27_18-22-01.log ---
+[2026-10-27 18:22:53.200748 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-27 18:22:53.200764 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-27 18:22:53.200797 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-27 18:22:53.205687 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-27 18:22:53.223788 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-27 18:22:53.339629 -07:00] ERROR [src/server/wayland.rs:117] Wayland portal handshake failed: wl-stage:create-session:unsupported:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.RemoteDesktop” on object at path /org/freedesktop/portal/desktop
+[2026-10-27 18:22:53.339659 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1992, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-27 18:22:53.339751 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-27 18:22:53.339760 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-27 18:22:53.339820 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-27 18:22:53.339836 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1992, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-27 18:22:53.339916 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-27 18:22:53.339921 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-27 18:22:53.347062 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-27 18:22:53.347129 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-27 18:22:53.347143 -07:00] INFO [src/server/connection.rs:5249] #1992 Connection closed: Reset by the peer
+[2026-10-27 18:22:53.347155 -07:00] INFO [src/server/connection.rs:1237] #1992 connection loop exited
+[2026-10-27 18:22:53.347172 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1992)
+[2026-10-27 18:22:53.347317 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-27 18:22:53.347339 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-27 18:22:53.347309 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-27 18:22:53.347359 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-27 18:22:53.347356 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-27 18:22:53.347374 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-27 18:22:53.347368 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-27 18:22:53.347405 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-27 18:22:53.358346 -07:00] INFO [libs/libxdo-sys-stub/src/lib.rs:114] libxdo-sys Loaded libxdo.so.4
+[2026-10-27 18:22:53.359372 -07:00] INFO [libs/enigo/src/linux/xdo.rs:100] xdo context created successfully
+[2026-10-27 18:22:53.359589 -07:00] INFO [libs/enigo/src/linux/xdo.rs:72] X11 pointer has 10 buttons, side buttons supported
+[2026-10-27 18:22:53.359598 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-14.log ---
+[2026-10-29 16:15:07.752675 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-29 16:15:07.757883 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-29 16:15:07.776348 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 16:15:07.879483 -07:00] ERROR [src/server/wayland.rs:117] Wayland portal handshake failed: wl-stage:create-session:unsupported:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.RemoteDesktop” on object at path /org/freedesktop/portal/desktop
+[2026-10-29 16:15:07.879544 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1800, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 16:15:07.879681 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 16:15:07.879688 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 16:15:07.879729 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 16:15:07.879740 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1800, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 16:15:07.879839 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 16:15:07.879852 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 16:15:07.886222 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 16:15:07.886311 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 16:15:07.886329 -07:00] INFO [src/server/connection.rs:5249] #1800 Connection closed: Reset by the peer
+[2026-10-29 16:15:07.886342 -07:00] INFO [src/server/connection.rs:1237] #1800 connection loop exited
+[2026-10-29 16:15:07.886376 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1800)
+[2026-10-29 16:15:07.886417 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 16:15:07.886434 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 16:15:07.886441 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 16:15:07.886436 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 16:15:07.886450 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 16:15:07.886455 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 16:15:07.886556 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 16:15:07.886649 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 16:15:07.886660 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 16:15:07.898938 -07:00] INFO [libs/libxdo-sys-stub/src/lib.rs:114] libxdo-sys Loaded libxdo.so.4
+[2026-10-29 16:15:07.901981 -07:00] INFO [libs/enigo/src/linux/xdo.rs:100] xdo context created successfully
+[2026-10-29 16:15:07.902344 -07:00] INFO [libs/enigo/src/linux/xdo.rs:72] X11 pointer has 10 buttons, side buttons supported
+[2026-10-29 16:15:07.902359 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 16:15:17.608177 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:62903: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_16-13-48.log ---
+[2026-10-29 16:13:48.376494 -07:00] INFO [src/platform/gtk_sudo.rs:352] read from child: [sudo] password for REDACTED_USER:
+[2026-10-29 16:13:48.376900 -07:00] DEBUG [src/platform/gtk_sudo.rs:363] get_echo_turn_off ok
+[2026-10-29 16:13:48.427015 -07:00] INFO [src/platform/gtk_sudo.rs:352] read from child: ]3008;start=REDACTED;user=REDACTED_USER;hostname=omarchy;machineid=REDACTED_MACHINEID;bootid=REDACTED_BOOTID;pid=162262;pidfdid=REDACTED;comm=sudo;targetuser=root;type=session\
+]3008;end=f6b7edf6379a44ad95dc4727ef1107a3\
+[2026-10-29 16:13:48.427047 -07:00] DEBUG [src/platform/gtk_sudo.rs:430] Read error: Os { code: 5, kind: InputOutputError, message: "Input/output error" }
+[2026-10-29 16:13:48.427080 -07:00] INFO [src/platform/gtk_sudo.rs:438] waitpid status: Ok(Exited(Pid(162262), 0))
+[2026-10-29 16:13:48.475494 -07:00] INFO [src/platform/gtk_sudo.rs:142] Exit code: 0
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-04-11.log ---
+[2026-10-29 18:04:38.720627 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:04:38.720641 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-29 18:04:38.720688 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-29 18:04:38.736407 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:04:38.747227 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-29 18:04:39.770545 -07:00] ERROR [src/server/wayland.rs:117] Wayland portal handshake failed: wl-stage:create-session:dbus:org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout
+[2026-10-29 18:04:39.770605 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1708, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:04:39.770720 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:04:39.770729 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:04:39.770773 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:04:39.770789 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1708, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:04:39.770863 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:04:39.770877 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:04:39.778330 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:04:39.778387 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 18:04:39.778408 -07:00] INFO [src/server/connection.rs:5249] #1708 Connection closed: Reset by the peer
+[2026-10-29 18:04:39.778437 -07:00] INFO [src/server/connection.rs:1237] #1708 connection loop exited
+[2026-10-29 18:04:39.778458 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1708)
+[2026-10-29 18:04:39.778480 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:04:39.778492 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:04:39.778500 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:04:39.778515 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:04:39.778588 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:04:39.778673 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:04:39.778773 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: reset by the peer
+[2026-10-29 18:04:39.791935 -07:00] INFO [libs/libxdo-sys-stub/src/lib.rs:114] libxdo-sys Loaded libxdo.so.4
+[2026-10-29 18:04:39.793179 -07:00] INFO [libs/enigo/src/linux/xdo.rs:100] xdo context created successfully
+[2026-10-29 18:04:39.793619 -07:00] INFO [libs/enigo/src/linux/xdo.rs:72] X11 pointer has 10 buttons, side buttons supported
+[2026-10-29 18:04:39.793632 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:04:50.223230 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:56933: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-07-40.log ---
+[2026-10-29 18:13:12.434341 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-29 18:13:12.434379 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-29 18:13:12.434422 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-29 18:13:12.439256 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-29 18:13:12.460494 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:13:12.460580 -07:00] WARN [src/server/wayland.rs:575] wayland_diag: Preventing duplicate PipeWire initialization
+[2026-10-29 18:13:12.460596 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1265, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:13:12.460714 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:13:12.460727 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:13:12.460756 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:13:12.460773 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1265, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:13:12.460846 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:13:12.460854 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:13:12.466167 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:13:12.466234 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 18:13:12.466290 -07:00] INFO [src/server/connection.rs:5249] #1265 Connection closed: Reset by the peer
+[2026-10-29 18:13:12.466311 -07:00] INFO [src/server/connection.rs:1237] #1265 connection loop exited
+[2026-10-29 18:13:12.466332 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1265)
+[2026-10-29 18:13:12.466348 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:13:12.466372 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:13:12.466346 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:13:12.466383 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:13:12.466415 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:13:12.466482 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:13:12.466528 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:13:12.467593 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-29 18:13:13.070715 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 18:13:16.702671 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-29 18:13:21.120501 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:61164: deadline has elapsed
+[2026-10-29 18:13:29.707878 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:61169: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-14-05.log ---
+[2026-10-29 18:17:35.289688 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 120 to PLAYING state...
+[2026-10-29 18:17:35.295566 -07:00] ERROR [src/server/wayland.rs:128] Failed scrap Element failed to change its state
+[2026-10-29 18:17:35.295621 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1086, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:17:35.295757 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:17:35.295773 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:17:35.295800 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:17:35.295843 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1086, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-29 18:17:35.295918 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-29 18:17:35.295926 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-29 18:17:35.301330 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:17:35.301396 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 18:17:35.301416 -07:00] INFO [src/server/connection.rs:5249] #1086 Connection closed: Reset by the peer
+[2026-10-29 18:17:35.301433 -07:00] INFO [src/server/connection.rs:1237] #1086 connection loop exited
+[2026-10-29 18:17:35.301456 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1086)
+[2026-10-29 18:17:35.301485 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:17:35.301476 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:17:35.301520 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301540 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:17:35.301581 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301611 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-29 18:17:35.301598 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:17:35.301681 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:17:35.301718 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:17:35.301751 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:17:35.303448 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-29 18:17:35.605637 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 18:17:36.896103 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-29 18:17:38.503648 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-29 18:17:51.491489 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52313: deadline has elapsed
+[2026-10-29 18:17:53.252247 -07:00] ERROR [src/server.rs:387] Failed to create relay connection for REDACTED_PUBLIC_IP:52315 with uuid REDACTED_UUID: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-19-10.log ---
+[2026-10-29 18:19:10.499324 -07:00] INFO [src/server.rs:665] DISPLAY=Ok(":0")
+[2026-10-29 18:19:10.499730 -07:00] INFO [src/server.rs:666] XAUTHORITY=Err(NotPresent)
+[2026-10-29 18:19:10.499791 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+[2026-10-29 18:19:10.499817 -07:00] INFO [src/server.rs:744] try start server
+[2026-10-29 18:19:10.500478 -07:00] INFO [src/common.rs:706] Testing nat ...
+[2026-10-29 18:19:10.500769 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+[2026-10-29 18:19:10.500914 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+[2026-10-29 18:19:10.524498 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+[2026-10-29 18:19:10.536020 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+[2026-10-29 18:19:10.540771 -07:00] INFO [libs/scrap/src/common/codec.rs:1046] skip test av1
+[2026-10-29 18:19:10.540802 -07:00] INFO [src/lan.rs:31] lan discovery listener started
+[2026-10-29 18:19:10.540876 -07:00] INFO [src/rendezvous_mediator.rs:659] start rendezvous mediator of rs-ny.rustdesk.com
+[2026-10-29 18:19:10.541171 -07:00] INFO [src/rendezvous_mediator.rs:369] start udp: rs-ny.rustdesk.com:21116
+[2026-10-29 18:19:10.712740 -07:00] DEBUG [libs/hbb_common/src/udp.rs:36] Receive buf size of udp 0.0.0.0:0: Ok(212992)
+[2026-10-29 18:19:10.801323 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+[2026-10-29 18:19:10.841156 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21116: port=41731
+[2026-10-29 18:19:10.886751 -07:00] DEBUG [src/rendezvous_mediator.rs:415] Latency of rs-ny.rustdesk.com:21116: 172.801ms
+[2026-10-29 18:19:11.191123 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21115: port=41731
+[2026-10-29 18:19:11.191168 -07:00] INFO [src/common.rs:760] Tested nat type: ASYMMETRIC in 690.534088ms
+[2026-10-29 18:19:11.230423 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:523] set hwcodec config
+[2026-10-29 18:19:11.230440 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:524] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:19:11.402549 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+[2026-10-29 18:19:11.531303 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:742] Check hwcodec config, exit with: exit status: 0
+[2026-10-29 18:19:12.303225 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+[2026-10-29 18:19:12.303260 -07:00] WARN [src/server.rs:924] skipped config sync
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-22-19.log ---
+[2026-10-29 18:22:57.827564 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-29 18:22:57.827591 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-29 18:22:57.827681 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-29 18:22:57.827695 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-29 18:22:57.827680 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-29 18:22:57.834985 -07:00] INFO [src/server/service.rs:196] Call snapshot of mouse_cursor service
+[2026-10-29 18:22:57.856198 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-29 18:22:57.931354 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-29 18:22:58.020839 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-29 18:22:58.021552 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:22:58.025699 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-29 18:22:58.025738 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-29 18:22:58.115888 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-29 18:22:58.116016 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-29 18:22:58.141978 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 126 to PLAYING state...
+[2026-10-29 18:22:58.143184 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-29 18:22:58.202144 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-29 18:22:58.202209 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-29 18:22:58.202222 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-29 18:22:58.202264 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-29 18:22:58.202306 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-29 18:22:58.211887 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-29 18:22:58.213881 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 116 to PLAYING state...
+[2026-10-29 18:22:58.228218 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-29 18:22:58.229919 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-29 18:22:58.293435 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:22:58.401573 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-29 18:23:00.288165 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: NotSet, supported_decoding: MessageField(None), custom_fps: 30, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-29 18:23:08.280396 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-29 18:23:08.576663 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:57678: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-24-21.log ---
+[2026-10-29 18:24:34.203191 -07:00] DEBUG [src/server/service.rs:305] Enter clipboard service inner loop
+[2026-10-29 18:24:34.205552 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:24:34.206956 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-29 18:24:34.212045 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-29 18:24:34.212097 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-29 18:24:34.212182 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-29 18:24:34.212203 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-29 18:24:34.212182 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-29 18:24:34.314380 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-29 18:24:34.381136 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-29 18:24:34.385210 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-29 18:24:34.385246 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-29 18:24:34.404530 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:24:34.475386 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-29 18:24:34.475482 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-29 18:24:34.498881 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 131 to PLAYING state...
+[2026-10-29 18:24:34.518341 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-29 18:24:34.570761 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-29 18:24:34.570954 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-29 18:24:34.570949 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-29 18:24:34.571047 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-29 18:24:34.571095 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-29 18:24:34.580688 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-29 18:24:34.584319 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 113 to PLAYING state...
+[2026-10-29 18:24:34.596553 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-29 18:24:34.598157 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-29 18:24:34.668657 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:24:34.777929 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-29 18:24:44.621628 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-29 18:24:46.881219 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:57714: deadline has elapsed
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-26-41.log ---
+[2026-10-29 18:26:54.476484 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-29 18:26:54.483306 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-29 18:26:54.488621 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-29 18:26:54.626671 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-29 18:26:54.735609 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-29 18:27:04.613784 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-29 18:28:03.206004 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-29 18:28:59.831583 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-29 18:28:59.831635 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-29 18:28:59.831680 -07:00] INFO [src/server/connection.rs:5249] #1498 Connection closed: Reset by the peer
+[2026-10-29 18:28:59.831706 -07:00] INFO [src/server/connection.rs:1237] #1498 connection loop exited
+[2026-10-29 18:28:59.831724 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1498)
+[2026-10-29 18:28:59.831764 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-29 18:28:59.831794 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-29 18:28:59.831743 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-29 18:28:59.831807 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-29 18:28:59.831824 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-29 18:28:59.831905 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-29 18:28:59.831978 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-29 18:28:59.831988 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-29 18:28:59.849823 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-29 18:28:59.849906 -07:00] DEBUG [src/server/service.rs:321] Exit monitor0 service inner loop
+[2026-10-29 18:28:59.867721 -07:00] DEBUG [src/server/service.rs:321] Exit audio service inner loop
+[2026-10-29 18:28:59.895467 -07:00] DEBUG [src/server/service.rs:321] Exit display service inner loop
+[2026-10-29 18:29:00.076651 -07:00] INFO [src/clipboard.rs:1082] Unsubscribe clipboard listener: clipboard
+[2026-10-29 18:29:00.076706 -07:00] INFO [src/clipboard.rs:1093] Stop clipboard listener thread
+[2026-10-29 18:29:00.110473 -07:00] DEBUG [src/clipboard.rs:1116] Clipboard listener stopped
+[2026-10-29 18:29:00.110596 -07:00] INFO [src/clipboard.rs:1096] Clipboard listener thread stopped
+[2026-10-29 18:29:00.110624 -07:00] INFO [src/clipboard.rs:1099] Clipboard listener unsubscribed: clipboard
+[2026-10-29 18:29:00.110649 -07:00] DEBUG [src/server/service.rs:321] Exit clipboard service inner loop
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-29_18-29-42.log ---
+[2026-10-29 18:29:42.298188 -07:00] INFO [src/server.rs:665] DISPLAY=Ok(":0")
+[2026-10-29 18:29:42.298715 -07:00] INFO [src/server.rs:666] XAUTHORITY=Err(NotPresent)
+[2026-10-29 18:29:42.298800 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+[2026-10-29 18:29:42.298819 -07:00] INFO [src/server.rs:744] try start server
+[2026-10-29 18:29:42.299543 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+[2026-10-29 18:29:42.299608 -07:00] INFO [src/common.rs:706] Testing nat ...
+[2026-10-29 18:29:42.299749 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+[2026-10-29 18:29:42.326921 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+[2026-10-29 18:29:42.330426 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+[2026-10-29 18:29:42.336097 -07:00] INFO [libs/scrap/src/common/codec.rs:1046] skip test av1
+[2026-10-29 18:29:42.336115 -07:00] INFO [src/lan.rs:31] lan discovery listener started
+[2026-10-29 18:29:42.336208 -07:00] INFO [src/rendezvous_mediator.rs:659] start rendezvous mediator of rs-ny.rustdesk.com
+[2026-10-29 18:29:42.336583 -07:00] INFO [src/rendezvous_mediator.rs:369] start udp: rs-ny.rustdesk.com:21116
+[2026-10-29 18:29:42.502109 -07:00] DEBUG [libs/hbb_common/src/udp.rs:36] Receive buf size of udp 0.0.0.0:0: Ok(212992)
+[2026-10-29 18:29:42.600814 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+[2026-10-29 18:29:42.668159 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21116: port=38655
+[2026-10-29 18:29:42.674064 -07:00] DEBUG [src/rendezvous_mediator.rs:415] Latency of rs-ny.rustdesk.com:21116: 170.744ms
+[2026-10-29 18:29:43.006658 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21115: port=38655
+[2026-10-29 18:29:43.006726 -07:00] INFO [src/common.rs:760] Tested nat type: ASYMMETRIC in 706.898103ms
+[2026-10-29 18:29:43.041448 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:523] set hwcodec config
+[2026-10-29 18:29:43.041485 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:524] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-29 18:29:43.201890 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+[2026-10-29 18:29:43.330274 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:742] Check hwcodec config, exit with: exit status: 0
+[2026-10-29 18:29:44.102821 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+[2026-10-29 18:29:44.102869 -07:00] WARN [src/server.rs:924] skipped config sync
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_17-43-22.log ---
+[2026-10-30 17:44:03.649606 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-30 17:44:03.650479 -07:00] INFO [src/server/service.rs:196] Call snapshot of mouse_cursor service
+[2026-10-30 17:44:03.661605 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-30 17:44:03.727589 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-30 17:44:03.732278 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-30 17:44:03.732401 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-30 17:44:03.756819 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 17:44:03.822548 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 17:44:03.822582 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 17:44:03.838698 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 126 to PLAYING state...
+[2026-10-30 17:44:03.846986 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 17:44:03.916991 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 17:44:03.917211 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 17:44:03.917280 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 17:44:03.917474 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 17:44:03.917591 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 17:44:03.933819 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 17:44:03.938796 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 126 to PLAYING state...
+[2026-10-30 17:44:03.963076 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 17:44:03.967852 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 17:44:03.968420 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 17:44:04.118249 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 17:44:04.227538 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-30 17:44:04.702572 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: NotSet, supported_decoding: MessageField(None), custom_fps: 30, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 17:44:11.929183 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:65258: deadline has elapsed
+[2026-10-30 17:44:14.108542 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 17:45:52.524506 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 17:48:44.570745 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 17:57:41.550224 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 18:01:27.526212 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+--- ~/.local/share/logs/RustDesk/rustdesk_r2026-10-30_18-07-53.log ---
+[2026-10-30 18:08:16.956258 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:08:16.956280 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:08:16.956294 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:08:16.956393 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:08:16.956743 -07:00] INFO [src/platform/linux.rs:2591] wakelock: keepawake could not take the inhibit (org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable)
+[2026-10-30 18:08:16.956865 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:08:16.956913 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:08:16.956952 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:08:16.956973 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:08:16.956991 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:08:16.957004 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:08:16.957070 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:08:16.961977 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-30 18:08:16.982808 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:08:17.014928 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_449/u1")} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_449/u1", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.449", Serial: 164, Args: [0, {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_449/u1")}] }
+[2026-10-30 18:08:17.015696 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_449/u2", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.449", Serial: 171, Args: [0, {}] }
+[2026-10-30 18:08:21.205984 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-30 18:08:22.721955 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_449/u3", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.449", Serial: 204, Args: [0, {}] }
+[2026-10-30 18:08:25.428040 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_449/u1"), "devices": Variant(3), "streams": Variant(InternalArray { data: [[65, {"size": Variant([1920, 1080]), "source_type": Variant(1), "pipewire-serial": Variant(20092), "mapping_id": Variant("HDMI-A-1"), "position": Variant([0, 0])}]], inner_sig: Signature("(ua{sv})\0") }), "source_type": Variant(1)} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_449/u4", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.449", Serial: 217, Args: [0, {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_449/u1"), "devices": Variant(3), "streams": Variant(InternalArray { data: [[65, {"size": Variant([1920, 1080]), "pipewire-serial": Variant(20092), "mapping_id": Variant("HDMI-A-1"), "source_type": Variant(1), "position": Variant([0, 0])}]], inner_sig: Signature("(ua{sv})\0") }), "source_type": Variant(1)}] }
+[2026-10-30 18:08:25.437716 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 113 to PLAYING state...
+[2026-10-30 18:08:25.506894 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:08:25.506995 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:08:25.507092 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:08:25.507117 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:08:25.507153 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:08:25.516743 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:08:25.518725 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 113 to PLAYING state...
+[2026-10-30 18:08:25.544580 -07:00] INFO [libs/libxdo-sys-stub/src/lib.rs:114] libxdo-sys Loaded libxdo.so.4
+[2026-10-30 18:08:25.545616 -07:00] INFO [libs/enigo/src/linux/xdo.rs:100] xdo context created successfully
+[2026-10-30 18:08:25.545948 -07:00] INFO [libs/enigo/src/linux/xdo.rs:72] X11 pointer has 10 buttons, side buttons supported
+[2026-10-30 18:08:25.545976 -07:00] INFO [src/server/input_service.rs:784] RdpInput keyboard created
+[2026-10-30 18:08:25.545985 -07:00] INFO [src/server/input_service.rs:799] RdpInput mouse created
+[2026-10-30 18:08:25.545993 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1088, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:08:25.546104 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:08:25.546114 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:08:25.546152 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:08:25.546173 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1088, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:08:25.546243 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:08:25.546252 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:08:25.546369 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:08:25.546423 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:08:25.546487 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:08:25.546822 -07:00] INFO [libs/scrap/src/common/codec.rs:1027] cpu num: 8, cpu loadavg: 2.65, available memory: 9G, codec thread: 2
+[2026-10-30 18:08:25.547270 -07:00] INFO [src/platform/linux.rs:298] xdo context created successfully
+[2026-10-30 18:08:25.550169 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:08:25.552983 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-30 18:08:25.557723 -07:00] DEBUG [src/server/service.rs:305] Enter display service inner loop
+[2026-10-30 18:08:25.557805 -07:00] INFO [src/server/service.rs:196] Call snapshot of display service
+[2026-10-30 18:08:25.557848 -07:00] INFO [src/server/display_service.rs:721] Displays changed
+[2026-10-30 18:08:25.571826 -07:00] INFO [src/server/service.rs:196] Call snapshot of mouse_cursor service
+[2026-10-30 18:08:25.572195 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:25.572284 -07:00] DEBUG [src/server/service.rs:305] Enter clipboard service inner loop
+[2026-10-30 18:08:25.574494 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-30 18:08:25.578638 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-30 18:08:25.578685 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-30 18:08:25.578824 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-30 18:08:25.578838 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-30 18:08:25.578821 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-30 18:08:25.681305 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:08:25.750295 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-30 18:08:25.755543 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-30 18:08:25.755589 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-30 18:08:25.771496 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:25.845782 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:08:25.845820 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:08:25.875305 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 128 to PLAYING state...
+[2026-10-30 18:08:25.887633 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:08:25.939588 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:08:25.939737 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:08:25.939814 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:08:25.939865 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:08:25.939901 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:08:25.952427 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:08:25.956232 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 109 to PLAYING state...
+[2026-10-30 18:08:25.969586 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:08:25.971715 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:08:26.037973 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:26.163340 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-30 18:08:34.215726 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:61413: deadline has elapsed
+[2026-10-30 18:08:36.063410 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+--- ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log ---
+[2026-10-30 18:09:47.109981 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:47.110044 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110070 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:47.110100 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110125 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:47.110252 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:47.110583 -07:00] INFO [src/platform/linux.rs:2591] wakelock: keepawake could not take the inhibit (org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable)
+[2026-10-30 18:09:47.110726 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:09:47.110782 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:47.110847 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110880 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:47.110900 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110981 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:47.111061 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:47.116372 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-30 18:09:47.136268 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:47.147281 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1")} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u1", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 381, Args: [0, {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1")}] }
+[2026-10-30 18:09:47.148056 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u2", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 388, Args: [0, {}] }
+[2026-10-30 18:09:50.593573 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u3", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 421, Args: [0, {}] }
+[2026-10-30 18:09:51.394323 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-30 18:09:51.681391 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1"), "streams": Variant(InternalArray { data: [[44, {"pipewire-serial": Variant(20144), "source_type": Variant(1), "position": Variant([0, 0]), "size": Variant([1920, 1080]), "mapping_id": Variant("HDMI-A-1")}]], inner_sig: Signature("(ua{sv})\0") }), "source_type": Variant(1), "devices": Variant(3)} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u4", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 434, Args: [0, {"devices": Variant(3), "session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1"), "source_type": Variant(1), "streams": Variant(InternalArray { data: [[44, {"mapping_id": Variant("HDMI-A-1"), "size": Variant([1920, 1080]), "position": Variant([0, 0]), "source_type": Variant(1), "pipewire-serial": Variant(20144)}]], inner_sig: Signature("(ua{sv})\0") })}] }
+[2026-10-30 18:09:51.691330 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 117 to PLAYING state...
+[2026-10-30 18:09:51.762063 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:09:51.762157 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:09:51.762173 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:09:51.762223 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:09:51.762251 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:09:51.771943 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:09:51.773940 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 117 to PLAYING state...
+[2026-10-30 18:09:51.788818 -07:00] INFO [src/server/input_service.rs:784] RdpInput keyboard created
+[2026-10-30 18:09:51.788847 -07:00] INFO [src/server/input_service.rs:799] RdpInput mouse created
+[2026-10-30 18:09:51.788859 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1478, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:51.788981 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:51.788991 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:51.789050 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:51.789071 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1478, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:51.789137 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:51.789147 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:51.789245 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:09:51.789311 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:09:51.789406 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:09:51.789707 -07:00] INFO [libs/scrap/src/common/codec.rs:1027] cpu num: 8, cpu loadavg: 1.52, available memory: 9G, codec thread: 2
+[2026-10-30 18:09:51.790268 -07:00] INFO [src/platform/linux.rs:298] xdo context created successfully
+[2026-10-30 18:09:51.792926 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:09:51.794936 -07:00] INFO [src/server/service.rs:196] Call snapshot of mouse_cursor service
+[2026-10-30 18:09:51.796887 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-30 18:09:51.817597 -07:00] DEBUG [src/server/service.rs:305] Enter clipboard service inner loop
+[2026-10-30 18:09:51.817610 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:51.817659 -07:00] DEBUG [src/server/service.rs:305] Enter display service inner loop
+[2026-10-30 18:09:51.817731 -07:00] INFO [src/server/service.rs:196] Call snapshot of display service
+[2026-10-30 18:09:51.817794 -07:00] INFO [src/server/display_service.rs:721] Displays changed
+[2026-10-30 18:09:51.818284 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-30 18:09:51.818299 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-30 18:09:51.818391 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-30 18:09:51.818403 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-30 18:09:51.818390 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-30 18:09:51.829363 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-30 18:09:51.927292 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:09:51.949402 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-30 18:09:51.955262 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-30 18:09:51.955342 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-30 18:09:52.017522 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:52.045542 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:09:52.045579 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:09:52.062053 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 129 to PLAYING state...
+[2026-10-30 18:09:52.126370 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:09:52.133259 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:09:52.133422 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:09:52.133436 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:09:52.133541 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:09:52.133605 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:09:52.142962 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:09:52.146893 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 115 to PLAYING state...
+[2026-10-30 18:09:52.160065 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:09:52.161437 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:09:52.276617 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:52.384575 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-30 18:09:54.104447 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: NotSet, supported_decoding: MessageField(None), custom_fps: 30, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:10:02.264057 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 18:10:04.405552 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52626: deadline has elapsed
+
+=== TIMELINE RECONCILE ===
+hook log timestamps:
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: parent exiting (worker pid 537232)
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: rustdesk gone after KILL
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: sleeping 10s before rustdesk restart
+2026-10-30 18:09:14 -0700 xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid
+2026-10-30 18:09:15 -0700 xdph-rd-on-lock: rustdesk after start: 537542 /usr/bin/rustdesk;537585 [rustdesk] <defunct>;
+
+xdph journal lines with lock/hook/session (no filter time skew):
+2026-10-30T18:07:49.190390-07:00 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-30T18:07:49.193101-07:00 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-30T18:07:49.193325-07:00 omarchy systemd[910]: xdg-desktop-portal-hyprland.service: Consumed 36.660s CPU time over 24min 30.478s wall clock time, 47.5M memory peak.
+2026-10-30T18:07:49.720819-07:00 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+2026-10-30T18:07:49.744109-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [toplevel] (activate) locks: 1
+2026-10-30T18:07:49.744109-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG]  | Got interface: hyprland_lock_notifier_v1 (ver 1)
+2026-10-30T18:07:49.744109-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+2026-10-30T18:07:49.745412-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+2026-10-30T18:07:49.745556-07:00 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] registered
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] watching hyprland_lock_notifier_v1 for lock events
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_449/u1 sess=/org/freedesktop/portal/desktop/session/1_449/u1
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] CreateSession returning for appid=
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] devices selected: 7
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [screencopy] SelectSources:
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_449/u1
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [sc] Selection: r/screen:HDMI-A-1
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [screencopy] SHAREDATA returned selection 0
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] virtual pointer created
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+2026-10-30T18:09:22.282140-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] virtual keyboard created with keymap
+2026-10-30T18:09:22.283687-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [screencopy] Sharing initialized
+2026-10-30T18:09:22.283687-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] session locked: closing remote sessions
+2026-10-30T18:09:22.283687-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] closing all sessions (screen locked)
+2026-10-30T18:09:22.283687-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] running lock hook ~/.local/bin/xdph-rd-on-lock
+2026-10-30T18:09:22.283687-07:00 omarchy xdg-desktop-portal-hyprland[536185]: [LOG] [remotedesktop] session /org/freedesktop/portal/desktop/session/1_449/u1 destroyed
+
+=== WAS --server / --service EVER ALIVE? ===
+disabled
+inactive
+ 197279 user      1000 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+ 203419 user      1000 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+ 205685 user      1000 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+ 537542 user      1000 /usr/bin/rustdesk
+ 538891 user      1000 /usr/lib/rustdesk/rustdesk --cm
+UNCONN 0      0                                 192.168.x.x:50235      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=40))
+UNCONN 0      0                                       0.0.0.0:50778      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=111))
+UNCONN 0      0                                       0.0.0.0:51306      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=109))
+UNCONN 0      0                                       0.0.0.0:51706      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=112))
+UNCONN 0      0                                       0.0.0.0:35440      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=89))
+UNCONN 0      0                                       0.0.0.0:21119      0.0.0.0:*    users:(("rustdesk",pid=537542,fd=42))
+UNCONN 0      0      [fd3e:60f0:3663:9127:7f89:976:fe8a:c790]:49250         [::]:*    users:(("rustdesk",pid=537542,fd=46))
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*   
+LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*   
+LISTEN 0      4096      172.16.x.x:53        0.0.0.0:*   
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*   
+no 2111x listen visible to user
+
+=== HOW RUSTDESK IS STARTED ON LOGIN (autostart) ===
+/usr/share/applications/rustdesk.desktop
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-04.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-32.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-57.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-27_18-22-28.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_16-14-55.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-04-31.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-07-48.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-04.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-12.log
+~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-15-08.log

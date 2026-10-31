@@ -1,0 +1,179 @@
+=== PREV LOG first 20 ===
+[2026-10-30 18:07:53.027547 -07:00] INFO [src/server.rs:665] DISPLAY=Ok(":0")
+[2026-10-30 18:07:53.028033 -07:00] INFO [src/server.rs:666] XAUTHORITY=Err(NotPresent)
+[2026-10-30 18:07:53.028085 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+[2026-10-30 18:07:53.028108 -07:00] INFO [src/server.rs:744] try start server
+[2026-10-30 18:07:53.028870 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+[2026-10-30 18:07:53.029059 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+[2026-10-30 18:07:53.031594 -07:00] INFO [src/common.rs:706] Testing nat ...
+[2026-10-30 18:07:53.067070 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+[2026-10-30 18:07:53.067242 -07:00] INFO [src/lan.rs:31] lan discovery listener started
+[2026-10-30 18:07:53.067214 -07:00] INFO [libs/scrap/src/common/codec.rs:1046] skip test av1
+[2026-10-30 18:07:53.067322 -07:00] INFO [src/rendezvous_mediator.rs:659] start rendezvous mediator of rs-ny.rustdesk.com
+[2026-10-30 18:07:53.067778 -07:00] INFO [src/rendezvous_mediator.rs:369] start udp: rs-ny.rustdesk.com:21116
+[2026-10-30 18:07:53.204058 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+[2026-10-30 18:07:53.231636 -07:00] DEBUG [libs/hbb_common/src/udp.rs:36] Receive buf size of udp 0.0.0.0:0: Ok(212992)
+[2026-10-30 18:07:53.330363 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+[2026-10-30 18:07:53.373762 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21116: port=37583
+[2026-10-30 18:07:53.412113 -07:00] DEBUG [src/rendezvous_mediator.rs:415] Latency of rs-ny.rustdesk.com:21116: 179.298ms
+[2026-10-30 18:07:53.729792 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21115: port=37583
+[2026-10-30 18:07:53.729841 -07:00] INFO [src/common.rs:760] Tested nat type: ASYMMETRIC in 698.185596ms
+[2026-10-30 18:07:53.788807 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:523] set hwcodec config
+
+=== PREV LOG last 30 ===
+[2026-10-30 18:08:25.572195 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:25.572284 -07:00] DEBUG [src/server/service.rs:305] Enter clipboard service inner loop
+[2026-10-30 18:08:25.574494 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-30 18:08:25.578638 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-30 18:08:25.578685 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-30 18:08:25.578824 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-30 18:08:25.578838 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-30 18:08:25.578821 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-30 18:08:25.681305 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:08:25.750295 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-30 18:08:25.755543 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-30 18:08:25.755589 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-30 18:08:25.771496 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:25.845782 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:08:25.845820 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:08:25.875305 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 128 to PLAYING state...
+[2026-10-30 18:08:25.887633 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:08:25.939588 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:08:25.939737 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:08:25.939814 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:08:25.939865 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:08:25.939901 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:08:25.952427 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:08:25.956232 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 109 to PLAYING state...
+[2026-10-30 18:08:25.969586 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:08:25.971715 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:08:26.037973 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:08:26.163340 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-30 18:08:34.215726 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:61413: deadline has elapsed
+[2026-10-30 18:08:36.063410 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+
+=== PREV: peer/connect/portal/accept/closed lines ===
+3:[2026-10-30 18:07:53.028085 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+5:[2026-10-30 18:07:53.028870 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+8:[2026-10-30 18:07:53.067070 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+15:[2026-10-30 18:07:53.330363 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+22:[2026-10-30 18:07:53.931780 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+24:[2026-10-30 18:07:54.833465 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+26:[2026-10-30 18:08:16.048940 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:61413
+29:[2026-10-30 18:08:16.203589 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connecting
+36:[2026-10-30 18:08:16.548736 -07:00] INFO [src/common.rs:2213] Connection secured
+37:[2026-10-30 18:08:16.566441 -07:00] INFO [src/common.rs:2213] Connection secured
+38:[2026-10-30 18:08:16.930554 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connected
+41:[2026-10-30 18:08:16.948618 -07:00] DEBUG [src/server/connection.rs:1498] #1088 Connection opened from REDACTED_PUBLIC_IP:61412.
+58:[2026-10-30 18:08:16.961977 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable;...
+59:[2026-10-30 18:08:16.982808 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: fa...
+60:[2026-10-30 18:08:17.014928 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop...
+61:[2026-10-30 18:08:17.015696 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path:...
+62:[2026-10-30 18:08:21.205984 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antis...
+63:[2026-10-30 18:08:22.721955 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path:...
+64:[2026-10-30 18:08:25.428040 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop...
+80:[2026-10-30 18:08:25.546114 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+81:[2026-10-30 18:08:25.546152 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_in...
+84:[2026-10-30 18:08:25.546252 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+91:[2026-10-30 18:08:25.552983 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+104:[2026-10-30 18:08:25.681305 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+107:[2026-10-30 18:08:25.755589 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+112:[2026-10-30 18:08:25.887633 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+124:[2026-10-30 18:08:34.215726 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:61413: deadline has elapsed
+
+=== CURRENT first 40 (post-restart) ===
+[2026-10-30 18:09:14.463845 -07:00] INFO [src/server.rs:665] DISPLAY=Ok(":0")
+[2026-10-30 18:09:14.464372 -07:00] INFO [src/server.rs:666] XAUTHORITY=Err(NotPresent)
+[2026-10-30 18:09:14.464434 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+[2026-10-30 18:09:14.464489 -07:00] INFO [src/server.rs:744] try start server
+[2026-10-30 18:09:14.465160 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+[2026-10-30 18:09:14.465272 -07:00] INFO [src/common.rs:706] Testing nat ...
+[2026-10-30 18:09:14.465460 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+[2026-10-30 18:09:14.479653 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+[2026-10-30 18:09:14.495875 -07:00] INFO [libs/scrap/src/common/codec.rs:1046] skip test av1
+[2026-10-30 18:09:14.495900 -07:00] INFO [src/lan.rs:31] lan discovery listener started
+[2026-10-30 18:09:14.496006 -07:00] INFO [src/rendezvous_mediator.rs:659] start rendezvous mediator of rs-ny.rustdesk.com
+[2026-10-30 18:09:14.496384 -07:00] INFO [src/rendezvous_mediator.rs:369] start udp: rs-ny.rustdesk.com:21116
+[2026-10-30 18:09:14.498106 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+[2026-10-30 18:09:14.667663 -07:00] DEBUG [libs/hbb_common/src/udp.rs:36] Receive buf size of udp 0.0.0.0:0: Ok(212992)
+[2026-10-30 18:09:14.765794 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+[2026-10-30 18:09:14.821716 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21116: port=33943
+[2026-10-30 18:09:14.831382 -07:00] DEBUG [src/rendezvous_mediator.rs:415] Latency of rs-ny.rustdesk.com:21116: 162.482ms
+[2026-10-30 18:09:15.171424 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21115: port=33943
+[2026-10-30 18:09:15.171492 -07:00] INFO [src/common.rs:760] Tested nat type: ASYMMETRIC in 706.057564ms
+[2026-10-30 18:09:15.180175 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:523] set hwcodec config
+[2026-10-30 18:09:15.180194 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:524] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 18:09:15.368045 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+[2026-10-30 18:09:15.495777 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:742] Check hwcodec config, exit with: exit status: 0
+[2026-10-30 18:09:16.269701 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+[2026-10-30 18:09:16.269731 -07:00] WARN [src/server.rs:924] skipped config sync
+[2026-10-30 18:09:21.319928 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52585
+[2026-10-30 18:09:21.479925 -07:00] INFO [src/server.rs:193] Server listening on: 192.168.x.x:41601
+[2026-10-30 18:09:21.480071 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:595] New webrtc stream (remote endpoint: 673 bytes)
+[2026-10-30 18:09:21.480634 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:861] remote offer SDP received (424 bytes), local answer endpoint 673 bytes
+[2026-10-30 18:09:21.480669 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:867] Start webrtc with remote key: sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-30 18:09:21.480641 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connecting
+[2026-10-30 18:09:21.482186 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.nextcloud.com:443: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483147 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.cloudflare.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483340 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.antisip.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483632 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.l.google.com:19302: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.825929 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:21.825937 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:22.193571 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connected
+[2026-10-30 18:09:22.205710 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:765] Remote data channel bootstrap ready
+[2026-10-30 18:09:22.205747 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/data_channel/mod.rs:242] webrtc.DetachDataChannels() enabled but didn't Detach, call Detach from OnOpen
+
+=== CURRENT: accept/fail/peer/68.225/portal response code ===
+3:[2026-10-30 18:09:14.464434 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+5:[2026-10-30 18:09:14.465160 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+8:[2026-10-30 18:09:14.479653 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+15:[2026-10-30 18:09:14.765794 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+22:[2026-10-30 18:09:15.368045 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+24:[2026-10-30 18:09:16.269701 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+26:[2026-10-30 18:09:21.319928 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52585
+41:[2026-10-30 18:09:22.214165 -07:00] DEBUG [src/server/connection.rs:1498] #1477 Connection opened from REDACTED_PUBLIC_IP:52586.
+59:[2026-10-30 18:09:22.250565 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: fa...
+60:[2026-10-30 18:09:22.282315 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 2, results: {"session_handle": Variant("/org/freedesktop...
+62:[2026-10-30 18:09:22.282389 -07:00] ERROR [src/server/wayland.rs:117] Wayland portal handshake failed: wl-stage:create-session:ended:
+70:[2026-10-30 18:09:22.287871 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+72:[2026-10-30 18:09:22.288044 -07:00] INFO [src/server/connection.rs:5249] #1477 Connection closed: Reset by the peer
+75:[2026-10-30 18:09:22.288112 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+76:[2026-10-30 18:09:22.288124 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+77:[2026-10-30 18:09:22.288134 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+88:[2026-10-30 18:09:26.485012 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antis...
+89:[2026-10-30 18:09:39.481696 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52585: deadline has elapsed
+90:[2026-10-30 18:09:46.224751 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52626
+105:[2026-10-30 18:09:47.102441 -07:00] DEBUG [src/server/connection.rs:1498] #1478 Connection opened from REDACTED_PUBLIC_IP:52625.
+123:[2026-10-30 18:09:47.136268 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: f...
+124:[2026-10-30 18:09:47.147281 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedeskto...
+125:[2026-10-30 18:09:47.148056 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path...
+126:[2026-10-30 18:09:50.593573 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path...
+127:[2026-10-30 18:09:51.394323 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.anti...
+128:[2026-10-30 18:09:51.681391 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedeskto...
+165:[2026-10-30 18:09:51.927292 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+173:[2026-10-30 18:09:52.126370 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+187:[2026-10-30 18:10:04.405552 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52626: deadline has elapsed
+
+=== IPC sockets ===
+/tmp/RustDesk-1000
+/run/user/1000/tray-icon/tray-icon-rustdesk-0.png
+
+=== cm logs mtimes ===
+2026-10-26 21:28 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-04.log 779
+2026-10-26 21:28 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-32.log 779
+2026-10-26 21:29 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-26_21-28-57.log 694
+2026-10-27 18:22 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-27_18-22-28.log 779
+2026-10-29 16:15 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_16-14-55.log 779
+2026-10-29 18:04 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-04-31.log 779
+2026-10-29 18:12 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-07-48.log 901
+2026-10-29 18:13 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-04.log 694
+2026-10-29 18:13 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-13-12.log 694
+2026-10-29 18:17 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-15-08.log 928
+2026-10-29 18:17 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-17-35.log 694
+2026-10-29 18:22 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-22-58.log 612
+2026-10-29 18:24 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-24-34.log 613
+2026-10-29 18:28 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-29_18-26-54.log 928
+2026-10-30 17:44 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_17-44-03.log 613
+2026-10-30 18:08 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-08-25.log 613
+2026-10-30 18:09 ~/.local/share/logs/RustDesk/cm/rustdesk_r2026-10-30_18-09-22.log 694
+2026-10-30 18:09 ~/.local/share/logs/RustDesk/cm/rustdesk_rCURRENT.log 613

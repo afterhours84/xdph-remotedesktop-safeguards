@@ -1,0 +1,20 @@
+=== 44 unlock-fix RESULT ===
+date: 2026-10-30 (America/Phoenix)
+reported_by: tester (user confirmation)
+
+RESULT: PASS (unlock fix works as intended)
+
+Observed by tester:
+  - On lock: viewer drops; reconnect attempts fail while the gaming-pc is still locked.
+  - On unlock: rustdesk restarts; Retry then shows the screen picker and consent
+    approve again.
+
+Mechanism under test (proof/43):
+  - ~/.local/bin/xdph-rd-on-lock: pkill -KILL rustdesk; arm unlock waiter; no restart
+  - ~/.local/bin/xdph-rd-wait-unlock: poll omarchy-hyprland-session-locked until unlock
+  - ~/.local/bin/xdph-rd-on-unlock: setsid -f /usr/bin/rustdesk only if not already running
+
+Prior diagnose (proof/40-42): WebRTC means no clear "forcibly closed" dialog; the
+important behavior is drop + no successful reconnect until unlock + re-approve.
+
+No further code changes this step; confirmation log only.

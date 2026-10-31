@@ -1,0 +1,7 @@
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: parent exiting (worker pid 537232)
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: rustdesk gone after KILL
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: sleeping 10s before rustdesk restart
+2026-10-30 18:09:14 -0700 xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid
+2026-10-30 18:09:15 -0700 xdph-rd-on-lock: rustdesk after start: 537542 /usr/bin/rustdesk;537585 [rustdesk] <defunct>;

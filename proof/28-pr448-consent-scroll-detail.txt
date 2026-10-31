@@ -1,0 +1,282 @@
+=== 28 consent / persist / scroll detail ===
+date: 2026-10-30 10:04:52 MST
+
+=== #448 CreateSession / SelectDevices consent path ===
+116: // failed attempt would silently drop them back to the consent dialog next time.
+117: static bool validateRestoreToken(const std::string& token, const std::string& appID, uint32_t deviceTypes) {
+206: static std::string issueRestoreToken(const std::string& appID, uint32_t deviceTypes) {
+302:             sdbus::registerMethod("CreateSession")
+304:                     [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onCreateSession(o1, o2, s, m); }),
+305:             sdbus::registerMethod("SelectDevices")
+307:                     [this](sdbus::ObjectPath o1, sdbus::ObjectPath o2, std::string s, std::unordered_map<std::string, sdbus::Variant> m) { return onSelectDevices(o1, o2, s, m); }),
+309:                                                                 std::unordered_map<std::string, sdbus::Variant> m) { return onStart(o1, o2, s1, s2, m); }),
+617: dbUasv CRemoteDesktopPortal::onCreateSession(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+638:     Debug::log(LOG, "[remotedesktop] CreateSession returning for appid={}", appID);
+642: dbUasv CRemoteDesktopPortal::onSelectDevices(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID,
+647:         Debug::log(ERR, "[remotedesktop] SelectDevices: no session");
+656:             PSESSION->persistMode = v.get<uint32_t>();
+657:             Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+675:     if (PSESSION->persistMode == 1) {
+677:         PSESSION->persistMode = 0;
+689:     // Deliberately not gated on persistMode: persist_mode describes how the *new*
+692:     PSESSION->restored = validateRestoreToken(PSESSION->restoreToken, appID, PSESSION->deviceTypes);
+694:         Debug::log(LOG, "[remotedesktop] valid restore token, skipping consent dialog");
+699: dbUasv CRemoteDesktopPortal::onStart(sdbus::ObjectPath requestHandle, sdbus::ObjectPath sessionHandle, std::string appID, std::string parentWindow,
+723:     // as offering the checkbox in the consent dialog.
+726:         if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, PSESSION->persistMode == 2, &persistAllowed)) {
+731:         persistAllowed = true; // the grant being restored was consented to already
+800:     const bool                                      persistSession = PSESSION->persistMode == 2 && persistAllowed;
+828:         const auto TOKEN = PSESSION->restored ? PSESSION->restoreToken : issueRestoreToken(appID, PSESSION->deviceTypes);
+846:                 results["persist_mode"] = sdbus::Variant{PSESSION->persistMode};
+
+=== #448 scroll axis handlers (context) ===
+323:            sdbus::registerMethod("NotifyPointerAxis").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, double d1, double d2) {
+324:                onNotifyPointerAxis(o, m, d1, d2);
+326:            sdbus::registerMethod("NotifyPointerAxisDiscrete")
+328:                    [this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, uint32_t u1, int32_t i1) { onNotifyPointerAxisDiscrete(o, m, u1, i1); }),
+949:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+954:    // Portal and Wayland scroll deltas use the same coordinate directions.
+980:void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t axis, int32_t steps) {
+985:        Debug::log(WARN, "[remotedesktop] ignoring discrete scroll with invalid axis {}", axis);
+1164:                        double dx = eis_event_scroll_get_dx(event);
+1165:                        double dy = eis_event_scroll_get_dy(event);
+1179:                        s->discreteScrollX += eis_event_scroll_get_discrete_dx(event);
+1180:                        s->discreteScrollY += eis_event_scroll_get_discrete_dy(event);
+1199:                        if (eis_event_scroll_get_stop_y(event))
+1201:                        if (eis_event_scroll_get_stop_x(event))
+
+-- context for NotifyPointerAxisDiscrete in #448:
+326:            sdbus::registerMethod("NotifyPointerAxisDiscrete")
+327-                .implementedAs(
+328:                    [this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, uint32_t u1, int32_t i1) { onNotifyPointerAxisDiscrete(o, m, u1, i1); }),
+329-            sdbus::registerMethod("NotifyKeyboardKeycode").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, int32_t i1, uint32_t u1) {
+330-                onNotifyKeyboardKeycode(o, m, i1, u1);
+331-            }),
+332-            sdbus::registerMethod("NotifyKeyboardKeysym").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, int32_t i1, uint32_t u1) {
+333-                onNotifyKeyboardKeysym(o, m, i1, u1);
+334-            }),
+335-            sdbus::registerProperty("AvailableDeviceTypes").withGetter([this]() { return availableDeviceTypes(); }),
+336-            sdbus::registerProperty("version").withGetter([this]() { return version(); }))
+337-        .forInterface(INTERFACE_NAME);
+338-
+339-    Debug::log(LOG, "[remotedesktop] registered");
+340-}
+--
+980:void CRemoteDesktopPortal::onNotifyPointerAxisDiscrete(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t axis, int32_t steps) {
+981-    const auto PSESSION = getSession(sessionHandle);
+982-    if (!PSESSION || !PSESSION->virtualPointer)
+983-        return;
+984-    if (axis > 1) {
+985-        Debug::log(WARN, "[remotedesktop] ignoring discrete scroll with invalid axis {}", axis);
+986-        return;
+987-    }
+988-
+989-    uint32_t time = currentTimeMs();
+990-    PSESSION->virtualPointer->sendAxisSource(0);
+991-    PSESSION->virtualPointer->sendAxisDiscrete(time, axis, wl_fixed_from_int(steps * 15), steps);
+992-    PSESSION->virtualPointer->sendFrame();
+
+-- context for NotifyPointerAxis\b in #448:
+323:            sdbus::registerMethod("NotifyPointerAxis").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, double d1, double d2) {
+324:                onNotifyPointerAxis(o, m, d1, d2);
+325-            }),
+326-            sdbus::registerMethod("NotifyPointerAxisDiscrete")
+327-                .implementedAs(
+328-                    [this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, uint32_t u1, int32_t i1) { onNotifyPointerAxisDiscrete(o, m, u1, i1); }),
+329-            sdbus::registerMethod("NotifyKeyboardKeycode").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, int32_t i1, uint32_t u1) {
+330-                onNotifyKeyboardKeycode(o, m, i1, u1);
+331-            }),
+332-            sdbus::registerMethod("NotifyKeyboardKeysym").implementedAs([this](sdbus::ObjectPath o, std::unordered_map<std::string, sdbus::Variant> m, int32_t i1, uint32_t u1) {
+333-                onNotifyKeyboardKeysym(o, m, i1, u1);
+334-            }),
+335-            sdbus::registerProperty("AvailableDeviceTypes").withGetter([this]() { return availableDeviceTypes(); }),
+336-            sdbus::registerProperty("version").withGetter([this]() { return version(); }))
+--
+949:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+950-    const auto PSESSION = getSession(sessionHandle);
+951-    if (!PSESSION || !PSESSION->virtualPointer)
+952-        return;
+953-
+954-    // Portal and Wayland scroll deltas use the same coordinate directions.
+955-    uint32_t time = currentTimeMs();
+956-    if (dy != 0.0) {
+957-        PSESSION->virtualPointer->sendAxisSource(2);
+958-        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+959-        PSESSION->axisActiveY = true;
+960-    }
+961-    if (dx != 0.0) {
+
+-- context for ei_scroll in #448:
+
+-- context for wl_fixed_from_double in #448:
+915:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+916-    PSESSION->virtualPointer->sendFrame();
+917-    wl_display_flush(g_pPortalManager->m_sWaylandConnection.display);
+918-}
+919-
+920-void CRemoteDesktopPortal::onNotifyPointerMotionAbsolute(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, uint32_t stream, double x,
+921-                                                         double y) {
+922-    const auto PSESSION = getSession(sessionHandle);
+923-    if (!PSESSION || !PSESSION->virtualPointer)
+924-        return;
+925-
+926-    uint32_t mappedX = 0, mappedY = 0, extentW = 3840, extentH = 2160;
+927-    if (!g_pPortalManager->m_sPortals.screencopy ||
+--
+958:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+959-        PSESSION->axisActiveY = true;
+960-    }
+961-    if (dx != 0.0) {
+962-        PSESSION->virtualPointer->sendAxisSource(2);
+963:        PSESSION->virtualPointer->sendAxis(time, 1, wl_fixed_from_double(dx));
+964-        PSESSION->axisActiveX = true;
+965-    }
+966-
+967-    const auto FINISH = opts.find("finish");
+968-    if (FINISH != opts.end() && FINISH->second.get<bool>()) {
+969-        if (PSESSION->axisActiveY)
+970-            PSESSION->virtualPointer->sendAxisStop(time, 0);
+971-        if (PSESSION->axisActiveX)
+972-            PSESSION->virtualPointer->sendAxisStop(time, 1);
+973-        PSESSION->axisActiveX = false;
+974-        PSESSION->axisActiveY = false;
+975-    }
+--
+1133:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1134-                    }
+1135-                    break;
+1136-                }
+1137-                case EIS_EVENT_POINTER_MOTION_ABSOLUTE: {
+1138-                    if (s->virtualPointer) {
+1139-                        // Regions are advertised relative to the layout's top-left, so the
+
+=== ours vs #448: CreateSession rejection safeguards (diff hunks) ===
+@@ -1,5 +1,6 @@
+@@ -16,9 +17,7 @@
+@@ -341,42 +340,19 @@
+@@ -488,6 +464,7 @@
+@@ -641,18 +618,6 @@
+-    // Practical safeguard: never start remote control while the screen is locked.
+-        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: screen is locked");
+-        Debug::log(WARN, "[remotedesktop] rejecting CreateSession: another remote session already exists");
+@@ -721,12 +686,12 @@
+-    PSESSION->persistMode = 0;
+@@ -754,13 +719,16 @@
+@@ -806,8 +774,8 @@
+@@ -820,10 +788,7 @@
+@@ -834,10 +799,7 @@
+@@ -979,11 +941,6 @@
+@@ -994,6 +951,7 @@
+@@ -1040,14 +998,10 @@
+@@ -1059,7 +1013,7 @@
+@@ -1068,18 +1022,16 @@
+@@ -1203,10 +1155,6 @@
+@@ -1235,9 +1183,8 @@
+@@ -1256,17 +1203,20 @@
+@@ -1298,6 +1248,19 @@
+@@ -1378,171 +1341,7 @@
+-void CRemoteDesktopPortal::closeAllSessions(const char* reason) {
+-            closeAllSessions("screen locked");
+
+=== does #448 force persistMode off? ===
+656:            PSESSION->persistMode = v.get<uint32_t>();
+657:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+675:    if (PSESSION->persistMode == 1) {
+677:        PSESSION->persistMode = 0;
+689:    // Deliberately not gated on persistMode: persist_mode describes how the *new*
+726:        if (!promptForRemoteDesktopConsent(appID, PSESSION->deviceTypes, PSESSION->persistMode == 2, &persistAllowed)) {
+800:    const bool                                      persistSession = PSESSION->persistMode == 2 && persistAllowed;
+846:                results["persist_mode"] = sdbus::Variant{PSESSION->persistMode};
+-- ours persistMode:
+691:            PSESSION->persistMode = v.get<uint32_t>();
+692:            Debug::log(LOG, "[remotedesktop] persist mode selected: {}", PSESSION->persistMode);
+710:    if (PSESSION->persistMode == 1) {
+712:        PSESSION->persistMode = 0;
+729:    PSESSION->persistMode = 0;
+835:    const bool                                      persistSession = PSESSION->persistMode == 2 && persistAllowed;
+884:                results["persist_mode"] = sdbus::Variant{PSESSION->persistMode};
+
+=== share-picker remote consent UI in #448 ===
+20:static int runRemoteDesktopConsent(const CSharedPointer<IBackend>& backend) {
+25:                            ->appTitle("Allow remote control?")
+29:        std::cerr << "[XDPH_PICKER_ERROR] Failed to create the consent window\n";
+48:    const char* APPID        = std::getenv("XDPH_REMOTE_DESKTOP_APP_ID");
+49:    const char* DEVICES      = std::getenv("XDPH_REMOTE_DESKTOP_DEVICE_TYPES");
+51:    const bool  POINTER      = DEVICE_TYPES.contains("pointer");
+52:    const bool  KEYBOARD     = DEVICE_TYPES.contains("keyboard");
+53:    const auto  WHAT         = POINTER && !KEYBOARD ? "pointer" : (KEYBOARD && !POINTER ? "keyboard" : "pointer and keyboard");
+54:    // App IDs are caller-controlled: escape markup to prevent spoofing the dialog.
+56:    LAYOUT->addChild(CTextBuilder::begin()->text(APP + " wants to control your " + WHAT + ".")->color([backend] { return backend->getPalette()->m_colors.text; })->commence());
+59:    const char*                      PERSIST = std::getenv("XDPH_REMOTE_DESKTOP_PERSIST");
+60:    CSharedPointer<CCheckboxElement> persistBox;
+66:            CTextBuilder::begin()->text("Allow " + APP + " to skip this prompt in the future")->color([backend] { return backend->getPalette()->m_colors.text; })->commence());
+71:    ACTIONS->addChild(CButtonBuilder::begin()->label("Deny")->onMainClick([&](CSharedPointer<CButtonElement>) { CLOSE(); })->commence());
+73:                          ->label("Allow")
+74:                          ->onMainClick([&](CSharedPointer<CButtonElement>) {
+96:    bool allowTokenByDefault = false;
+97:    bool remoteDesktop       = false;
+99:        if (std::string_view{argv[i]} == "--allow-token")
+100:            allowTokenByDefault = true;
+101:        else if (std::string_view{argv[i]} == "--remote-desktop")
+102:            remoteDesktop = true;
+112:    if (remoteDesktop)
+113:        return runRemoteDesktopConsent(BACKEND);
+121:                      WORKSPACE_LIST_V3 ? parseWorkspaceListV3(WORKSPACE_LIST_V3) : parseWorkspaceList(WORKSPACE_LIST ? WORKSPACE_LIST : ""), allowTokenByDefault);
+-- ~/Projects/xdph-448/hyprland-share-picker/Picker.cpp
+-- ~/Projects/xdph-448/hyprland-share-picker/Picker.hpp
+-- ~/Projects/xdph-448/hyprland-share-picker/PickerData.cpp
+-- ~/Projects/xdph-448/hyprland-share-picker/PickerData.hpp
+-- ~/Projects/xdph-448/hyprland-share-picker/PickerDataTest.cpp
+-- ~/Projects/xdph-448/hyprland-share-picker/RegionPicker.cpp
+-- ~/Projects/xdph-448/hyprland-share-picker/RegionPicker.hpp
+-- ~/Projects/xdph-448/hyprland-share-picker/main.cpp
+20:static int runRemoteDesktopConsent(const CSharedPointer<IBackend>& backend) {
+25:                            ->appTitle("Allow remote control?")
+29:        std::cerr << "[XDPH_PICKER_ERROR] Failed to create the consent window\n";
+48:    const char* APPID        = std::getenv("XDPH_REMOTE_DESKTOP_APP_ID");
+49:    const char* DEVICES      = std::getenv("XDPH_REMOTE_DESKTOP_DEVICE_TYPES");
+54:    // App IDs are caller-controlled: escape markup to prevent spoofing the dialog.
+56:    LAYOUT->addChild(CTextBuilder::begin()->text(APP + " wants to control your " + WHAT + ".")->color([backend] { return backend->getPalette()->m_colors.text; })->commence());
+58:    // Persistence is offered only when requested, and is never selected by default.
+59:    const char*                      PERSIST = std::getenv("XDPH_REMOTE_DESKTOP_PERSIST");
+60:    CSharedPointer<CCheckboxElement> persistBox;
+61:    if (PERSIST && *PERSIST == '1') {
+63:        persistBox     = CCheckboxBuilder::begin()->toggled(false)->commence();
+64:        ROW->addChild(persistBox);
+87:    if (persistBox && persistBox->state())
+88:        std::cout << "[PERSIST]";
+97:    bool remoteDesktop       = false;
+101:        else if (std::string_view{argv[i]} == "--remote-desktop")
+102:            remoteDesktop = true;
+112:    if (remoteDesktop)
+113:        return runRemoteDesktopConsent(BACKEND);
+
+=== closeAllSessions in #448? ===
+none
+
+=== binary sizes ===
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.7M user 30 Oct 10:04  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+.rwxr-xr-x  1.5M user 29 Oct 18:26  ~/.local/libexec/xdg-desktop-portal-hyprland
+installed md5: 27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+pr448 md5:     8bc2d89c8b53ad635637444b5c8e75d7  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+ours build-omarchy md5 (if present):
+27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/src/build-omarchy/src/xdg-desktop-portal-hyprland
+~/Projects/xdph-rd/src/build-omarchy/src/xdg-desktop-portal-hyprland
+=== EIS scroll paths (append to analysis) ===
+-- #448:
+909:void CRemoteDesktopPortal::onNotifyPointerMotion(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+914:    Debug::log(TRACE, "[remotedesktop] NotifyPointerMotion: dx={}, dy={}", dx, dy);
+915:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+949:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+958:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1133:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1168:                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+-- ours:
+947:void CRemoteDesktopPortal::onNotifyPointerMotion(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+952:    Debug::log(TRACE, "[remotedesktop] NotifyPointerMotion: dx={}, dy={}", dx, dy);
+953:    PSESSION->virtualPointer->sendMotion(currentTimeMs(), wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+992:void CRemoteDesktopPortal::onNotifyPointerAxis(sdbus::ObjectPath sessionHandle, std::unordered_map<std::string, sdbus::Variant> opts, double dx, double dy) {
+1000:        PSESSION->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));
+1181:                        s->virtualPointer->sendMotion(time, wl_fixed_from_double(dx), wl_fixed_from_double(dy));
+1220:                            s->virtualPointer->sendAxis(time, 0, wl_fixed_from_double(dy));

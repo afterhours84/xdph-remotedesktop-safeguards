@@ -1,0 +1,19 @@
+=== 34-pr448-live-test-RESULT ===
+date: 2026-10-30 17:50:24 MST
+build: PR #448 head 84b03f2a (md5 8bc2d89c8b53ad635637444b5c8e75d7) trial-installed
+tester: tester from gaming PC -> omarchy via RustDesk 1.5.0
+
+RESULTS (tester reported):
+  connect + consent: WORKED (share-picker / approve)
+  mouse wheel scroll direction: CORRECT
+  lock screen: did NOT disconnect the remote session
+  unlock from remote: WORKED (typed password from gaming PC while locked)
+  2nd session via RustDesk viewer reconnect: NOT TESTABLE (reconnect reuses existing connection)
+
+COMPARE TO OUR BUILD (safeguards):
+  our build closes session on lock + restarts RustDesk via xdph-rd-on-lock
+  #448 has no lock-close; session stayed up through lock/unlock
+
+NEXT: proof/35 second CreateSession test while RustDesk session stays open
+installed_still=8bc2d89c8b53ad635637444b5c8e75d7  ~/.local/libexec/xdg-desktop-portal-hyprland
+rustdesk: 524388 /usr/bin/rustdesk

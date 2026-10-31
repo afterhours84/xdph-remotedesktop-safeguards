@@ -1,0 +1,40 @@
+#!/bin/bash
+# xdph-rd-wait-unlock: poll until the compositor session lock is gone, then
+# run xdph-rd-on-unlock. Intended to be run under flock so only one waiter
+# exists. Omarchy has no unlock hook and does not use hypridle; this uses the
+# same helper Omarchy uses (omarchy-hyprland-session-locked).
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-wait-unlock: waiting for unlock (pid $$)" >>"$LOG"
+
+# Exit 0 = locked. Exit 1 = unlocked. Exit 2 = undetermined.
+while true; do
+  omarchy-hyprland-session-locked
+  ec=$?
+  if [ "$ec" -eq 0 ]; then
+    sleep 1
+    continue
+  fi
+  if [ "$ec" -eq 1 ]; then
+    echo "$(ts) xdph-rd-wait-unlock: unlocked (omarchy-hyprland-session-locked exit 1)" >>"$LOG"
+    break
+  fi
+  # undetermined (2) or other: confirm via omarchy-shell lock status when available
+  status=$(omarchy-shell lock status 2>/dev/null || true)
+  if printf '%s' "$status" | grep -q '"locked":false' \
+     && printf '%s' "$status" | grep -q '"sessionLocked":false'; then
+    echo "$(ts) xdph-rd-wait-unlock: unlocked (shell status)" >>"$LOG"
+    break
+  fi
+  sleep 1
+done
+
+ONUNLOCK="${HOME}/.local/bin/xdph-rd-on-unlock"
+if [ -x "$ONUNLOCK" ]; then
+  exec "$ONUNLOCK"
+fi
+echo "$(ts) xdph-rd-wait-unlock: WARN missing $ONUNLOCK" >>"$LOG"
+exit 1

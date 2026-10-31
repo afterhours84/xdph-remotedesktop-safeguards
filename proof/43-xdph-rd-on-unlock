@@ -1,0 +1,20 @@
+#!/bin/bash
+# xdph-rd-on-unlock: start RustDesk after the session unlocks (idempotent).
+# Called by xdph-rd-wait-unlock once omarchy-hyprland-session-locked reports unlocked.
+
+LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+mkdir -p "$(dirname "$LOG")"
+ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+
+echo "$(ts) xdph-rd-on-unlock: invoked" >>"$LOG"
+
+if pgrep -x rustdesk >/dev/null 2>&1; then
+  echo "$(ts) xdph-rd-on-unlock: rustdesk already running; skip start: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+  exit 0
+fi
+
+echo "$(ts) xdph-rd-on-unlock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+setsid -f /usr/bin/rustdesk
+sleep 1
+echo "$(ts) xdph-rd-on-unlock: after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+exit 0

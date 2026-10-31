@@ -1,0 +1,189 @@
+[2026-10-30 18:09:14.463845 -07:00] INFO [src/server.rs:665] DISPLAY=Ok(":0")
+[2026-10-30 18:09:14.464372 -07:00] INFO [src/server.rs:666] XAUTHORITY=Err(NotPresent)
+[2026-10-30 18:09:14.464434 -07:00] INFO [src/server.rs:739] server not started: Connection refused (os error 111), no_server: false
+[2026-10-30 18:09:14.464489 -07:00] INFO [src/server.rs:744] try start server
+[2026-10-30 18:09:14.465160 -07:00] WARN [src/common.rs:2683] Failed to bind IPv6 socket: Network is unreachable (os error 101)
+[2026-10-30 18:09:14.465272 -07:00] INFO [src/common.rs:706] Testing nat ...
+[2026-10-30 18:09:14.465460 -07:00] DEBUG [src/server.rs:832] #tries of ipc service connection: 3
+[2026-10-30 18:09:14.479653 -07:00] ERROR [src/common.rs:2735] Failed to get public IPv6 address: UDP socket error
+[2026-10-30 18:09:14.495875 -07:00] INFO [libs/scrap/src/common/codec.rs:1046] skip test av1
+[2026-10-30 18:09:14.495900 -07:00] INFO [src/lan.rs:31] lan discovery listener started
+[2026-10-30 18:09:14.496006 -07:00] INFO [src/rendezvous_mediator.rs:659] start rendezvous mediator of rs-ny.rustdesk.com
+[2026-10-30 18:09:14.496384 -07:00] INFO [src/rendezvous_mediator.rs:369] start udp: rs-ny.rustdesk.com:21116
+[2026-10-30 18:09:14.498106 -07:00] INFO [src/ipc.rs:725] Started ipc server at path: /tmp/RustDesk-1000/ipc
+[2026-10-30 18:09:14.667663 -07:00] DEBUG [libs/hbb_common/src/udp.rs:36] Receive buf size of udp 0.0.0.0:0: Ok(212992)
+[2026-10-30 18:09:14.765794 -07:00] INFO [src/server.rs:916] #1 try: failed to connect to ipc_service
+[2026-10-30 18:09:14.821716 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21116: port=33943
+[2026-10-30 18:09:14.831382 -07:00] DEBUG [src/rendezvous_mediator.rs:415] Latency of rs-ny.rustdesk.com:21116: 162.482ms
+[2026-10-30 18:09:15.171424 -07:00] DEBUG [src/common.rs:734] Got nat response from rs-ny.rustdesk.com:21115: port=33943
+[2026-10-30 18:09:15.171492 -07:00] INFO [src/common.rs:760] Tested nat type: ASYMMETRIC in 706.057564ms
+[2026-10-30 18:09:15.180175 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:523] set hwcodec config
+[2026-10-30 18:09:15.180194 -07:00] DEBUG [libs/scrap/src/common/hwcodec.rs:524] HwCodecConfig { signature: 0, ram_encode: [], ram_decode: [CodecInfo { name: "h264", mc_name: None, format: H264, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 1, hwdevice: AV_HWDEVICE_TYPE_CUDA }, CodecInfo { name: "h264", mc_name: None, format: H264, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }, CodecInfo { name: "hevc", mc_name: None, format: H265, priority: 3, hwdevice: AV_HWDEVICE_TYPE_NONE }] }
+[2026-10-30 18:09:15.368045 -07:00] INFO [src/server.rs:916] #2 try: failed to connect to ipc_service
+[2026-10-30 18:09:15.495777 -07:00] INFO [libs/scrap/src/common/hwcodec.rs:742] Check hwcodec config, exit with: exit status: 0
+[2026-10-30 18:09:16.269701 -07:00] INFO [src/server.rs:916] #3 try: failed to connect to ipc_service
+[2026-10-30 18:09:16.269731 -07:00] WARN [src/server.rs:924] skipped config sync
+[2026-10-30 18:09:21.319928 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52585
+[2026-10-30 18:09:21.479925 -07:00] INFO [src/server.rs:193] Server listening on: 192.168.x.x:41601
+[2026-10-30 18:09:21.480071 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:595] New webrtc stream (remote endpoint: 673 bytes)
+[2026-10-30 18:09:21.480634 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:861] remote offer SDP received (424 bytes), local answer endpoint 673 bytes
+[2026-10-30 18:09:21.480669 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:867] Start webrtc with remote key: sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-30 18:09:21.480641 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connecting
+[2026-10-30 18:09:21.482186 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.nextcloud.com:443: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483147 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.cloudflare.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483340 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.antisip.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.483632 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.l.google.com:19302: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:21.825929 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:21.825937 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:22.193571 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connected
+[2026-10-30 18:09:22.205710 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:765] Remote data channel bootstrap ready
+[2026-10-30 18:09:22.205747 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/data_channel/mod.rs:242] webrtc.DetachDataChannels() enabled but didn't Detach, call Detach from OnOpen
+[2026-10-30 18:09:22.214165 -07:00] DEBUG [src/server/connection.rs:1498] #1477 Connection opened from REDACTED_PUBLIC_IP:52586.
+[2026-10-30 18:09:22.223636 -07:00] INFO [src/platform/mod.rs:112] new wakelock, require display on: true
+[2026-10-30 18:09:22.223944 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:09:22.223982 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:22.224005 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:22.224023 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:22.224041 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:22.224095 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:22.224213 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:22.224576 -07:00] INFO [src/platform/linux.rs:2591] wakelock: keepawake could not take the inhibit (org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable)
+[2026-10-30 18:09:22.224789 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:09:22.224825 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:22.224852 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:22.224863 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:22.224873 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:22.224884 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:22.224934 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:22.230218 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-30 18:09:22.250565 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:22.282315 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 2, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_468/u1")} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_468/u1", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.468", Serial: 347, Args: [2, {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_468/u1")}] }
+[2026-10-30 18:09:22.282356 -07:00] WARN [libs/scrap/src/wayland/pipewire.rs:622] DBus response: User interaction ended in some other way.
+[2026-10-30 18:09:22.282389 -07:00] ERROR [src/server/wayland.rs:117] Wayland portal handshake failed: wl-stage:create-session:ended:
+[2026-10-30 18:09:22.282410 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1477, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:22.282531 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:22.282550 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:22.282594 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:22.282620 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1477, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:22.282700 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:22.282715 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:22.287871 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/sctp/src/association/mod.rs:469] [] failed to read packets on net_conn: Alert is Fatal or Close Notify
+[2026-10-30 18:09:22.287963 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:1472] WebRTC data channel ended (reset or empty message)
+[2026-10-30 18:09:22.288044 -07:00] INFO [src/server/connection.rs:5249] #1477 Connection closed: Reset by the peer
+[2026-10-30 18:09:22.288068 -07:00] INFO [src/server/connection.rs:1237] #1477 connection loop exited
+[2026-10-30 18:09:22.288100 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Remove(1477)
+[2026-10-30 18:09:22.288112 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: closed
+[2026-10-30 18:09:22.288124 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:807] WebRTC session closing due to closed
+[2026-10-30 18:09:22.288134 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:810] WebRTC session stream closed
+[2026-10-30 18:09:22.288203 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:828] WebRTC session removed key: answer:sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-30 18:09:22.288273 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/mux/mod.rs:147] Warning: mux: no endpoint for packet starting with 21
+[2026-10-30 18:09:22.288421 -07:00] DEBUG [src/server/connection.rs:1322] post_seq_loop exited
+[2026-10-30 18:09:22.288296 -07:00] INFO [src/server/connection.rs:6597] drop wakelock
+[2026-10-30 18:09:22.289683 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-30 18:09:22.298177 -07:00] INFO [libs/libxdo-sys-stub/src/lib.rs:114] libxdo-sys Loaded libxdo.so.4
+[2026-10-30 18:09:22.299000 -07:00] INFO [libs/enigo/src/linux/xdo.rs:100] xdo context created successfully
+[2026-10-30 18:09:22.299273 -07:00] INFO [libs/enigo/src/linux/xdo.rs:72] X11 pointer has 10 buttons, side buttons supported
+[2026-10-30 18:09:22.299299 -07:00] DEBUG [src/server/connection.rs:1315] Input thread exited
+[2026-10-30 18:09:22.590949 -07:00] WARN [src/server/connection.rs:2823] ipc to connection manager exit: expected
+[2026-10-30 18:09:26.485012 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-30 18:09:39.481696 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52585: deadline has elapsed
+[2026-10-30 18:09:46.224751 -07:00] DEBUG [src/rendezvous_mediator.rs:830] Handle intranet from REDACTED_PUBLIC_IP:52626
+[2026-10-30 18:09:46.390627 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:595] New webrtc stream (remote endpoint: 673 bytes)
+[2026-10-30 18:09:46.391109 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:861] remote offer SDP received (424 bytes), local answer endpoint 673 bytes
+[2026-10-30 18:09:46.391162 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:867] Start webrtc with remote key: sha-256 REDACTED_WEBRTC_FINGERPRINT
+[2026-10-30 18:09:46.391168 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connecting
+[2026-10-30 18:09:46.393302 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.nextcloud.com:443: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:46.393942 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.cloudflare.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:46.394176 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.antisip.com:3478: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:46.394315 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp6 stun:stun.l.google.com:19302: io error: Network is unreachable (os error 101)
+[2026-10-30 18:09:46.404250 -07:00] INFO [src/server.rs:193] Server listening on: 192.168.x.x:38083
+[2026-10-30 18:09:46.714762 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:46.736710 -07:00] INFO [src/common.rs:2213] Connection secured
+[2026-10-30 18:09:47.084228 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:797] WebRTC session peer connection state: connected
+[2026-10-30 18:09:47.097067 -07:00] DEBUG [libs/hbb_common/src/webrtc.rs:765] Remote data channel bootstrap ready
+[2026-10-30 18:09:47.097136 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/webrtc/src/data_channel/mod.rs:242] webrtc.DetachDataChannels() enabled but didn't Detach, call Detach from OnOpen
+[2026-10-30 18:09:47.102441 -07:00] DEBUG [src/server/connection.rs:1498] #1478 Connection opened from REDACTED_PUBLIC_IP:52625.
+[2026-10-30 18:09:47.109786 -07:00] INFO [src/platform/mod.rs:112] new wakelock, require display on: true
+[2026-10-30 18:09:47.109935 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:09:47.109981 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:47.110044 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110070 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:47.110100 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110125 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:47.110252 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:47.110583 -07:00] INFO [src/platform/linux.rs:2591] wakelock: keepawake could not take the inhibit (org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable)
+[2026-10-30 18:09:47.110726 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:382] perform;
+[2026-10-30 18:09:47.110782 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Auth(Some(External), Some([49, 48, 48, 48]))
+[2026-10-30 18:09:47.110847 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110880 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=NegotiateUnixFD
+[2026-10-30 18:09:47.110900 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:953] read_command;
+[2026-10-30 18:09:47.110981 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/handshake.rs:935] write_command; command=Begin
+[2026-10-30 18:09:47.111061 -07:00] INFO [/home/builder/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zbus-3.15.2/src/socket_reader.rs:33] socket reader;
+[2026-10-30 18:09:47.116372 -07:00] INFO [src/platform/linux.rs:2551] wakelock: no session idle inhibitor answered, so the compositor may still blank this screen (org.gnome.SessionManager: The name is not activatable; org.freedesktop.PowerManagement: The name is not activatable)
+[2026-10-30 18:09:47.136268 -07:00] INFO [src/server/connection.rs:2117] peer info supported_encoding: SupportedEncoding { h264: false, h265: false, vp8: true, av1: true, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:47.147281 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1")} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u1", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 381, Args: [0, {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1")}] }
+[2026-10-30 18:09:47.148056 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u2", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 388, Args: [0, {}] }
+[2026-10-30 18:09:50.593573 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u3", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 421, Args: [0, {}] }
+[2026-10-30 18:09:51.394323 -07:00] WARN [/home/builder/.cargo/git/checkouts/webrtc-887ad915e8c0e7fb/49c89bd/ice/src/agent/agent_gather.rs:672] [controlled]: could not get server reflexive address udp4 stun:stun.antisip.com:3478: deadline has elapsed
+[2026-10-30 18:09:51.681391 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:613] Response from DBus: response: OrgFreedesktopPortalRequestResponse { response: 0, results: {"session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1"), "streams": Variant(InternalArray { data: [[44, {"pipewire-serial": Variant(20144), "source_type": Variant(1), "position": Variant([0, 0]), "size": Variant([1920, 1080]), "mapping_id": Variant("HDMI-A-1")}]], inner_sig: Signature("(ua{sv})\0") }), "source_type": Variant(1), "devices": Variant(3)} }, message: Message { Type: Signal, Path: "/org/freedesktop/portal/desktop/request/1_473/u4", Interface: "org.freedesktop.portal.Request", Member: "Response", Sender: ":1.440", Destination: ":1.473", Serial: 434, Args: [0, {"devices": Variant(3), "session_handle": Variant("/org/freedesktop/portal/desktop/session/1_473/u1"), "source_type": Variant(1), "streams": Variant(InternalArray { data: [[44, {"mapping_id": Variant("HDMI-A-1"), "size": Variant([1920, 1080]), "position": Variant([0, 0]), "source_type": Variant(1), "pipewire-serial": Variant(20144)}]], inner_sig: Signature("(ua{sv})\0") })}] }
+[2026-10-30 18:09:51.691330 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 117 to PLAYING state...
+[2026-10-30 18:09:51.762063 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:09:51.762157 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:09:51.762173 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:09:51.762223 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:09:51.762251 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:09:51.771943 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:09:51.773940 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 117 to PLAYING state...
+[2026-10-30 18:09:51.788818 -07:00] INFO [src/server/input_service.rs:784] RdpInput keyboard created
+[2026-10-30 18:09:51.788847 -07:00] INFO [src/server/input_service.rs:799] RdpInput mouse created
+[2026-10-30 18:09:51.788859 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1478, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:51.788981 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:51.788991 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:51.789050 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: Yes, supported_decoding: MessageField(Some(SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), custom_fps: 0, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:09:51.789071 -07:00] INFO [libs/scrap/src/common/codec.rs:172] update:Update(1478, SupportedDecoding { ability_vp9: 1, ability_h264: 1, ability_h265: 1, prefer: Auto, ability_vp8: 1, ability_av1: 1, i444: MessageField(Some(CodecAbility { vp8: false, vp9: true, av1: true, h264: false, h265: false, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })), prefer_chroma: I420, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } })
+[2026-10-30 18:09:51.789137 -07:00] INFO [libs/scrap/src/common/codec.rs:314] usable: vp8=true, av1=true, h264=false, h265=false
+[2026-10-30 18:09:51.789147 -07:00] INFO [libs/scrap/src/common/codec.rs:317] connection count: 1, used preference: Auto, encoder: AV1
+[2026-10-30 18:09:51.789245 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:09:51.789311 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:09:51.789406 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:09:51.789707 -07:00] INFO [libs/scrap/src/common/codec.rs:1027] cpu num: 8, cpu loadavg: 1.52, available memory: 9G, codec thread: 2
+[2026-10-30 18:09:51.790268 -07:00] INFO [src/platform/linux.rs:298] xdo context created successfully
+[2026-10-30 18:09:51.792926 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:09:51.794936 -07:00] INFO [src/server/service.rs:196] Call snapshot of mouse_cursor service
+[2026-10-30 18:09:51.796887 -07:00] DEBUG [src/server/connection.rs:6354] Start cm
+[2026-10-30 18:09:51.817597 -07:00] DEBUG [src/server/service.rs:305] Enter clipboard service inner loop
+[2026-10-30 18:09:51.817610 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:51.817659 -07:00] DEBUG [src/server/service.rs:305] Enter display service inner loop
+[2026-10-30 18:09:51.817731 -07:00] INFO [src/server/service.rs:196] Call snapshot of display service
+[2026-10-30 18:09:51.817794 -07:00] INFO [src/server/display_service.rs:721] Displays changed
+[2026-10-30 18:09:51.818284 -07:00] INFO [src/clipboard.rs:1020] Subscribe clipboard listener: clipboard
+[2026-10-30 18:09:51.818299 -07:00] INFO [src/clipboard.rs:1030] Start clipboard listener thread
+[2026-10-30 18:09:51.818391 -07:00] INFO [src/clipboard.rs:1056] Clipboard listener thread started
+[2026-10-30 18:09:51.818403 -07:00] INFO [src/clipboard.rs:1059] Clipboard listener subscribed: clipboard
+[2026-10-30 18:09:51.818390 -07:00] DEBUG [src/clipboard.rs:1112] Clipboard listener started
+[2026-10-30 18:09:51.829363 -07:00] INFO [src/server/service.rs:196] Call snapshot of monitor0 service
+[2026-10-30 18:09:51.927292 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:09:51.949402 -07:00] INFO [src/server/video_service.rs:750] switch to refresh
+[2026-10-30 18:09:51.955262 -07:00] INFO [src/server/video_service.rs:1021] stop video service: monitor0
+[2026-10-30 18:09:51.955342 -07:00] ERROR [src/server/service.rs:308] Error of monitor0 service: SWITCH
+[2026-10-30 18:09:52.017522 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:52.045542 -07:00] DEBUG [src/server/service.rs:305] Enter monitor0 service inner loop
+[2026-10-30 18:09:52.045579 -07:00] INFO [src/server/video_service.rs:1009] new video service: monitor0
+[2026-10-30 18:09:52.062053 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 129 to PLAYING state...
+[2026-10-30 18:09:52.126370 -07:00] ERROR [src/server/service.rs:308] Error of audio service: Connection refused (os error 111)
+[2026-10-30 18:09:52.133259 -07:00] DEBUG [src/server/wayland.rs:580] Initializing displays with fill_displays()
+[2026-10-30 18:09:52.133422 -07:00] DEBUG [src/server/input_service.rs:2605] Dropping TemporaryMouseMoveHandle
+[2026-10-30 18:09:52.133436 -07:00] DEBUG [src/server/input_service.rs:2579] TemporaryMouseMoveHandle thread started
+[2026-10-30 18:09:52.133541 -07:00] DEBUG [src/server/input_service.rs:2587] TemporaryMouseMoveHandle thread exiting
+[2026-10-30 18:09:52.133605 -07:00] DEBUG [src/server/wayland.rs:587] Attempting to fix logical size with try_fix_logical_size()
+[2026-10-30 18:09:52.142962 -07:00] DEBUG [src/server/wayland.rs:602] #displays=1, primary=0, rects: [((0, 0), 1920, 1080)], cpus=4/8
+[2026-10-30 18:09:52.146893 -07:00] DEBUG [libs/scrap/src/wayland/pipewire.rs:325] [gstreamer] Setting pipeline 115 to PLAYING state...
+[2026-10-30 18:09:52.160065 -07:00] INFO [libs/scrap/src/common/codec.rs:135] new encoder: AOM(AomEncoderConfig { width: 1920, height: 1080, quality: 0.67, keyframe_interval: None }), i444: false
+[2026-10-30 18:09:52.161437 -07:00] INFO [src/server/video_service.rs:705] initial quality: 0.67
+[2026-10-30 18:09:52.276617 -07:00] DEBUG [src/server/service.rs:305] Enter audio service inner loop
+[2026-10-30 18:09:52.384575 -07:00] INFO [src/server/service.rs:196] Call snapshot of audio service
+[2026-10-30 18:09:54.104447 -07:00] INFO [src/server/connection.rs:4857] Option update: OptionMessage { image_quality: NotSet, lock_after_session_end: NotSet, show_remote_cursor: NotSet, privacy_mode: NotSet, block_input: NotSet, custom_image_quality: 0, disable_audio: NotSet, disable_clipboard: NotSet, enable_file_transfer: NotSet, supported_decoding: MessageField(None), custom_fps: 30, disable_keyboard: NotSet, follow_remote_cursor: NotSet, follow_remote_window: NotSet, disable_camera: NotSet, terminal_persistent: NotSet, show_my_cursor: NotSet, special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2026-10-30 18:10:02.264057 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 18:10:04.405552 -07:00] WARN [src/server.rs:363] Failed to accept connection from REDACTED_PUBLIC_IP:52626: deadline has elapsed
+[2026-10-30 18:12:23.972380 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack
+[2026-10-30 18:13:06.650320 -07:00] DEBUG [src/server/audio_service.rs:798] Audio Zero Gate Attack

@@ -1,0 +1,175 @@
+=== 32-pr448-trial-install ===
+date: 2026-10-30 17:43:18 MST
+goal: trial-install #448 for live RustDesk test; DO NOT restore yet
+
+=== VERIFY BACKUP ===
+backup=~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+backup_md5=27011044bd5770cf78bcacd9f5c18cf4 expect=27011044bd5770cf78bcacd9f5c18cf4
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.5M user 29 Oct 18:26  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+
+=== VERIFY #448 BINARY ===
+pr448=~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+pr448_md5=8bc2d89c8b53ad635637444b5c8e75d7 expect=8bc2d89c8b53ad635637444b5c8e75d7
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.7M user 30 Oct 10:04  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+
+=== PRE STATE ===
+active
+active
+installed_before=27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+rustdesk not running
+no rustdesk binary procs
+
+=== STOP PORTAL, INSTALL #448 ===
+after_stop ActiveState=inactive MainPID=0
+installed_after=8bc2d89c8b53ad635637444b5c8e75d7
+
+=== START PORTAL SERVICES ===
+active
+active
+MainPID=524342
+Permissions Size User Date Modified Name
+lrwxrwxrwx     - user 30 Oct 17:43  /proc/524342/exe -> ~/.local/libexec/xdg-desktop-portal-hyprland
+
+=== BUSCTL INTROSPECTION ===
+RemoteDesktop version: u 2
+u 3
+u 6
+u 7
+--- RemoteDesktop iface ---
+NAME                         TYPE     SIGNATURE RESULT/VALUE FLAGS
+.ConnectToEIS                method   osa{sv}   h            -
+.CreateSession               method   oosa{sv}  ua{sv}       -
+.NotifyKeyboardKeycode       method   oa{sv}iu  -            -
+.NotifyKeyboardKeysym        method   oa{sv}iu  -            -
+.NotifyPointerAxis           method   oa{sv}dd  -            -
+.NotifyPointerAxisDiscrete   method   oa{sv}ui  -            -
+.NotifyPointerButton         method   oa{sv}iu  -            -
+.NotifyPointerMotion         method   oa{sv}dd  -            -
+.NotifyPointerMotionAbsolute method   oa{sv}udd -            -
+.SelectDevices               method   oosa{sv}  ua{sv}       -
+.Start                       method   oossa{sv} ua{sv}       -
+.AvailableDeviceTypes        property u         3            emits-change
+.version                     property u         2            emits-change
+--- iface list ---
+org.freedesktop.impl.portal.GlobalShortcuts interface -                 -            -
+org.freedesktop.impl.portal.InputCapture    interface -                 -            -
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+org.freedesktop.impl.portal.Screenshot      interface -                 -            -
+RD_VER=2
+RemoteDesktop v2 OK
+
+=== RESTART RUSTDESK ===
+rustdesk cleared
+
+(rustdesk:524388): Atk-CRITICAL **: 17:43:22.203: atk_socket_embed: assertion 'plug_id != NULL' failed
+Try setting transparent
+flutter: launch args: []
+flutter: initializing FFI main
+flutter: _appType:main,info1-id:2b53e13ad90346ed8a43c95abd325654,info2-name:Omarchy,dir:~/Documents
+flutter: _globalFFI init
+flutter: registerEventHandler callback_query_onlines address book peer
+flutter: registerEventHandler load_address_book_peers address book peer
+flutter: registerEventHandler callback_query_onlines group peer
+flutter: registerEventHandler load_group_peers group peer
+flutter: registerEventHandler callback_query_onlines recent peer
+flutter: registerEventHandler load_recent_peers recent peer
+flutter: registerEventHandler callback_query_onlines fav peer
+flutter: registerEventHandler load_fav_peers fav peer
+flutter: registerEventHandler callback_query_onlines discovered peer
+flutter: registerEventHandler load_lan_peers discovered peer
+flutter: _globalFFI init end
+flutter: registerEventHandler check_software_update_finish check_software_update_finish
+flutter: registerEventHandler callback_query_onlines AllPeersLoader
+flutter: restore lpos: 1280.0/720.0, offset:null/null, isMaximized: true, isFullscreen: false
+flutter: handled by uni links: false
+flutter: [MultiWindowHandler] active window changed: {0}
+524388 /usr/bin/rustdesk
+524388 /usr/bin/rustdesk
+
+=== JOURNAL SNIPPET ===
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [toplevel mapping] registered manager
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [globalshortcuts] registered
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [input-capture] initializing input capture portal
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [input-capture] init successful
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [pipewire] connected
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] init successful
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+
+=== FINAL STATE (trial, NOT restored) ===
+active
+active
+installed=8bc2d89c8b53ad635637444b5c8e75d7  ~/.local/libexec/xdg-desktop-portal-hyprland
+backup_ours=27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+pr448_build=8bc2d89c8b53ad635637444b5c8e75d7  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+running_xdph:
+524342 ~/.local/libexec/xdg-desktop-portal-hyprland
+rustdesk:
+524388 /usr/bin/rustdesk
+
+RESTORE COMMAND (run when tester says restore; do NOT run now):
+  systemctl --user stop xdg-desktop-portal-hyprland.service
+  cp -a ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin \
+        ~/.local/libexec/xdg-desktop-portal-hyprland
+  chmod 755 ~/.local/libexec/xdg-desktop-portal-hyprland
+  systemctl --user start xdg-desktop-portal-hyprland.service
+  systemctl --user restart xdg-desktop-portal.service
+  pkill -x rustdesk; sleep 1; setsid -f /usr/bin/rustdesk
+  md5sum ~/.local/libexec/xdg-desktop-portal-hyprland
+  # expect: 27011044bd5770cf78bcacd9f5c18cf4
+
+TAIL LOGS DURING TEST:
+  journalctl --user -u xdg-desktop-portal-hyprland.service -f --no-pager
+  # optional also:
+  journalctl --user -u xdg-desktop-portal.service -f --no-pager
+  # rustdesk log:
+  # tail -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+
+DONE trial_install_ok=1 restored=0
+
+(rustdesk:525040): Atk-CRITICAL **: 17:44:03.855: atk_socket_embed: assertion 'plug_id != NULL' failed
+Try setting transparent
+flutter: launch args: [--cm]
+flutter: --cm started
+flutter: initializing FFI cm
+flutter: _appType:cm,info1-id:2b53e13ad90346ed8a43c95abd325654,info2-name:Omarchy,dir:~/Documents
+flutter: _globalFFI init
+flutter: registerEventHandler callback_query_onlines address book peer
+flutter: registerEventHandler load_address_book_peers address book peer
+flutter: registerEventHandler callback_query_onlines group peer
+flutter: registerEventHandler load_group_peers group peer
+flutter: registerEventHandler callback_query_onlines recent peer
+flutter: registerEventHandler load_recent_peers recent peer
+flutter: registerEventHandler callback_query_onlines fav peer
+flutter: registerEventHandler load_fav_peers fav peer
+flutter: registerEventHandler callback_query_onlines discovered peer
+flutter: registerEventHandler load_lan_peers discovered peer
+flutter: _globalFFI init end
+flutter: registerEventHandler theme theme
+flutter: registerEventHandler language language
+flutter: Bring window 'null' on top

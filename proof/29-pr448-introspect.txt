@@ -1,0 +1,112 @@
+=== 29-pr448-introspect ===
+date: 2026-10-30 10:05:28 MST
+NOTE: temporary swap of user-local binary only. Auto-restores. No RustDesk start (was not running).
+installed: ~/.local/libexec/xdg-desktop-portal-hyprland
+pr448_bin: ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+backup: ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+
+=== PRE: unit and process state ===
+active
+active
+ActiveState=active
+MainPID=208284
+ExecStart={ path=~/.local/libexec/xdg-desktop-portal-hyprland ; argv[]=~/.local/libexec/xdg-desktop-portal-hyprland ; ignore_errors=no ; start_time=[Thu 2026-10-29 18:26:37 MST] ; stop_time=[n/a] ; pid=208284 ; code=(null) ; status=0/0 }
+pgrep: pattern that searches for process name longer than 15 characters will result in zero matches
+Try `pgrep -f' option to match against the complete command line.
+27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+8bc2d89c8b53ad635637444b5c8e75d7  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+rustdesk: not running
+
+=== PRE: introspection (our installed build) ===
+NAME                                        TYPE      SIGNATURE         RESULT/VALUE FLAGS
+org.freedesktop.DBus.Introspectable         interface -                 -            -
+.Introspect                                 method    -                 s            -
+org.freedesktop.DBus.Peer                   interface -                 -            -
+.GetMachineId                               method    -                 s            -
+.Ping                                       method    -                 -            -
+org.freedesktop.DBus.Properties             interface -                 -            -
+.Get                                        method    ss                v            -
+.GetAll                                     method    s                 a{sv}        -
+.Set                                        method    ssv               -            -
+.PropertiesChanged                          signal    sa{sv}as          -            -
+org.freedesktop.impl.portal.GlobalShortcuts interface -                 -            -
+.BindShortcuts                              method    ooa(sa{sv})sa{sv} ua{sv}       -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.ListShortcuts                              method    oo                ua{sv}       -
+.Activated                                  signal    osta{sv}          -            -
+.Deactivated                                signal    osta{sv}          -            -
+.ShortcutsChanged                           signal    oa{sa{sv}}        -            -
+org.freedesktop.impl.portal.InputCapture    interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oossa{sv}         ua{sv}       -
+.Disable                                    method    osa{sv}           ua{sv}       -
+.Enable                                     method    osa{sv}           ua{sv}       -
+.GetZones                                   method    oosa{sv}          ua{sv}       -
+.Release                                    method    osa{sv}           ua{sv}       -
+.SetPointerBarriers                         method    oosa{sv}aa{sv}u   ua{sv}       -
+.SupportedCapabilities                      property  u                 3            emits-change
+.version                                    property  u                 1            emits-change
+.Activated                                  signal    oa{sv}            -            -
+.Deactivated                                signal    oa{sv}            -            -
+.Disabled                                   signal    oa{sv}            -            -
+.ZonesChanged                               signal    oa{sv}            -            -
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.NotifyKeyboardKeycode                      method    oa{sv}iu          -            -
+.NotifyKeyboardKeysym                       method    oa{sv}iu          -            -
+.NotifyPointerAxis                          method    oa{sv}dd          -            -
+.NotifyPointerAxisDiscrete                  method    oa{sv}ui          -            -
+.NotifyPointerButton                        method    oa{sv}iu          -            -
+.NotifyPointerMotion                        method    oa{sv}dd          -            -
+.NotifyPointerMotionAbsolute                method    oa{sv}udd         -            -
+.SelectDevices                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableDeviceTypes                       property  u                 3            emits-change
+.version                                    property  u                 2            emits-change
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.SelectSources                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableCursorModes                       property  u                 3            emits-change
+.AvailableSourceTypes                       property  u                 7            emits-change
+.version                                    property  u                 6            emits-change
+org.freedesktop.impl.portal.Screenshot      interface -                 -            -
+.PickColor                                  method    ossa{sv}          ua{sv}       -
+.Screenshot                                 method    ossa{sv}          ua{sv}       -
+.version                                    property  u                 2            emits-change
+--- RemoteDesktop iface ---
+NAME                         TYPE     SIGNATURE RESULT/VALUE FLAGS
+.ConnectToEIS                method   osa{sv}   h            -
+.CreateSession               method   oosa{sv}  ua{sv}       -
+.NotifyKeyboardKeycode       method   oa{sv}iu  -            -
+.NotifyKeyboardKeysym        method   oa{sv}iu  -            -
+.NotifyPointerAxis           method   oa{sv}dd  -            -
+.NotifyPointerAxisDiscrete   method   oa{sv}ui  -            -
+.NotifyPointerButton         method   oa{sv}iu  -            -
+.NotifyPointerMotion         method   oa{sv}dd  -            -
+.NotifyPointerMotionAbsolute method   oa{sv}udd -            -
+.SelectDevices               method   oosa{sv}  ua{sv}       -
+.Start                       method   oossa{sv} ua{sv}       -
+.AvailableDeviceTypes        property u         3            emits-change
+.version                     property u         2            emits-change
+--- ScreenCast iface ---
+NAME                  TYPE     SIGNATURE RESULT/VALUE FLAGS
+.CreateSession        method   oosa{sv}  ua{sv}       -
+.SelectSources        method   oosa{sv}  ua{sv}       -
+.Start                method   oossa{sv} ua{sv}       -
+.AvailableCursorModes property u         3            emits-change
+.AvailableSourceTypes property u         7            emits-change
+.version              property u         6            emits-change
+--- version props ---
+u 2
+u 3
+u 6
+
+=== BACKUP installed binary ===
+27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+Permissions Size User Date Modified Name
+.rwxr-xr-x  1.5M user 29 Oct 18:26  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+
+=== SWAP IN #448 binary ===
+cp: cannot create regular file '~/.local/libexec/xdg-desktop-portal-hyprland': Text file busy

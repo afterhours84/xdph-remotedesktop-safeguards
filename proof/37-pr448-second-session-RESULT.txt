@@ -1,0 +1,40 @@
+=== 37-pr448-second-session-RESULT ===
+date: 2026-10-30 17:53:04 MST
+build: PR #448 trial-installed (md5 8bc2d89c8b53ad635637444b5c8e75d7)
+rustdesk_session: stayed open throughout (PID 524388, portal session 1_407/u1)
+
+TESTER LIVE TEST (proof/34)
+  connect+consent: WORKED
+  scroll direction: CORRECT
+  lock: did NOT disconnect; remote unlock WORKED
+
+SECOND-SESSION TEST (proof/35 full flow + proof/36 CreateSession-only)
+  Method: same as proof/23 (frontend org.freedesktop.portal.RemoteDesktop.CreateSession
+  via gdbus/python while RustDesk portal session active).
+
+  CreateSession while RustDesk open: ACCEPTED (not rejected)
+    dbus-monitor shows impl CreateSession for session proof448css
+    Request.Response uint32 0 + session_handle
+    No journal line "rejecting CreateSession: another remote session already exists"
+    (that WARN is ours-only; absent from #448)
+
+  SelectDevices: succeeded (proof/35)
+
+  SelectSources / Start: timed out at 60s waiting for picker Response
+    (tester may not have seen/approved a picker; no share-picker process left running)
+    Cannot claim concurrent Start was granted from this run.
+    CreateSession acceptance alone already proves no one-session guard.
+
+  RustDesk affected?: NO
+    rustdesk PIDs still 524388 / 525040 --cm
+    portal session 1_407/u1 still present after cleanup
+    bus tree after cleanup shows only RustDesk session
+
+  Cleanup: Session.Close on test sessions; no leftover proof448* sessions
+
+COMPARE TO OUR BUILD (proof/23)
+  ours: CreateSession REJECTED ("another remote session already exists")
+  #448: CreateSession ACCEPTED (concurrent session objects allowed)
+
+restored=0  (#448 still installed; awaiting tester restore request)
+detail: proof/34, 35-*.txt, 35-second-session-probe.py, 36-*.txt

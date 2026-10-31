@@ -1,0 +1,260 @@
+=== 30-pr448-introspect ===
+date: 2026-10-30 10:06:06 MST
+NOTE: stop service before overwrite (prior attempt hit Text file busy). Auto-restores. RustDesk not started.
+
+pre_installed=27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+backup=27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+pr448=8bc2d89c8b53ad635637444b5c8e75d7  ~/Projects/xdph-448/build-omarchy/src/xdg-desktop-portal-hyprland
+
+=== PRE introspection (ours, already logged in 29; quick confirm) ===
+u 2
+u 3
+u 6
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+
+=== STOP then SWAP #448 ===
+after_stop MainPID=0 ActiveState=inactive
+swapped_md5=8bc2d89c8b53ad635637444b5c8e75d7 expect=8bc2d89c8b53ad635637444b5c8e75d7
+active
+MainPID=430888
+
+=== MID introspection (#448) ===
+NAME                                        TYPE      SIGNATURE         RESULT/VALUE FLAGS
+org.freedesktop.DBus.Introspectable         interface -                 -            -
+.Introspect                                 method    -                 s            -
+org.freedesktop.DBus.Peer                   interface -                 -            -
+.GetMachineId                               method    -                 s            -
+.Ping                                       method    -                 -            -
+org.freedesktop.DBus.Properties             interface -                 -            -
+.Get                                        method    ss                v            -
+.GetAll                                     method    s                 a{sv}        -
+.Set                                        method    ssv               -            -
+.PropertiesChanged                          signal    sa{sv}as          -            -
+org.freedesktop.impl.portal.GlobalShortcuts interface -                 -            -
+.BindShortcuts                              method    ooa(sa{sv})sa{sv} ua{sv}       -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.ListShortcuts                              method    oo                ua{sv}       -
+.Activated                                  signal    osta{sv}          -            -
+.Deactivated                                signal    osta{sv}          -            -
+.ShortcutsChanged                           signal    oa{sa{sv}}        -            -
+org.freedesktop.impl.portal.InputCapture    interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oossa{sv}         ua{sv}       -
+.Disable                                    method    osa{sv}           ua{sv}       -
+.Enable                                     method    osa{sv}           ua{sv}       -
+.GetZones                                   method    oosa{sv}          ua{sv}       -
+.Release                                    method    osa{sv}           ua{sv}       -
+.SetPointerBarriers                         method    oosa{sv}aa{sv}u   ua{sv}       -
+.SupportedCapabilities                      property  u                 3            emits-change
+.version                                    property  u                 1            emits-change
+.Activated                                  signal    oa{sv}            -            -
+.Deactivated                                signal    oa{sv}            -            -
+.Disabled                                   signal    oa{sv}            -            -
+.ZonesChanged                               signal    oa{sv}            -            -
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.NotifyKeyboardKeycode                      method    oa{sv}iu          -            -
+.NotifyKeyboardKeysym                       method    oa{sv}iu          -            -
+.NotifyPointerAxis                          method    oa{sv}dd          -            -
+.NotifyPointerAxisDiscrete                  method    oa{sv}ui          -            -
+.NotifyPointerButton                        method    oa{sv}iu          -            -
+.NotifyPointerMotion                        method    oa{sv}dd          -            -
+.NotifyPointerMotionAbsolute                method    oa{sv}udd         -            -
+.SelectDevices                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableDeviceTypes                       property  u                 3            emits-change
+.version                                    property  u                 2            emits-change
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.SelectSources                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableCursorModes                       property  u                 3            emits-change
+.AvailableSourceTypes                       property  u                 7            emits-change
+.version                                    property  u                 6            emits-change
+org.freedesktop.impl.portal.Screenshot      interface -                 -            -
+.PickColor                                  method    ossa{sv}          ua{sv}       -
+.Screenshot                                 method    ossa{sv}          ua{sv}       -
+.version                                    property  u                 2            emits-change
+--- RemoteDesktop ---
+NAME                         TYPE     SIGNATURE RESULT/VALUE FLAGS
+.ConnectToEIS                method   osa{sv}   h            -
+.CreateSession               method   oosa{sv}  ua{sv}       -
+.NotifyKeyboardKeycode       method   oa{sv}iu  -            -
+.NotifyKeyboardKeysym        method   oa{sv}iu  -            -
+.NotifyPointerAxis           method   oa{sv}dd  -            -
+.NotifyPointerAxisDiscrete   method   oa{sv}ui  -            -
+.NotifyPointerButton         method   oa{sv}iu  -            -
+.NotifyPointerMotion         method   oa{sv}dd  -            -
+.NotifyPointerMotionAbsolute method   oa{sv}udd -            -
+.SelectDevices               method   oosa{sv}  ua{sv}       -
+.Start                       method   oossa{sv} ua{sv}       -
+.AvailableDeviceTypes        property u         3            emits-change
+.version                     property u         2            emits-change
+--- ScreenCast ---
+NAME                  TYPE     SIGNATURE RESULT/VALUE FLAGS
+.CreateSession        method   oosa{sv}  ua{sv}       -
+.SelectSources        method   oosa{sv}  ua{sv}       -
+.Start                method   oossa{sv} ua{sv}       -
+.AvailableCursorModes property u         3            emits-change
+.AvailableSourceTypes property u         7            emits-change
+.version              property u         6            emits-change
+--- props ---
+u 2
+u 3
+u 6
+u 7
+u 3
+--- iface names ---
+org.freedesktop.impl.portal.GlobalShortcuts interface -                 -            -
+org.freedesktop.impl.portal.InputCapture    interface -                 -            -
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+org.freedesktop.impl.portal.Screenshot      interface -                 -            -
+--- journal since swap ---
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwlr_output_manager_v1 (ver 4)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: org_kde_kwin_server_decoration_manager (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_focus_grab_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwp_tablet_manager_v2 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwlr_layer_shell_v1 (ver 5)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_presentation (ver 2)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: xdg_wm_base (ver 7)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwlr_data_control_manager_v1 (ver 2)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: xwayland_shell_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [toplevel mapping] registered manager
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [globalshortcuts] registered
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [input-capture] initializing input capture portal
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [input-capture] init successful
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [pipewire] connected
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG] [screencopy] init successful
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+Oct 30 10:06:07 omarchy xdg-desktop-portal-hyprland[430888]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+Oct 30 10:06:07 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+
+=== RESTORE hook ===
+restored_md5=27011044bd5770cf78bcacd9f5c18cf4 expect=27011044bd5770cf78bcacd9f5c18cf4
+active
+
+=== POST introspection (restored ours) ===
+NAME                                        TYPE      SIGNATURE         RESULT/VALUE FLAGS
+org.freedesktop.DBus.Introspectable         interface -                 -            -
+.Introspect                                 method    -                 s            -
+org.freedesktop.DBus.Peer                   interface -                 -            -
+.GetMachineId                               method    -                 s            -
+.Ping                                       method    -                 -            -
+org.freedesktop.DBus.Properties             interface -                 -            -
+.Get                                        method    ss                v            -
+.GetAll                                     method    s                 a{sv}        -
+.Set                                        method    ssv               -            -
+.PropertiesChanged                          signal    sa{sv}as          -            -
+org.freedesktop.impl.portal.GlobalShortcuts interface -                 -            -
+.BindShortcuts                              method    ooa(sa{sv})sa{sv} ua{sv}       -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.ListShortcuts                              method    oo                ua{sv}       -
+.Activated                                  signal    osta{sv}          -            -
+.Deactivated                                signal    osta{sv}          -            -
+.ShortcutsChanged                           signal    oa{sa{sv}}        -            -
+org.freedesktop.impl.portal.InputCapture    interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oossa{sv}         ua{sv}       -
+.Disable                                    method    osa{sv}           ua{sv}       -
+.Enable                                     method    osa{sv}           ua{sv}       -
+.GetZones                                   method    oosa{sv}          ua{sv}       -
+.Release                                    method    osa{sv}           ua{sv}       -
+.SetPointerBarriers                         method    oosa{sv}aa{sv}u   ua{sv}       -
+.SupportedCapabilities                      property  u                 3            emits-change
+.version                                    property  u                 1            emits-change
+.Activated                                  signal    oa{sv}            -            -
+.Deactivated                                signal    oa{sv}            -            -
+.Disabled                                   signal    oa{sv}            -            -
+.ZonesChanged                               signal    oa{sv}            -            -
+org.freedesktop.impl.portal.RemoteDesktop   interface -                 -            -
+.ConnectToEIS                               method    osa{sv}           h            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.NotifyKeyboardKeycode                      method    oa{sv}iu          -            -
+.NotifyKeyboardKeysym                       method    oa{sv}iu          -            -
+.NotifyPointerAxis                          method    oa{sv}dd          -            -
+.NotifyPointerAxisDiscrete                  method    oa{sv}ui          -            -
+.NotifyPointerButton                        method    oa{sv}iu          -            -
+.NotifyPointerMotion                        method    oa{sv}dd          -            -
+.NotifyPointerMotionAbsolute                method    oa{sv}udd         -            -
+.SelectDevices                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableDeviceTypes                       property  u                 3            emits-change
+.version                                    property  u                 2            emits-change
+org.freedesktop.impl.portal.ScreenCast      interface -                 -            -
+.CreateSession                              method    oosa{sv}          ua{sv}       -
+.SelectSources                              method    oosa{sv}          ua{sv}       -
+.Start                                      method    oossa{sv}         ua{sv}       -
+.AvailableCursorModes                       property  u                 3            emits-change
+.AvailableSourceTypes                       property  u                 7            emits-change
+.version                                    property  u                 6            emits-change
+org.freedesktop.impl.portal.Screenshot      interface -                 -            -
+.PickColor                                  method    ossa{sv}          ua{sv}       -
+.Screenshot                                 method    ossa{sv}          ua{sv}       -
+.version                                    property  u                 2            emits-change
+--- RemoteDesktop ---
+NAME                         TYPE     SIGNATURE RESULT/VALUE FLAGS
+.ConnectToEIS                method   osa{sv}   h            -
+.CreateSession               method   oosa{sv}  ua{sv}       -
+.NotifyKeyboardKeycode       method   oa{sv}iu  -            -
+.NotifyKeyboardKeysym        method   oa{sv}iu  -            -
+.NotifyPointerAxis           method   oa{sv}dd  -            -
+.NotifyPointerAxisDiscrete   method   oa{sv}ui  -            -
+.NotifyPointerButton         method   oa{sv}iu  -            -
+.NotifyPointerMotion         method   oa{sv}dd  -            -
+.NotifyPointerMotionAbsolute method   oa{sv}udd -            -
+.SelectDevices               method   oosa{sv}  ua{sv}       -
+.Start                       method   oossa{sv} ua{sv}       -
+.AvailableDeviceTypes        property u         3            emits-change
+.version                     property u         2            emits-change
+--- ScreenCast ---
+NAME                  TYPE     SIGNATURE RESULT/VALUE FLAGS
+.CreateSession        method   oosa{sv}  ua{sv}       -
+.SelectSources        method   oosa{sv}  ua{sv}       -
+.Start                method   oossa{sv} ua{sv}       -
+.AvailableCursorModes property u         3            emits-change
+.AvailableSourceTypes property u         7            emits-change
+.version              property u         6            emits-change
+--- props ---
+u 2
+u 3
+u 6
+
+=== FINAL STATE ===
+active
+active
+installed=27011044bd5770cf78bcacd9f5c18cf4  ~/.local/libexec/xdg-desktop-portal-hyprland
+backup=27011044bd5770cf78bcacd9f5c18cf4  ~/Projects/xdph-rd/proof/xdph-before-pr448-introspect.bin
+cmp_installed_backup=OK
+197279 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+203419 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+205685 tail -n0 -F ~/.local/share/logs/RustDesk/rustdesk_rCURRENT.log
+197271 journalctl --user -f -o short-iso -u xdg-desktop-portal-hyprland -u xdg-desktop-portal
+203058 journalctl --user -f -u xdg-desktop-portal-hyprland -u xdg-desktop-portal --no-pager
+205679 journalctl --user -f -u xdg-desktop-portal-hyprland --no-pager
+430919 ~/.local/libexec/xdg-desktop-portal-hyprland
+DONE restore_ok=1

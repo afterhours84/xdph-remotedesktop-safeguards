@@ -1,0 +1,162 @@
+
+=== JOURNAL RETRY last 15 min (filtered) ===
+Oct 30 17:43:18 omarchy systemd[910]: Stopping Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 30 17:43:18 omarchy systemd[910]: Stopped Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[430919]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture
+Oct 30 17:43:18 omarchy systemd[910]: Starting Portal service (Hyprland, user-local RemoteDesktop build)...
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] Initializing xdph...
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] XDG_CURRENT_DESKTOP set to Hyprland
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] Gathering exported interfaces
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_seat (ver 9)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_data_device_manager (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_compositor (ver 6)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_subcompositor (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_shm (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_viewporter (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_tearing_control_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_fractional_scale_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_output_manager_v1 (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_cursor_shape_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_idle_inhibit_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_relative_pointer_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_decoration_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_alpha_modifier_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_gamma_control_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_foreign_toplevel_list_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_pointer_gestures_v1 (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_foreign_toplevel_manager_v1 (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [toplevel] (activate) locks: 1
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_keyboard_shortcuts_inhibit_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_text_input_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_text_input_manager_v3 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_pointer_constraints_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_output_power_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_activation_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_idle_notifier_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_lock_notifier_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_session_lock_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_input_method_manager_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_virtual_keyboard_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_virtual_pointer_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_output_manager_v1 (ver 4)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: org_kde_kwin_server_decoration_manager (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_focus_grab_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_tablet_manager_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_layer_shell_v1 (ver 5)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_presentation (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_wm_base (ver 7)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_data_control_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_primary_selection_device_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xwayland_shell_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_toplevel_mapping_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [toplevel mapping] registered manager
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_global_shortcuts_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [globalshortcuts] registered
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_wm_dialog_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_single_pixel_buffer_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_security_context_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_ctm_control_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_input_capture_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [input-capture] initializing input capture portal
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [input-capture] init successful
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_surface_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_content_type_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_toplevel_tag_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: xdg_system_bell_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: vicinae_hotkey_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_workspace_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_data_control_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_pointer_warp_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_fifo_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_exporter_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zxdg_importer_v2 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_background_effect_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_commit_timing_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwlr_screencopy_manager_v1 (ver 3)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [pipewire] connected
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] init successful
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: hyprland_toplevel_export_manager_v1 (ver 2)
+Oct 30 17:43:18 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_output_image_capture_source_manager_v1 (ver 1)
+Oct 30 17:43:18 omarchy systemd[910]: Started Portal service (Hyprland, user-local RemoteDesktop build).
+Oct 30 17:43:19 omarchy systemd[910]: Stopping Portal service...
+Oct 30 17:43:19 omarchy systemd[910]: Stopped Portal service.
+Oct 30 17:43:19 omarchy systemd[910]: xdg-desktop-portal.service: Consumed 1.101s CPU time over 23h 16min 42.573s wall clock time, 5.4M memory peak.
+Oct 30 17:43:19 omarchy systemd[910]: Starting Portal service...
+Oct 30 17:43:19 omarchy /usr/lib/xdg-desktop-portal[524349]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 30 17:43:19 omarchy /usr/lib/xdg-desktop-portal[524349]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 30 17:43:19 omarchy /usr/lib/xdg-desktop-portal[524349]: Failed to load RealtimeKit property: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+Oct 30 17:43:19 omarchy systemd[910]: Started Portal service.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_foreign_toplevel_image_capture_source_manager_v1 (ver 1)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: ext_image_copy_capture_manager_v1 (ver 1)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_color_manager_v1 (ver 3)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_drm_lease_device_v1 (ver 1)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wp_linux_drm_syncobj_manager_v1 (ver 1)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_drm (ver 2)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: zwp_linux_dmabuf_v1 (ver 5)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG]  | Got interface: wl_output (ver 4)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] dmabufFeedbackMainDevice
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] Found output name HDMI-A-1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [toplevel] Activated, bound to 5580630059f0, toplevels: 2
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] Registered for toplevel export
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] Registered for image copy capture
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screenshot] init successful
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] registered
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] New session: appid= req=/org/freedesktop/portal/desktop/request/1_407/u1 sess=/org/freedesktop/portal/desktop/session/1_407/u1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] CreateSession returning for appid=
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] devices selected: 7
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] SelectSources:
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/request/1_407/u3
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy]  | /org/freedesktop/portal/desktop/session/1_407/u1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy]  | appid:
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] unused option types
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] restore data invalid / missing, prompting
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [sc] Selection output: [SELECTION]r/screen:HDMI-A-1
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] SHAREDATA returned selection 0
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] virtual pointer created
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] session emulating with the compositor keymap (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [remotedesktop] virtual keyboard created with keymap
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [pw] Building modifiers for dma
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [screencopy] Sharing initialized
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [WARN] [pipewire] Asked for a wl_shm buffer which is legacy.
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35748 bytes)
+Oct 30 17:46:36 omarchy xdg-desktop-portal-hyprland[524342]: [LOG] [core] compositor keymap mirrored (35740 bytes)

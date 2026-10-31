@@ -1,0 +1,70 @@
+--- ~/.local/bin/xdph-rd-on-lock.bak-20261030-181843	2026-10-30 18:07:51.841325220 -0700
++++ ~/.local/bin/xdph-rd-on-lock	2026-10-30 18:18:43.906349880 -0700
+@@ -1,44 +1,33 @@
+ #!/bin/bash
+ # xdph-rd-on-lock: run when xdph closes remote sessions because the screen locked.
+-# Invoked by xdph via fork+exec (does not block the portal event loop on our sleep
+-# as long as we return quickly). We background the kill/delay/restart work so this
+-# script exits immediately.
+-#
+-# Goal: gaming-PC RustDesk viewer should see a clear "connection forcibly closed"
+-# (TCP RST via SIGKILL), then after a short delay RustDesk is restarted so a later
+-# reconnect (after unlock + approve) can succeed.
++# xdph already double-forks this hook. We only SIGKILL rustdesk here and arm a
++# one-shot unlock waiter; rustdesk is NOT restarted until unlock.
+ 
+ LOG="${HOME}/.local/share/xdph-rd/lock-hook.log"
+ mkdir -p "$(dirname "$LOG")"
+ ts() { date '+%Y-%m-%d %H:%M:%S %z'; }
+ 
+-echo "$(ts) xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart" >>"$LOG"
++echo "$(ts) xdph-rd-on-lock: invoked (screen locked); hard-killing rustdesk (no restart until unlock)" >>"$LOG"
+ 
+-# Detach the slow work so this hook process returns immediately to the forked child.
+-(
+-  echo "$(ts) xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk" >>"$LOG"
+-  # Abrupt kill so the viewer gets RST / "connection forcibly closed" rather than
+-  # a graceful disconnect that can look like a freeze.
+-  pkill -KILL -x rustdesk 2>/dev/null || true
+-  pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
+-  pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
+-  sleep 0.3
+-  if pgrep -x rustdesk >/dev/null 2>&1; then
+-    echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
+-  else
+-    echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
+-  fi
++pkill -KILL -x rustdesk 2>/dev/null || true
++pkill -KILL -f '/usr/bin/rustdesk' 2>/dev/null || true
++pkill -KILL -f '/usr/lib/rustdesk/rustdesk' 2>/dev/null || true
++sleep 0.3
++if pgrep -x rustdesk >/dev/null 2>&1; then
++  echo "$(ts) xdph-rd-on-lock: WARN rustdesk still present after KILL: $(pgrep -ax rustdesk | tr '\n' '; ')" >>"$LOG"
++else
++  echo "$(ts) xdph-rd-on-lock: rustdesk gone after KILL" >>"$LOG"
++fi
++
++# Arm unlock waiter (exactly one via flock). Detached so this hook returns now.
++WAIT="${HOME}/.local/bin/xdph-rd-wait-unlock"
++LOCKFILE="${XDG_RUNTIME_DIR:-/tmp}/xdph-rd-wait-unlock.lock"
++if [ -x "$WAIT" ]; then
++  setsid -f bash -c "flock -n '$LOCKFILE' '$WAIT' || echo \"\$(date '+%Y-%m-%d %H:%M:%S %z') xdph-rd-on-lock: unlock waiter already running; leave it\" >>'$LOG'" >/dev/null 2>&1
++  echo "$(ts) xdph-rd-on-lock: unlock waiter spawn attempted" >>"$LOG"
++else
++  echo "$(ts) xdph-rd-on-lock: WARN missing $WAIT" >>"$LOG"
++fi
+ 
+-  # Delay before restart so the viewer has time to surface the error dialog
+-  # before a new listener appears and auto-reconnect races it.
+-  echo "$(ts) xdph-rd-on-lock: sleeping 10s before rustdesk restart" >>"$LOG"
+-  sleep 10
+-
+-  echo "$(ts) xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid" >>"$LOG"
+-  setsid -f /usr/bin/rustdesk
+-  sleep 1
+-  echo "$(ts) xdph-rd-on-lock: rustdesk after start: $(pgrep -ax rustdesk 2>/dev/null | tr '\n' '; ' || echo none)" >>"$LOG"
+-) >/dev/null 2>&1 &
+-
+-echo "$(ts) xdph-rd-on-lock: parent exiting (worker pid $!)" >>"$LOG"
++echo "$(ts) xdph-rd-on-lock: done" >>"$LOG"
+ exit 0

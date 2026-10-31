@@ -1,0 +1,106 @@
+=== 25-pr448-fetch ===
+date: 2026-10-30 10:03:20 MST
+goal: fetch PR #448 into ~/Projects/xdph-448, record head SHA
+
+cloning hyprwm/xdg-desktop-portal-hyprland into ~/Projects/xdph-448
+Cloning into '~/Projects/xdph-448'...
+Updating files:   1% (1/75)
+Updating files:   2% (2/75)
+Updating files:   4% (3/75)
+Updating files:   5% (4/75)
+Updating files:   6% (5/75)
+Updating files:   8% (6/75)
+Updating files:   9% (7/75)
+Updating files:  10% (8/75)
+Updating files:  12% (9/75)
+Updating files:  13% (10/75)
+Updating files:  14% (11/75)
+Updating files:  16% (12/75)
+Updating files:  17% (13/75)
+Updating files:  18% (14/75)
+Updating files:  20% (15/75)
+Updating files:  21% (16/75)
+Updating files:  22% (17/75)
+Updating files:  24% (18/75)
+Updating files:  25% (19/75)
+Updating files:  26% (20/75)
+Updating files:  28% (21/75)
+Updating files:  29% (22/75)
+Updating files:  30% (23/75)
+Updating files:  32% (24/75)
+Updating files:  33% (25/75)
+Updating files:  34% (26/75)
+Updating files:  36% (27/75)
+Updating files:  37% (28/75)
+Updating files:  38% (29/75)
+Updating files:  40% (30/75)
+Updating files:  41% (31/75)
+Updating files:  42% (32/75)
+Updating files:  44% (33/75)
+Updating files:  45% (34/75)
+Updating files:  46% (35/75)
+Updating files:  48% (36/75)
+Updating files:  49% (37/75)
+Updating files:  50% (38/75)
+Updating files:  52% (39/75)
+Updating files:  53% (40/75)
+Updating files:  54% (41/75)
+Updating files:  56% (42/75)
+Updating files:  57% (43/75)
+Updating files:  58% (44/75)
+Updating files:  60% (45/75)
+Updating files:  61% (46/75)
+Updating files:  62% (47/75)
+Updating files:  64% (48/75)
+Updating files:  65% (49/75)
+Updating files:  66% (50/75)
+Updating files:  68% (51/75)
+Updating files:  69% (52/75)
+Updating files:  70% (53/75)
+Updating files:  72% (54/75)
+Updating files:  73% (55/75)
+Updating files:  74% (56/75)
+Updating files:  76% (57/75)
+Updating files:  77% (58/75)
+Updating files:  78% (59/75)
+Updating files:  80% (60/75)
+Updating files:  81% (61/75)
+Updating files:  82% (62/75)
+Updating files:  84% (63/75)
+Updating files:  85% (64/75)
+Updating files:  86% (65/75)
+Updating files:  88% (66/75)
+Updating files:  89% (67/75)
+Updating files:  90% (68/75)
+Updating files:  92% (69/75)
+Updating files:  93% (70/75)
+Updating files:  94% (71/75)
+Updating files:  96% (72/75)
+Updating files:  97% (73/75)
+Updating files:  98% (74/75)
+Updating files: 100% (75/75)
+Updating files: 100% (75/75), done.
+From https://github.com/hyprwm/xdg-desktop-portal-hyprland
+ * [new ref]         refs/pull/448/head -> pr-448
+Switched to branch 'pr-448'
+
+HEAD: 84b03f2a991c7019a168ed3199e4b3158c2ff560
+HEAD short: 84b03f2
+branch: pr-448
+log -1:
+commit 84b03f2a991c7019a168ed3199e4b3158c2ff560
+Author:     Keith Yang <yang@keitheis.org>
+AuthorDate: Fri Oct 30 23:41:25 2026 +0800
+Commit:     Keith Yang <yang@keitheis.org>
+CommitDate: Fri Oct 30 23:41:25 2026 +0800
+
+    fix(remotedesktop): release held keys when EIS keyboards stop
+
+submodules:
+Submodule 'hyprland-protocols' (https://github.com/hyprwm/hyprland-protocols) registered for path 'subprojects/hyprland-protocols'
+Submodule 'subprojects/sdbus-cpp' (https://github.com/Kistler-Group/sdbus-cpp) registered for path 'subprojects/sdbus-cpp'
+Cloning into '~/Projects/xdph-448/subprojects/hyprland-protocols'...
+Cloning into '~/Projects/xdph-448/subprojects/sdbus-cpp'...
+Submodule path 'subprojects/hyprland-protocols': checked out 'd260a60f90668bf55dbddb6fa60fba9a3e2e34e9'
+Submodule path 'subprojects/sdbus-cpp': checked out 'b7d85f936d622299ee57966c2b2aefde5e4f3684'
+DONE fetch

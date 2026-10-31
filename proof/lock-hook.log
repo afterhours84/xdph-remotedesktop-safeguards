@@ -1,6 +1,22 @@
-2026-10-29T18:24:19-07:00 lock hook: restarting rustdesk
-2026-10-29T18:24:21-07:00 rustdesk relaunched: 206825 
-2026-10-29T18:26:39-07:00 lock hook: restarting rustdesk
-2026-10-29T18:26:41-07:00 rustdesk relaunched: 208317 
-2026-10-29T18:29:40-07:00 lock hook: restarting rustdesk
-2026-10-29T18:29:42-07:00 rustdesk relaunched: 210066 
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: invoked (screen locked); scheduling hard kill + delayed restart
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: worker start; pkill -KILL -x rustdesk
+2026-10-30 18:09:03 -0700 xdph-rd-on-lock: parent exiting (worker pid 537232)
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: rustdesk gone after KILL
+2026-10-30 18:09:04 -0700 xdph-rd-on-lock: sleeping 10s before rustdesk restart
+2026-10-30 18:09:14 -0700 xdph-rd-on-lock: starting /usr/bin/rustdesk via setsid
+2026-10-30 18:09:15 -0700 xdph-rd-on-lock: rustdesk after start: 537542 /usr/bin/rustdesk;537585 [rustdesk] <defunct>;
+2026-10-30 18:19:11 -0700 xdph-rd-on-unlock: invoked
+2026-10-30 18:19:11 -0700 xdph-rd-on-unlock: rustdesk already running; skip start: 537542 /usr/bin/rustdesk;538891 /usr/lib/rustdesk/rustdesk --cm;
+2026-10-30 18:19:11 -0700 xdph-rd-wait-unlock: waiting for unlock (pid 544311)
+2026-10-30 18:19:11 -0700 xdph-rd-wait-unlock: unlocked (omarchy-hyprland-session-locked exit 1)
+2026-10-30 18:19:11 -0700 xdph-rd-on-unlock: invoked
+2026-10-30 18:19:11 -0700 xdph-rd-on-unlock: rustdesk already running; skip start: 537542 /usr/bin/rustdesk;538891 /usr/lib/rustdesk/rustdesk --cm;
+2026-10-30 18:23:31 -0700 xdph-rd-on-lock: invoked (screen locked); hard-killing rustdesk (no restart until unlock)
+2026-10-30 18:23:32 -0700 xdph-rd-on-lock: rustdesk gone after KILL
+2026-10-30 18:23:32 -0700 xdph-rd-on-lock: unlock waiter spawn attempted
+2026-10-30 18:23:32 -0700 xdph-rd-on-lock: done
+2026-10-30 18:23:32 -0700 xdph-rd-wait-unlock: waiting for unlock (pid 546077)
+2026-10-30 18:23:48 -0700 xdph-rd-wait-unlock: unlocked (omarchy-hyprland-session-locked exit 1)
+2026-10-30 18:23:48 -0700 xdph-rd-on-unlock: invoked
+2026-10-30 18:23:48 -0700 xdph-rd-on-unlock: starting /usr/bin/rustdesk via setsid
+2026-10-30 18:23:49 -0700 xdph-rd-on-unlock: after start: 546525 /usr/bin/rustdesk;546566 [rustdesk] <defunct>;

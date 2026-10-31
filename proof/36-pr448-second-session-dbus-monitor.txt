@@ -1,0 +1,30 @@
+signal time=1793407944.876133 sender=org.freedesktop.DBus -> destination=:1.430 serial=4294967295 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.430"
+signal time=1793407944.876258 sender=org.freedesktop.DBus -> destination=:1.430 serial=4294967295 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameLost
+   string ":1.430"
+method call time=1793407945.410077 sender=:1.432 -> destination=org.freedesktop.portal.Desktop serial=3 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.portal.RemoteDesktop; member=CreateSession
+   array [
+      dict entry(
+         string "handle_token"
+         variant             string "proof448cs"
+      )
+      dict entry(
+         string "session_handle_token"
+         variant             string "proof448css"
+      )
+   ]
+method call time=1793407945.412263 sender=:1.394 -> destination=:1.392 serial=5806 path=/org/freedesktop/portal/desktop; interface=org.freedesktop.impl.portal.RemoteDesktop; member=CreateSession
+   object path "/org/freedesktop/portal/desktop/request/1_432/proof448cs"
+   object path "/org/freedesktop/portal/desktop/session/1_432/proof448css"
+   string ""
+   array [
+   ]
+signal time=1793407945.412601 sender=:1.394 -> destination=:1.432 serial=5808 path=/org/freedesktop/portal/desktop/request/1_432/proof448cs; interface=org.freedesktop.portal.Request; member=Response
+   uint32 0
+   array [
+      dict entry(
+         string "session_handle"
+         variant             string "/org/freedesktop/portal/desktop/session/1_432/proof448css"
+      )
+   ]
+method call time=1793407957.662929 sender=:1.433 -> destination=:1.394 serial=7 path=/org/freedesktop/portal/desktop/request/1_432/proof448cs; interface=org.freedesktop.portal.Request; member=Close
